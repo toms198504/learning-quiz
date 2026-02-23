@@ -41,6 +41,7 @@
     let quizData = [];
     let currentStep = 0;
     let score = 0;
+    let wrongAnswers = []; // Tu będziemy przechowywać błędne pytania
 
     // Ładowanie z pliku pytania.json
     fetch('pytania.json')
@@ -74,53 +75,90 @@
     }
 
     function checkAnswer() {
-        const inputField = document.getElementById('answerInput');
-        const userInput = inputField.value.trim().toLowerCase();
-        const correctAnswer = quizData[currentStep].a;
-        const feedback = document.getElementById('feedback');
+    const inputField = document.getElementById('answerInput');
+    const userInput = inputField.value.trim().toLowerCase();
+    const correctAnswer = quizData[currentStep].a;
+    const feedback = document.getElementById('feedback');
 
-        inputField.disabled = true; // Blokujemy pole po odpowiedzi
-        document.getElementById('inputArea').classList.add('hidden');
-        feedback.classList.remove('hidden');
+    inputField.disabled = true;
+    document.getElementById('inputArea').classList.add('hidden');
+    feedback.classList.remove('hidden');
 
-        if (userInput === correctAnswer.toLowerCase()) {
-            score++;
-            feedback.innerText = "Doskonale! To poprawna odpowiedź.";
-            feedback.className = "correct-box";
-        } else {
-            feedback.innerHTML = `Błąd!<br>Twoja odpowiedź: <s>${userInput || "(brak)"}</s><br>Prawidłowa odpowiedź: <strong>${correctAnswer}</strong>`;
-            feedback.className = "wrong-box";
-        }
-
-        document.getElementById('score').innerText = `Punkty: ${score}`;
-        document.getElementById('nextBtn').classList.remove('hidden');
-        currentStep++;
+    if (userInput === correctAnswer.toLowerCase()) {
+        score++;
+        feedback.innerText = "Doskonale! To poprawna odpowiedź.";
+        feedback.className = "correct-box";
+    } else {
+        feedback.innerHTML = `Błąd!<br>Prawidłowa odpowiedź: <strong>${correctAnswer}</strong>`;
+        feedback.className = "wrong-box";
+        
+        // DODAJEMY TO: Zapisujemy całe pytanie do listy błędów
+        wrongAnswers.push(quizData[currentStep]);
     }
+
+    document.getElementById('score').innerText = `Punkty: ${score}`;
+    document.getElementById('nextBtn').classList.remove('hidden');
+    currentStep++;
+}
 
     function showSummary() {
     const percent = Math.round((score / quizData.length) * 100);
-    let message = "";
-
-    // Mały dodatek: personalizacja komunikatu zależnie od wyniku
-    if (percent === 100) message = "Perfekcyjnie! Jesteś mistrzem!";
-    else if (percent >= 50) message = "Całkiem nieźle!";
-    else message = "Może warto spróbować jeszcze raz?";
-
-    document.querySelector('.quiz-container').innerHTML = `
+    const container = document.querySelector('.quiz-container');
+    
+    let html = `
         <div style="text-align:center">
             <h2>Koniec testu!</h2>
-            <p>${message}</p>
-            <p style="font-size: 2em; margin: 10px 0;">Twój wynik: ${score} / ${quizData.length}</p>
-            <p>Skuteczność: <strong>${percent}%</strong></p>
-            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-            <p>Czy chcesz powtórzyć ten test?</p>
-            <div style="display: flex; gap: 10px;">
-                <button class="btn" style="background:#28a745; color:white;" onclick="location.reload()">Tak, zacznij od nowa</button>
-                <button class="btn" style="background:#6c757d; color:white;" onclick="finishQuiz()">Nie, dziękuję</button>
-            </div>
+            <p style="font-size: 2em; margin: 10px 0;">${score} / ${quizData.length}</p>
+            <p>Wynik: <strong>${percent}%</strong></p>
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+    `;
+
+    if (wrongAnswers.length > 0) {
+        html += `
+            <p>Masz błędy w ${wrongAnswers.length} pytaniach.</p>
+            <button class="btn" style="background:#dc3545; color:white; margin-bottom: 10px;" onclick="retryErrors()">Powtórz tylko błędy</button>
+        `;
+    } else {
+        html += `<p style="color: green; font-weight: bold;">Brawo! Zero błędów!</p>`;
+    }
+
+    html += `
+            <button class="btn" style="background:#007bff; color:white;" onclick="location.reload()">Zacznij cały test od nowa</button>
         </div>`;
+    
+    container.innerHTML = html;
 }
 
+// Funkcja, która podmienia bazę pytań na te błędne i resetuje test
+function retryErrors() {
+    quizData = [...wrongAnswers]; // Pytania to teraz tylko te z błędami
+    wrongAnswers = [];            // Czyścimy listę błędów na nową rundę
+    currentStep = 0;
+    score = 0;
+    
+    // Przywracamy wygląd interfejsu (bo summary go nadpisało)
+    const container = document.querySelector('.quiz-container');
+    container.innerHTML = `
+        <div class="stats">
+            <span id="progress">Pytanie: 0/0</span>
+            <span id="score">Punkty: 0</span>
+        </div>
+        <h2 id="question">Wczytywanie...</h2>
+        <div id="inputArea">
+            <input type="text" id="answerInput" placeholder="Twoja odpowiedź..." autofocus autocomplete="off">
+            <button id="checkBtn" class="btn" style="background:#007bff; color:white;" onclick="checkAnswer()">Sprawdź odpowiedź</button>
+        </div>
+        <div id="feedback" class="hidden"></div>
+        <button id="nextBtn" class="btn hidden" style="background:#6c757d; color:white; margin-top: 10px;" onclick="displayQuestion()">Następne pytanie &rarr;</button>
+    `;
+    
+    // Musimy ponownie podpiąć Enter dla nowego inputa
+    document.getElementById('answerInput').addEventListener("keypress", (e) => {
+        if (e.key === "Enter" && !document.getElementById('answerInput').disabled) checkAnswer();
+    });
+
+    displayQuestion();
+}
 // Opcjonalna funkcja zakończenia
 function finishQuiz() {
     document.querySelector('.quiz-container').innerHTML = `
@@ -138,5 +176,6 @@ function finishQuiz() {
 </body>
 
 </html>
+
 
 
