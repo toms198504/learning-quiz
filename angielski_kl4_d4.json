@@ -38,8 +38,8 @@
     "category": "Sytuacje i Reakcje",
     "questions": [
       { "q": "Odpowiedz na: 'Excuse me. Is this our new classroom?'", "a": "Yes, it is." },
-      { "q": "Odpowiedz na: 'How do you spell your name?'", "a": "J-O-H-N (lub przeliterowanie własnego imienia)" },
-      { "q": "Odpowiedz na: 'What's the time?'", "a": "It's nearly 12 o'clock." },
+      { "q": "Przetłumacz: 'Jak się pisze twoje imię?'", "a": "How do you spell your name?" },
+      { "q": "Odpowiedz na: 'What's the time?' (Jest prawie 12.00)", "a": "It's nearly 12 o'clock." },
       { "q": "Odpowiedz na: 'Nice to meet you'", "a": "Nice to meet you, too" }
     ]
   }
