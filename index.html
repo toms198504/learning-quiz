@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Interaktywny Quiz - Tryb Nauki</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; padding-top: 50px; background: #f0f2f5; }
+        .quiz-container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 450px; }
+        .stats { display: flex; justify-content: space-between; color: #666; margin-bottom: 20px; }
+        input { width: 100%; padding: 12px; margin: 15px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; }
+        .btn { width: 100%; padding: 12px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        #checkBtn { background: #007bff; color: white; }
+        #nextBtn { background: #6c757d; color: white; margin-top: 10px; }
+        #checkBtn:hover { background: #0056b3; }
+        #nextBtn:hover { background: #5a6268; }
+        .hidden { display: none; }
+        #feedback { margin-top: 15px; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; }
+        .correct-box { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .wrong-box { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <div class="stats">
+        <span id="progress">Pytanie: 0/0</span>
+        <span id="score">Punkty: 0</span>
+    </div>
+    <h2 id="question">Wczytywanie...</h2>
+    
+    <div id="inputArea">
+        <input type="text" id="answerInput" placeholder="Twoja odpowiedź..." autofocus>
+        <button id="checkBtn" class="btn" onclick="checkAnswer()">Sprawdź odpowiedź</button>
+    </div>
+
+    <div id="feedback" class="hidden"></div>
+    <button id="nextBtn" class="btn hidden" onclick="loadQuestion()">Następne pytanie &rarr;</button>
+</div>
+
+<script>
+    let quizData = [];
+    let currentStep = 0;
+    let score = 0;
+
+    // Ładowanie z pliku pytania.json
+    fetch('pytania.json')
+        .then(response => response.json())
+        .then(data => {
+            quizData = data;
+            initQuiz();
+        });
+
+    function initQuiz() {
+        document.getElementById('progress').innerText = `Pytanie: 1/${quizData.length}`;
+        displayQuestion();
+    }
+
+    function displayQuestion() {
+        if (currentStep < quizData.length) {
+            const q = quizData[currentStep];
+            document.getElementById('question').innerText = q.q;
+            document.getElementById('progress').innerText = `Pytanie: ${currentStep + 1}/${quizData.length}`;
+            
+            // Reset interfejsu
+            document.getElementById('answerInput').value = "";
+            document.getElementById('answerInput').disabled = false;
+            document.getElementById('inputArea').classList.remove('hidden');
+            document.getElementById('feedback').className = 'hidden';
+            document.getElementById('nextBtn').classList.add('hidden');
+            document.getElementById('answerInput').focus();
+        } else {
+            showSummary();
+        }
+    }
+
+    function checkAnswer() {
+        const inputField = document.getElementById('answerInput');
+        const userInput = inputField.value.trim().toLowerCase();
+        const correctAnswer = quizData[currentStep].a;
+        const feedback = document.getElementById('feedback');
+
+        inputField.disabled = true; // Blokujemy pole po odpowiedzi
+        document.getElementById('inputArea').classList.add('hidden');
+        feedback.classList.remove('hidden');
+
+        if (userInput === correctAnswer.toLowerCase()) {
+            score++;
+            feedback.innerText = "Doskonale! To poprawna odpowiedź.";
+            feedback.className = "correct-box";
+        } else {
+            feedback.innerHTML = `Błąd!<br>Twoja odpowiedź: <s>${userInput || "(brak)"}</s><br>Prawidłowa odpowiedź: <strong>${correctAnswer}</strong>`;
+            feedback.className = "wrong-box";
+        }
+
+        document.getElementById('score').innerText = `Punkty: ${score}`;
+        document.getElementById('nextBtn').classList.remove('hidden');
+        currentStep++;
+    }
+
+    function showSummary() {
+        const percent = Math.round((score / quizData.length) * 100);
+        document.querySelector('.quiz-container').innerHTML = `
+            <div style="text-align:center">
+                <h2>Koniec testu!</h2>
+                <p style="font-size: 2em; margin: 10px 0;">${score} / ${quizData.length}</p>
+                <p>Wynik: <strong>${percent}%</strong></p>
+                <button class="btn" style="background:#007bff; color:white;" onclick="location.reload()">Spróbuj ponownie</button>
+            </div>`;
+    }
+
+    // Obsługa Enter
+    document.getElementById('answerInput').addEventListener("keypress", (e) => {
+        if (e.key === "Enter" && !document.getElementById('answerInput').disabled) checkAnswer();
+    });
+</script>
+
+</body>
+</html>
