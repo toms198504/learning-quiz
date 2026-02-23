@@ -114,6 +114,10 @@
 
     function displayQuestion() {
         if (currentStep < quizData.length) {
+            // Wewnątrz funkcji displayQuestion()
+const qText = quizData[currentStep].q;
+document.getElementById('question-text').innerHTML = `${qText} 
+    <button onclick="speak('${qText}')" style="background:none; border:none; cursor:pointer; font-size:18px; vertical-align:middle;">🔊</button>`;
             const pct = (currentStep / quizData.length) * 100;
             document.getElementById('progressBar').style.width = pct + "%";
             document.getElementById('question-text').innerText = quizData[currentStep].q;
@@ -142,24 +146,15 @@
 
         if (userAns === correctAns.toLowerCase()) {
     score++;
-    feedback.innerText = "Brawo!";
+    feedback.innerHTML = `Brawo! <strong>${correctAns}</strong> 
+        <button onclick="speak('${correctAns}')" style="background:none; border:none; cursor:pointer; font-size:20px;">🔊</button>`;
     feedback.className = "correct-box";
-
-    // --- DODATEK: WYMOWA ---
-    // Jeśli uczymy się angielskiego, niech przeglądarka przeczyta słowo
-    let msg = new SpeechSynthesisUtterance(correctAns);
-    msg.lang = 'en-US'; // Możesz zmienić na 'en-GB' dla brytyjskiego
-    window.speechSynthesis.speak(msg);
-    // -----------------------
 } else {
-            feedback.innerHTML = `Błąd!<br>Poprawnie: <strong>${correctAns}</strong>`;
-            feedback.className = "wrong-box";
-            wrongAnswers.push(quizData[currentStep]);
-        }
-        document.getElementById('score-text').innerText = `Punkty: ${score}`;
-        document.getElementById('nextBtn').classList.remove('hidden');
-        currentStep++;
-    }
+    feedback.innerHTML = `Błąd!<br>Poprawnie: <strong>${correctAns}</strong> 
+        <button onclick="speak('${correctAns}')" style="background:none; border:none; cursor:pointer; font-size:20px;">🔊</button>`;
+    feedback.className = "wrong-box";
+    wrongAnswers.push(quizData[currentStep]);
+}
 
    function showSummary() {
     const pct = Math.round((score / quizData.length) * 100);
@@ -201,4 +196,5 @@
 </script>
 </body>
 </html>
+
 
