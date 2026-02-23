@@ -1,0 +1,70 @@
+[
+  {
+    "category": "Wirusy - szczegóły i mechanizmy",
+    "questions": [
+      {
+        "q": "Co dzieje się z komórką gospodarza po namnożeniu się w niej wirusów?",
+        "a": "Komórka zazwyczaj ulega zniszczeniu."
+      },
+      {
+        "q": "W jakiej formie wirusy mogą przetrwać poza organizmem gospodarza?",
+        "a": "W formie nieaktywnej, czekając na kontakt z odpowiednią komórką."
+      },
+      {
+        "q": "Dlaczego wirusy nazywamy 'pasożytami bezwzględnymi'?",
+        "a": "Ponieważ nie potrafią żyć ani rozmnażać się poza komórką żywego organizmu."
+      }
+    ]
+  },
+  {
+    "category": "Bakterie - budowa i formy przetrwalnikowe",
+    "questions": [
+      {
+        "q": "Co to są formy przetrwalnikowe bakterii?",
+        "a": "To stan uśpienia, który pozwala bakteriom przeżyć trudne warunki, np. suszę lub mróz."
+      },
+      {
+        "q": "Co otacza komórkę bakterii oprócz błony komórkowej?",
+        "a": "Ściana komórkowa, a często także otoczka śluzowa."
+      },
+      {
+        "q": "Czy bakterie mogą poruszać się samodzielnie?",
+        "a": "Tak, niektóre bakterie posiadają rzęski, które im na to pozwalają."
+      }
+    ]
+  },
+  {
+    "category": "Wirusy i Bakterie - porównanie",
+    "questions": [
+      {
+        "q": "Kto jest większy: wirus czy bakteria?",
+        "a": "Bakteria (wirusy są znacznie mniejsze i widać je tylko pod mikroskopem elektronowym)."
+      },
+      {
+        "q": "Które z nich mają budowę komórkową?",
+        "a": "Bakterie."
+      },
+      {
+        "q": "Które z nich potrafią rozmnażać się samodzielnie?",
+        "a": "Bakterie."
+      }
+    ]
+  },
+  {
+    "category": "Bakterie - rola w przyrodzie i gospodarce",
+    "questions": [
+      {
+        "q": "Co robią bakterie rozkładające szczątki roślin i zwierząt w glebie?",
+        "a": "Użyźniają glebę, przekształcając szczątki w proste związki mineralne."
+      },
+      {
+        "q": "W jaki sposób bakterie są wykorzystywane w oczyszczalniach ścieków?",
+        "a": "Rozkładają nieczystości, pomagając w oczyszczaniu wody."
+      },
+      {
+        "q": "Dlaczego bakterie w jelitach nazywamy naszą 'tarczą ochronną'?",
+        "a": "Ponieważ uniemożliwiają rozwój bakterii chorobotwórczych."
+      }
+    ]
+  }
+]
