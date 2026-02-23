@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platforma Edukacyjna dla Dzieci</title>
+    <title>Platforma Edukacyjna</title>
     <style>
         :root {
             --primary-color: #6f42c1;
@@ -28,15 +28,13 @@
         /* Interfejs Quizu */
         input { width: 100%; padding: 14px; margin: 15px 0; border: 2px solid #ddd; border-radius: 10px; font-size: 18px; box-sizing: border-box; }
         input:focus { border-color: var(--primary-color); outline: none; }
-        #question-text { font-size: 24px; margin-bottom: 20px; text-align: center; }
+        #question-text { font-size: 24px; margin-bottom: 20px; text-align: center; font-weight: bold; }
         .stats { display: flex; justify-content: space-between; color: #666; font-size: 0.9em; margin-bottom: 10px; }
         
         /* Komunikaty */
         #feedback { margin-top: 15px; padding: 20px; border-radius: 12px; text-align: center; font-weight: bold; font-size: 1.1em; }
         .correct-box { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
         .wrong-box { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
-        .speaker-btn { background: none; border: none; cursor: pointer; font-size: 24px; vertical-align: middle; margin-left: 10px; transition: transform 0.1s; }
-        .speaker-btn:active { transform: scale(1.2); }
         .hidden { display: none; }
         
         hr { border: 0; border-top: 1px solid #eee; margin: 20px 0; }
@@ -64,7 +62,7 @@
         </div>
         
         <div id="question-area">
-            <h2 id="question-text"></h2>
+            <h2 id="question-text">Pytanie</h2>
         </div>
 
         <div id="input-area">
@@ -78,30 +76,24 @@
 </div>
 
 <script>
-    let allModules = [];      // Lista z index.json
-    let currentModule = [];   // Kategorie z wybranego pliku
-    let quizData = [];        // Pytania z wybranej kategorii
+    let allModules = [];      
+    let currentModule = [];   
+    let quizData = [];        
     let currentStep = 0;
     let score = 0;
     let wrongAnswers = [];
 
-    // --- SYNTEZATOR MOWY ---
-    function speak(text) {
-        window.speechSynthesis.cancel(); // Zatrzymaj poprzednie czytanie
-        const msg = new SpeechSynthesisUtterance(text);
-        msg.lang = 'en-US'; 
-        msg.rate = 0.85; // Nieco wolniej dla dziecka
-        window.speechSynthesis.speak(msg);
-    }
-
-    // --- ŁADOWANIE DANYCH ---
+    // 1. Ładowanie spisu treści
     fetch('index.json?v=' + Date.now())
         .then(res => res.json())
         .then(data => {
             allModules = data;
             renderIndex();
         })
-        .catch(err => console.error("Błąd wczytywania index.json:", err));
+        .catch(err => {
+            document.getElementById('index-list').innerText = "Błąd wczytywania index.json!";
+            console.error(err);
+        });
 
     function renderIndex() {
         const list = document.getElementById('index-list');
@@ -115,6 +107,7 @@
         });
     }
 
+    // 2. Ładowanie pliku z działem
     function loadModule(file, title) {
         fetch(file + '?v=' + Date.now())
             .then(res => res.json())
@@ -139,9 +132,10 @@
         document.getElementById('category-screen').classList.remove('hidden');
     }
 
+    // 3. Przygotowanie pytań z kategorii
     function prepareQuiz(idx) {
         quizData = [...currentModule[idx].questions];
-        quizData.sort(() => Math.random() - 0.5); // Losowanie kolejności
+        quizData.sort(() => Math.random() - 0.5); // Losowanie
         currentStep = 0;
         score = 0;
         wrongAnswers = [];
@@ -151,19 +145,14 @@
         displayQuestion();
     }
 
-    // --- LOGIKA QUIZU ---
     function displayQuestion() {
         if (currentStep < quizData.length) {
-            const qObj = quizData[currentStep];
             const pct = (currentStep / quizData.length) * 100;
-            
             document.getElementById('progressBar').style.width = pct + "%";
             document.getElementById('progress-text').innerText = `Pytanie ${currentStep + 1}/${quizData.length}`;
             document.getElementById('score-text').innerText = `Punkty: ${score}`;
             
-            // Dodajemy głośnik do pytania
-            document.getElementById('question-text').innerHTML = `${qObj.q} 
-                <button class="speaker-btn" onclick="speak('${qObj.q.replace(/'/g, "\\'")}')">🔊</button>`;
+            document.getElementById('question-text').innerText = quizData[currentStep].q;
 
             document.getElementById('answerInput').value = "";
             document.getElementById('answerInput').disabled = false;
@@ -187,20 +176,17 @@
         document.getElementById('input-area').classList.add('hidden');
         feedback.classList.remove('hidden');
 
-        const isCorrect = userAns === correctAns.toLowerCase();
-
-        if (isCorrect) {
+        if (userAns === correctAns.toLowerCase()) {
             score++;
-            feedback.innerHTML = `Brawo! Poprawna odpowiedź to: <strong>${correctAns}</strong> 
-                <button class="speaker-btn" onclick="speak('${correctAns.replace(/'/g, "\\'")}')">🔊</button>`;
+            feedback.innerText = "Brawo! Poprawna odpowiedź.";
             feedback.className = "correct-box";
         } else {
-            feedback.innerHTML = `Ups! Prawidłowa odpowiedź to: <strong>${correctAns}</strong> 
-                <button class="speaker-btn" onclick="speak('${correctAns.replace(/'/g, "\\'")}')">🔊</button>`;
+            feedback.innerHTML = `Ups! Prawidłowa odpowiedź to: <strong>${correctAns}</strong>`;
             feedback.className = "wrong-box";
             wrongAnswers.push(quizData[currentStep]);
         }
         
+        document.getElementById('score-text').innerText = `Punkty: ${score}`;
         document.getElementById('nextBtn').classList.remove('hidden');
         currentStep++;
     }
@@ -229,12 +215,13 @@
     }
 
     function retryErrors() {
+        // Podmieniamy zestaw pytań na te błędne
         quizData = [...wrongAnswers];
         wrongAnswers = [];
         currentStep = 0;
         score = 0;
         
-        // Szybki reset widoku bez przeładowania strony
+        // Odświeżamy UI quizu
         document.getElementById('quiz-screen').innerHTML = `
             <div class="progress-container"><div id="progressBar"></div></div>
             <div class="stats"><span id="progress-text"></span><span id="score-text"></span></div>
@@ -247,7 +234,7 @@
             <button id="nextBtn" class="btn back-btn hidden" onclick="displayQuestion()">Następne pytanie →</button>
         `;
         
-        // Ponowne bindowanie eventu Enter
+        // Ponowne podpięcie obsługi Enter
         document.getElementById('answerInput').addEventListener("keypress", handleEnter);
         displayQuestion();
     }
