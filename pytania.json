@@ -1,12 +1,46 @@
 [
-    { "q": "Przetłumacz na angielski: Ja potrafię pływać.", "a": "I can swim" },
-    { "q": "Przetłumacz na angielski: Ona nie potrafi śpiewać.", "a": "She can't sing" },
-    { "q": "Jak brzmi pełna forma słowa 'can't'?", "a": "cannot" },
-    { "q": "Przetłumacz pytanie: Czy ty potrafisz skakać?", "a": "Can you jump" },
-    { "q": "Uzupełnij zdanie: 'They ____ (potrafią) play football.'", "a": "can" },
-    { "q": "Jak powiesz: 'Mój brat nie potrafi gotować.'?", "a": "My brother can't cook" },
-    { "q": "Przetłumacz na polski: 'Can you help me?'", "a": "Czy możesz mi pomóc" },
-    { "q": "Odpowiedz przecząco: 'Can he fly?' (Nie, on nie potrafi).", "a": "No, he can't" },
-    { "q": "Przetłumacz: 'Ptaki potrafią latać.'", "a": "Birds can fly" },
-    { "q": "Ułóż pytanie z rozsypanki: 'you / dance / Can / ?'", "a": "Can you dance" }
+  {
+    "category": "Czynności - Słówka",
+    "questions": [
+      { "q": "Jak jest po angielsku 'skakać na jednej nodze'?", "a": "hop" },
+      { "q": "Jak jest po angielsku 'huśtać się'?", "a": "swing" },
+      { "q": "Jak jest po angielsku 'złapać piłkę'?", "a": "catch a ball" },
+      { "q": "Jak jest po angielsku 'rzucić piłkę'?", "a": "throw a ball" },
+      { "q": "Jak jest po angielsku 'raczkować'?", "a": "crawl" },
+      { "q": "Jak jest po angielsku 'robić fikołka'?", "a": "do a somersault" },
+      { "q": "Jak jest po angielsku 'jeździć na rowerze'?", "a": "ride a bike" },
+      { "q": "Jak jest po angielsku 'pływać'?", "a": "swim" },
+      { "q": "Jak jest po angielsku 'wspinać się'?", "a": "climb" },
+      { "q": "Jak jest po angielsku 'jeździć gokartem'?", "a": "drive a go-kart" },
+      { "q": "Jak jest po angielsku 'skakać na skakance'?", "a": "skip" },
+      { "q": "Jak jest po angielsku 'nurkować'?", "a": "dive" },
+      { "q": "Jak jest po angielsku 'latać'?", "a": "fly" },
+      { "q": "Jak jest po angielsku 'skakać'?", "a": "jump" },
+      { "q": "Jak jest po angielsku 'stać na głowie'?", "a": "stand on your head" },
+      { "q": "Jak jest po angielsku 'jeździć na wrotkach'?", "a": "roller skate" },
+      { "q": "Jak jest po angielsku 'jeździć konno'?", "a": "ride a horse" },
+      { "q": "Jak jest po angielsku 'grać w frisbee'?", "a": "play frisbee" },
+      { "q": "Jak jest po angielsku 'żonglować'?", "a": "juggle" }
+    ]
+  },
+  {
+    "category": "Everyday English - Zwroty",
+    "questions": [
+      { "q": "Jak powiesz 'Dobry pomysł!'?", "a": "Good idea!" },
+      { "q": "Jak powiesz 'Zaczynajmy!'?", "a": "Let's begin!" },
+      { "q": "Jak powiesz 'Chodźcie!' / 'Pospiesz się!'?", "a": "Come on!" },
+      { "q": "Jak powiesz 'Bardzo mi przykro'?", "a": "I'm really sorry" },
+      { "q": "Jak powiesz 'Chyba tak'?", "a": "I think so" },
+      { "q": "Jak zapytasz 'Co cię tak rozbawiło?'?", "a": "What's so funny?" }
+    ]
+  },
+  {
+    "category": "Sytuacje i Reakcje",
+    "questions": [
+      { "q": "Odpowiedz na: 'Excuse me. Is this our new classroom?'", "a": "Yes, it is." },
+      { "q": "Odpowiedz na: 'How do you spell your name?'", "a": "J-O-H-N (lub przeliterowanie własnego imienia)" },
+      { "q": "Odpowiedz na: 'What's the time?'", "a": "It's nearly 12 o'clock." },
+      { "q": "Odpowiedz na: 'Nice to meet you'", "a": "Nice to meet you, too" }
+    ]
+  }
 ]
