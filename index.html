@@ -2,13 +2,18 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Angielski Klasa 4 - Wybierz Kategorię</title>
+    <title>Platforma Edukacyjna - Quiz</title>
     <style>
         body { font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; padding-top: 50px; background: #f0f2f5; }
-        .quiz-container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 500px; min-height: 300px; }
-        .stats { display: flex; justify-content: space-between; color: #666; margin-bottom: 20px; }
+        .quiz-container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 500px; min-height: 350px; }
         .category-btn { width: 100%; padding: 15px; margin: 10px 0; background: #6f42c1; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: bold; transition: 0.3s; }
         .category-btn:hover { background: #5a32a3; transform: scale(1.02); }
+        .back-btn { background: #6c757d; margin-top: 20px; }
+        
+        /* Pasek postępu */
+        .progress-container { width: 100%; background: #e0e0e0; border-radius: 10px; height: 10px; margin-bottom: 20px; overflow: hidden; }
+        #progressBar { width: 0%; background: #6f42c1; height: 100%; transition: 0.4s ease; }
+        
         input { width: 100%; padding: 12px; margin: 15px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; }
         .btn { width: 100%; padding: 12px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
         #checkBtn { background: #007bff; color: white; }
@@ -21,135 +26,142 @@
 </head>
 <body>
 
-<div class="quiz-container" id="main-container">
-    <div id="category-screen">
-        <h2 style="text-align:center">Wybierz kategorię testu:</h2>
-        <div id="category-list">
-            <p style="text-align:center">Wczytywanie kategorii...</p>
-        </div>
+<div class="quiz-container">
+    <div id="index-screen">
+        <h2 style="text-align:center">Wybierz przedmiot/dział:</h2>
+        <div id="index-list">Wczytywanie...</div>
+    </div>
+
+    <div id="category-screen" class="hidden">
+        <h2 id="module-title" style="text-align:center">Wybierz kategorię:</h2>
+        <div id="category-list"></div>
+        <button class="btn back-btn" onclick="showIndex()">← Powrót do działów</button>
     </div>
 
     <div id="quiz-screen" class="hidden">
-        <div class="stats">
-            <span id="progress">Pytanie: 0/0</span>
-            <span id="score">Punkty: 0</span>
+        <div class="progress-container"><div id="progressBar"></div></div>
+        <div style="display: flex; justify-content: space-between; color: #666; font-size: 0.9em; margin-bottom: 10px;">
+            <span id="progress-text"></span>
+            <span id="score-text">Punkty: 0</span>
         </div>
-        <div style="width: 100%; background: #eee; border-radius: 10px; height: 10px; margin-bottom: 20px;">
-    <div id="progressBar" style="width: 0%; background: #6f42c1; height: 100%; border-radius: 10px; transition: 0.5s;"></div>
-</div>
-        <h2 id="question">Pytanie</h2>
+        <h2 id="question-text">Pytanie</h2>
         <div id="inputArea">
-            <input type="text" id="answerInput" placeholder="Twoja odpowiedź..." autocomplete="off" autofocus>
-            <button id="checkBtn" class="btn" onclick="checkAnswer()">Sprawdź odpowiedź</button>
+            <input type="text" id="answerInput" placeholder="Twoja odpowiedź..." autocomplete="off">
+            <button id="checkBtn" class="btn" onclick="checkAnswer()">Sprawdź</button>
         </div>
         <div id="feedback" class="hidden"></div>
-        <button id="nextBtn" class="btn hidden" onclick="displayQuestion()">Następne pytanie &rarr;</button>
+        <button id="nextBtn" class="btn hidden" onclick="displayQuestion()">Następne pytanie</button>
     </div>
 </div>
 
 <script>
-    let allData = [];
-    let quizData = [];
+    let currentModuleData = []; // Dane z wybranego pliku .json
+    let quizData = [];          // Pytania z wybranej kategorii
     let currentStep = 0;
     let score = 0;
     let wrongAnswers = [];
 
-    // 1. Pobieranie nowego formatu JSON
-    fetch('pytania.json?v=' + Date.now())
-        .then(response => response.json())
+    // Ładowanie spisu treści (index.json)
+    fetch('index.json?v=' + Date.now())
+        .then(res => res.json())
         .then(data => {
-            allData = data;
-            renderCategories();
+            const list = document.getElementById('index-list');
+            list.innerHTML = "";
+            data.forEach(item => {
+                const btn = document.createElement('button');
+                btn.className = 'category-btn';
+                btn.innerText = item.title;
+                btn.onclick = () => loadModule(item.file, item.title);
+                list.appendChild(btn);
+            });
         });
 
-    // 2. Wyświetlanie przycisków kategorii
+    function loadModule(file, title) {
+        fetch(file + '?v=' + Date.now())
+            .then(res => res.json())
+            .then(data => {
+                currentModuleData = data;
+                document.getElementById('module-title').innerText = title;
+                renderCategories();
+            });
+    }
+
     function renderCategories() {
         const list = document.getElementById('category-list');
         list.innerHTML = "";
-        allData.forEach((item, index) => {
+        currentModuleData.forEach((cat, idx) => {
             const btn = document.createElement('button');
             btn.className = 'category-btn';
-            btn.innerText = item.category;
-            btn.onclick = () => startQuiz(index);
+            btn.style.background = "#28a745"; // Inny kolor dla podkategorii
+            btn.innerText = cat.category;
+            btn.onclick = () => startQuiz(idx);
             list.appendChild(btn);
         });
+        document.getElementById('index-screen').classList.add('hidden');
+        document.getElementById('category-screen').classList.remove('hidden');
     }
 
-    // 3. Rozpoczęcie wybranego quizu
-    function startQuiz(index) {
-        quizData = allData[index].questions;
+    function startQuiz(categoryIdx) {
+        quizData = [...currentModuleData[categoryIdx].questions];
+        quizData.sort(() => Math.random() - 0.5); // Losowanie
         currentStep = 0;
         score = 0;
         wrongAnswers = [];
-        
         document.getElementById('category-screen').classList.add('hidden');
         document.getElementById('quiz-screen').classList.remove('hidden');
         displayQuestion();
     }
 
     function displayQuestion() {
-    if (currentStep < quizData.length) {
-        // --- LOGIKA PASKA POSTĘPU ---
-        // Obliczamy procent: (aktualne pytanie / suma pytań) * 100
-        const progressPercent = (currentStep / quizData.length) * 100;
-        document.getElementById('progressBar').style.width = progressPercent + "%";
-        // ----------------------------
-
-        document.getElementById('question').innerText = quizData[currentStep].q;
-        document.getElementById('progress').innerText = `Pytanie: ${currentStep + 1}/${quizData.length}`;
-        document.getElementById('score').innerText = `Punkty: ${score}`;
-        
-        document.getElementById('answerInput').value = "";
-        document.getElementById('answerInput').disabled = false;
-        document.getElementById('inputArea').classList.remove('hidden');
-        document.getElementById('feedback').className = 'hidden';
-        document.getElementById('nextBtn').classList.add('hidden');
-        document.getElementById('answerInput').focus();
-    } else {
-        // Gdy koniec, ustaw pasek na 100%
-        document.getElementById('progressBar').style.width = "100%";
-        showSummary();
+        if (currentStep < quizData.length) {
+            const pct = (currentStep / quizData.length) * 100;
+            document.getElementById('progressBar').style.width = pct + "%";
+            document.getElementById('question-text').innerText = quizData[currentStep].q;
+            document.getElementById('progress-text').innerText = `Pytanie ${currentStep+1}/${quizData.length}`;
+            
+            document.getElementById('answerInput').value = "";
+            document.getElementById('answerInput').disabled = false;
+            document.getElementById('inputArea').classList.remove('hidden');
+            document.getElementById('feedback').className = 'hidden';
+            document.getElementById('nextBtn').classList.add('hidden');
+            setTimeout(() => document.getElementById('answerInput').focus(), 10);
+        } else {
+            showSummary();
+        }
     }
-}
 
     function checkAnswer() {
-        const inputField = document.getElementById('answerInput');
-        const userInput = inputField.value.trim().toLowerCase();
-        const correctAnswer = quizData[currentStep].a;
+        const input = document.getElementById('answerInput');
+        const userAns = input.value.trim().toLowerCase();
+        const correctAns = quizData[currentStep].a;
         const feedback = document.getElementById('feedback');
 
-        inputField.disabled = true;
+        input.disabled = true;
         document.getElementById('inputArea').classList.add('hidden');
         feedback.classList.remove('hidden');
 
-        if (userInput === correctAnswer.toLowerCase()) {
+        if (userAns === correctAns.toLowerCase()) {
             score++;
-            feedback.innerText = "Poprawnie!";
+            feedback.innerText = "Brawo!";
             feedback.className = "correct-box";
         } else {
-            feedback.innerHTML = `Błąd!<br>Prawidłowa odpowiedź: <strong>${correctAnswer}</strong>`;
+            feedback.innerHTML = `Błąd!<br>Poprawnie: <strong>${correctAns}</strong>`;
             feedback.className = "wrong-box";
             wrongAnswers.push(quizData[currentStep]);
         }
+        document.getElementById('score-text').innerText = `Punkty: ${score}`;
         document.getElementById('nextBtn').classList.remove('hidden');
         currentStep++;
     }
 
     function showSummary() {
-        const percent = Math.round((score / quizData.length) * 100);
-        let html = `
-            <div style="text-align:center">
-                <h2>Koniec kategorii!</h2>
-                <p style="font-size: 2em; margin: 10px 0;">${score} / ${quizData.length}</p>
-                <p>Wynik: <strong>${percent}%</strong></p>
-                <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
-        `;
-
-        if (wrongAnswers.length > 0) {
-            html += `<button class="btn" style="background:#dc3545; color:white; margin-bottom: 10px;" onclick="retryErrors()">Powtórz tylko błędy</button>`;
+        document.getElementById('progressBar').style.width = "100%";
+        const pct = Math.round((score/quizData.length)*100);
+        let html = `<div style="text-align:center"><h2>Wynik: ${pct}%</h2>`;
+        if(wrongAnswers.length > 0) {
+            html += `<button class="btn" style="background:#dc3545; color:white; margin-bottom:10px" onclick="retryErrors()">Powtórz błędy</button>`;
         }
-        
-        html += `<button class="btn" style="background:#007bff; color:white;" onclick="location.reload()">Wróć do wyboru kategorii</button></div>`;
+        html += `<button class="btn" onclick="location.reload()">Wróć do początku</button></div>`;
         document.getElementById('quiz-screen').innerHTML = html;
     }
 
@@ -158,7 +170,13 @@
         wrongAnswers = [];
         currentStep = 0;
         score = 0;
-        location.reload(); // Najbezpieczniej przeładować, by odświeżyć UI
+        // Resetujemy widok quizu (uproszczenie: przeładuj UI bez reload strony)
+        location.reload(); 
+    }
+
+    function showIndex() {
+        document.getElementById('category-screen').classList.add('hidden');
+        document.getElementById('index-screen').classList.remove('hidden');
     }
 
     document.getElementById('answerInput').addEventListener("keypress", (e) => {
@@ -167,4 +185,3 @@
 </script>
 </body>
 </html>
-
