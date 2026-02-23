@@ -34,6 +34,9 @@
             <span id="progress">Pytanie: 0/0</span>
             <span id="score">Punkty: 0</span>
         </div>
+        <div style="width: 100%; background: #eee; border-radius: 10px; height: 10px; margin-bottom: 20px;">
+    <div id="progressBar" style="width: 0%; background: #6f42c1; height: 100%; border-radius: 10px; transition: 0.5s;"></div>
+</div>
         <h2 id="question">Pytanie</h2>
         <div id="inputArea">
             <input type="text" id="answerInput" placeholder="Twoja odpowiedź..." autocomplete="off" autofocus>
@@ -85,21 +88,29 @@
     }
 
     function displayQuestion() {
-        if (currentStep < quizData.length) {
-            document.getElementById('question').innerText = quizData[currentStep].q;
-            document.getElementById('progress').innerText = `Pytanie: ${currentStep + 1}/${quizData.length}`;
-            document.getElementById('score').innerText = `Punkty: ${score}`;
-            
-            document.getElementById('answerInput').value = "";
-            document.getElementById('answerInput').disabled = false;
-            document.getElementById('inputArea').classList.remove('hidden');
-            document.getElementById('feedback').className = 'hidden';
-            document.getElementById('nextBtn').classList.add('hidden');
-            document.getElementById('answerInput').focus();
-        } else {
-            showSummary();
-        }
+    if (currentStep < quizData.length) {
+        // --- LOGIKA PASKA POSTĘPU ---
+        // Obliczamy procent: (aktualne pytanie / suma pytań) * 100
+        const progressPercent = (currentStep / quizData.length) * 100;
+        document.getElementById('progressBar').style.width = progressPercent + "%";
+        // ----------------------------
+
+        document.getElementById('question').innerText = quizData[currentStep].q;
+        document.getElementById('progress').innerText = `Pytanie: ${currentStep + 1}/${quizData.length}`;
+        document.getElementById('score').innerText = `Punkty: ${score}`;
+        
+        document.getElementById('answerInput').value = "";
+        document.getElementById('answerInput').disabled = false;
+        document.getElementById('inputArea').classList.remove('hidden');
+        document.getElementById('feedback').className = 'hidden';
+        document.getElementById('nextBtn').classList.add('hidden');
+        document.getElementById('answerInput').focus();
+    } else {
+        // Gdy koniec, ustaw pasek na 100%
+        document.getElementById('progressBar').style.width = "100%";
+        showSummary();
     }
+}
 
     function checkAnswer() {
         const inputField = document.getElementById('answerInput');
@@ -156,3 +167,4 @@
 </script>
 </body>
 </html>
+
