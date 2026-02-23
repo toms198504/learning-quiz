@@ -115,9 +115,6 @@
     function displayQuestion() {
         if (currentStep < quizData.length) {
             // Wewnątrz funkcji displayQuestion()
-const qText = quizData[currentStep].q;
-document.getElementById('question-text').innerHTML = `${qText} 
-    <button onclick="speak('${qText}')" style="background:none; border:none; cursor:pointer; font-size:18px; vertical-align:middle;">🔊</button>`;
             const pct = (currentStep / quizData.length) * 100;
             document.getElementById('progressBar').style.width = pct + "%";
             document.getElementById('question-text').innerText = quizData[currentStep].q;
@@ -196,5 +193,6 @@ document.getElementById('question-text').innerHTML = `${qText}
 </script>
 </body>
 </html>
+
 
 
