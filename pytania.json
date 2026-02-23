@@ -1,6 +1,12 @@
 [
-    { "q": "Jak nazywa się stolica Francji?", "a": "Paryż" },
-    { "q": "Podaj wynik działania 15 + 27", "a": "42" },
-    { "q": "Która planeta jest najbliżej Słońca?", "a": "Merkury" },
-    { "q": "Kto napisał 'Pan Tadeusz'?", "a": "Adam Mickiewicz" }
+    { "q": "Przetłumacz na angielski: Ja potrafię pływać.", "a": "I can swim" },
+    { "q": "Przetłumacz na angielski: Ona nie potrafi śpiewać.", "a": "She can't sing" },
+    { "q": "Jak brzmi pełna forma słowa 'can't'?", "a": "cannot" },
+    { "q": "Przetłumacz pytanie: Czy ty potrafisz skakać?", "a": "Can you jump" },
+    { "q": "Uzupełnij zdanie: 'They ____ (potrafią) play football.'", "a": "can" },
+    { "q": "Jak powiesz: 'Mój brat nie potrafi gotować.'?", "a": "My brother can't cook" },
+    { "q": "Przetłumacz na polski: 'Can you help me?'", "a": "Czy możesz mi pomóc" },
+    { "q": "Odpowiedz przecząco: 'Can he fly?' (Nie, on nie potrafi).", "a": "No, he can't" },
+    { "q": "Przetłumacz: 'Ptaki potrafią latać.'", "a": "Birds can fly" },
+    { "q": "Ułóż pytanie z rozsypanki: 'you / dance / Can / ?'", "a": "Can you dance" }
 ]
