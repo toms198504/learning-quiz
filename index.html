@@ -141,10 +141,17 @@
         feedback.classList.remove('hidden');
 
         if (userAns === correctAns.toLowerCase()) {
-            score++;
-            feedback.innerText = "Brawo!";
-            feedback.className = "correct-box";
-        } else {
+    score++;
+    feedback.innerText = "Brawo!";
+    feedback.className = "correct-box";
+
+    // --- DODATEK: WYMOWA ---
+    // Jeśli uczymy się angielskiego, niech przeglądarka przeczyta słowo
+    let msg = new SpeechSynthesisUtterance(correctAns);
+    msg.lang = 'en-US'; // Możesz zmienić na 'en-GB' dla brytyjskiego
+    window.speechSynthesis.speak(msg);
+    // -----------------------
+} else {
             feedback.innerHTML = `Błąd!<br>Poprawnie: <strong>${correctAns}</strong>`;
             feedback.className = "wrong-box";
             wrongAnswers.push(quizData[currentStep]);
@@ -154,17 +161,26 @@
         currentStep++;
     }
 
-    function showSummary() {
-        document.getElementById('progressBar').style.width = "100%";
-        const pct = Math.round((score/quizData.length)*100);
-        let html = `<div style="text-align:center"><h2>Wynik: ${pct}%</h2>`;
-        if(wrongAnswers.length > 0) {
-            html += `<button class="btn" style="background:#dc3545; color:white; margin-bottom:10px" onclick="retryErrors()">Powtórz błędy</button>`;
-        }
-        html += `<button class="btn" onclick="location.reload()">Wróć do początku</button></div>`;
-        document.getElementById('quiz-screen').innerHTML = html;
-    }
+   function showSummary() {
+    const pct = Math.round((score / quizData.length) * 100);
+    let stars = "⭐";
+    if (pct >= 70) stars = "⭐⭐";
+    if (pct >= 95) stars = "⭐⭐⭐";
 
+    let html = `
+        <div style="text-align:center">
+            <h1 style="font-size: 50px; margin: 0;">${stars}</h1>
+            <h2>Twój wynik to ${score} / ${quizData.length}</h2>
+            <p>Świetnie Ci idzie!</p>
+    `;
+    
+    if (wrongAnswers.length > 0) {
+        html += `<button class="btn" style="background:#dc3545; color:white; margin-bottom:10px" onclick="retryErrors()">Powtórz te, które sprawiły trudność</button>`;
+    }
+    
+    html += `<button class="btn" onclick="location.reload()">Wróć do menu</button></div>`;
+    document.getElementById('quiz-screen').innerHTML = html;
+}
     function retryErrors() {
         quizData = [...wrongAnswers];
         wrongAnswers = [];
@@ -185,3 +201,4 @@
 </script>
 </body>
 </html>
+
