@@ -43,7 +43,7 @@
     <div id="category-screen" class="hidden">
         <h2 id="module-title" style="text-align:center">Działy</h2>
         <div id="category-list"></div>
-        <button class="btn btn-gray" onclick="showIndex()">← Powrót</button>
+        <button class="btn btn-gray" onclick="showIndex()">← Powrót do przedmiotów</button>
     </div>
 
     <div id="quiz-screen" class="hidden">
@@ -218,13 +218,20 @@
             html += `<button class="btn btn-s" onclick="retryErrors()">Powtórz tylko błędy (${wrongAnswers.length})</button>`;
         }
         
-        html += `<button class="btn btn-p" onclick="location.reload()">Menu główne</button></div>`;
+        html += `<button class="btn btn-p" onclick="backToCategories()">Powrót do tematów</button>`;
+        html += `<button class="btn btn-gray" onclick="location.reload()">Menu główne (Przedmioty)</button></div>`;
         sum.innerHTML = html;
     }
 
     function retryErrors() {
         quizData = [...wrongAnswers];
         startNewSet();
+    }
+
+    function backToCategories() {
+        document.getElementById('quiz-screen').classList.add('hidden');
+        document.getElementById('summary-content').classList.add('hidden');
+        document.getElementById('category-screen').classList.remove('hidden');
     }
 
     function showIndex() {
