@@ -3,16 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platforma Edukacyjna - Uniwersalny Quiz</title>
+    <title>Uniwersalna Platforma Edukacyjna</title>
     <style>
-        :root {
-            --primary: #6f42c1;
-            --secondary: #28a745;
-            --bg: #f0f2f5;
-            --text: #333;
-        }
+        :root { --primary: #6f42c1; --secondary: #28a745; --bg: #f0f2f5; --text: #333; }
         body { font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; padding: 20px; background: var(--bg); color: var(--text); }
-        .quiz-container { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 500px; min-height: 400px; }
+        .quiz-container { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 550px; min-height: 400px; }
         
         .btn { width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 12px; cursor: pointer; font-size: 16px; font-weight: bold; transition: 0.2s; }
         .btn-p { background: var(--primary); color: white; }
@@ -24,11 +19,13 @@
         .progress-container { width: 100%; background: #e0e0e0; border-radius: 10px; height: 12px; margin-bottom: 20px; overflow: hidden; }
         #progressBar { width: 0%; background: var(--primary); height: 100%; transition: 0.4s ease; }
         
-        input { width: 100%; padding: 14px; margin: 15px 0; border: 2px solid #ddd; border-radius: 10px; font-size: 18px; box-sizing: border-box; }
-        #question-text { font-size: 22px; margin-bottom: 20px; text-align: center; font-weight: bold; line-height: 1.4; }
-        .stats { display: flex; justify-content: space-between; color: #666; font-size: 0.9em; margin-bottom: 10px; }
+        /* Styl dla luki wewnątrz tekstu */
+        .gap-input { padding: 5px; border: 2px solid var(--primary); border-radius: 6px; font-size: 18px; text-align: center; background: #fdfbff; }
+        #answerInputFull { width: 100%; padding: 14px; margin: 15px 0; border: 2px solid #ddd; border-radius: 10px; font-size: 18px; box-sizing: border-box; }
         
-        #feedback { margin-top: 15px; padding: 20px; border-radius: 12px; text-align: center; font-weight: bold; font-size: 1.1em; }
+        #question-text { font-size: 20px; margin-bottom: 25px; text-align: center; line-height: 1.6; }
+        .stats { display: flex; justify-content: space-between; color: #666; font-size: 0.9em; margin-bottom: 10px; }
+        #feedback { margin-top: 15px; padding: 20px; border-radius: 12px; text-align: center; font-weight: bold; }
         .correct-box { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
         .wrong-box { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
         .hidden { display: none; }
@@ -39,34 +36,33 @@
 
 <div class="quiz-container">
     <div id="index-screen">
-        <h2 style="text-align:center">Twoje Przedmioty</h2>
+        <h2 style="text-align:center">Wybierz Przedmiot</h2>
         <div id="index-list">Wczytywanie...</div>
     </div>
 
     <div id="category-screen" class="hidden">
-        <h2 id="module-title" style="text-align:center">Wybierz temat</h2>
+        <h2 id="module-title" style="text-align:center">Działy</h2>
         <div id="category-list"></div>
         <button class="btn btn-gray" onclick="showIndex()">← Powrót</button>
     </div>
 
     <div id="quiz-screen" class="hidden">
         <div class="progress-container"><div id="progressBar"></div></div>
-        <div class="stats">
-            <span id="progress-text"></span>
-            <span id="score-text">Punkty: 0</span>
-        </div>
+        <div class="stats"><span id="progress-text"></span><span id="score-text">Punkty: 0</span></div>
         
-        <h2 id="question-text">Pytanie</h2>
+        <div id="question-text">Pytanie</div>
 
         <div id="input-mode" class="hidden">
-            <input type="text" id="answerInput" placeholder="Twoja odpowiedź..." autocomplete="off">
-            <button class="btn btn-p" onclick="checkAnswer()">Sprawdź</button>
+            <div id="full-input-div">
+                <input type="text" id="answerInputFull" placeholder="Twoja odpowiedź..." autocomplete="off">
+            </div>
+            <button class="btn btn-p" onclick="checkAnyInput()">Sprawdź odpowiedź</button>
         </div>
 
         <div id="flash-mode" class="hidden">
             <button id="revealBtn" class="btn btn-p" onclick="revealAnswer()">Pokaż odpowiedź</button>
             <div id="self-eval" class="hidden">
-                <p style="text-align:center;">Czy wiedziałeś?</p>
+                <p style="text-align:center;">Czy Twoja odpowiedź była dobra?</p>
                 <div class="flex-gap">
                     <button class="btn btn-s" onclick="selfJudge(true)">TAK ✅</button>
                     <button class="btn btn-d" onclick="selfJudge(false)">NIE ❌</button>
@@ -75,57 +71,36 @@
         </div>
 
         <div id="feedback" class="hidden"></div>
-        <button id="nextBtn" class="btn btn-gray hidden" onclick="displayQuestion()">Następne →</button>
+        <button id="nextBtn" class="btn btn-gray hidden" onclick="displayQuestion()">Dalej →</button>
     </div>
 </div>
 
 <script>
-    let allModules = [];      
-    let currentModule = [];   
-    let quizData = [];        
-    let currentStep = 0;
-    let score = 0;
-    let wrongAnswers = [];
-    let currentMode = "wpisywanie";
+    let allModules = [], currentModule = [], quizData = [], currentStep = 0, score = 0, wrongAnswers = [], currentMode = "wpisywanie";
 
-    fetch('index.json?v=' + Date.now())
-        .then(res => res.json())
-        .then(data => {
-            allModules = data;
-            renderIndex();
-        });
+    fetch('index.json?v=' + Date.now()).then(res => res.json()).then(data => { allModules = data; renderIndex(); });
 
     function renderIndex() {
-        const list = document.getElementById('index-list');
-        list.innerHTML = "";
+        const list = document.getElementById('index-list'); list.innerHTML = "";
         allModules.forEach(item => {
-            const btn = document.createElement('button');
-            btn.className = 'btn btn-p';
-            btn.innerText = item.title;
-            btn.onclick = () => loadModule(item.file, item.title, item.type);
+            const btn = document.createElement('button'); btn.className = 'btn btn-p';
+            btn.innerText = item.title; btn.onclick = () => loadModule(item.file, item.title, item.type);
             list.appendChild(btn);
         });
     }
 
     function loadModule(file, title, type) {
         currentMode = type || "wpisywanie";
-        fetch(file + '?v=' + Date.now())
-            .then(res => res.json())
-            .then(data => {
-                currentModule = data;
-                document.getElementById('module-title').innerText = title;
-                renderCategories();
-            });
+        fetch(file + '?v=' + Date.now()).then(res => res.json()).then(data => {
+            currentModule = data; document.getElementById('module-title').innerText = title; renderCategories();
+        });
     }
 
     function renderCategories() {
-        const list = document.getElementById('category-list');
-        list.innerHTML = "";
+        const list = document.getElementById('category-list'); list.innerHTML = "";
         currentModule.forEach((cat, idx) => {
-            const btn = document.createElement('button');
-            btn.className = 'btn btn-s';
-            btn.innerText = cat.category;
-            btn.onclick = () => prepareQuiz(idx);
+            const btn = document.createElement('button'); btn.className = 'btn btn-s';
+            btn.innerText = cat.category; btn.onclick = () => prepareQuiz(idx);
             list.appendChild(btn);
         });
         document.getElementById('index-screen').classList.add('hidden');
@@ -133,8 +108,7 @@
     }
 
     function prepareQuiz(idx) {
-        quizData = [...currentModule[idx].questions];
-        quizData.sort(() => Math.random() - 0.5);
+        quizData = [...currentModule[idx].questions]; quizData.sort(() => Math.random() - 0.5);
         currentStep = 0; score = 0; wrongAnswers = [];
         document.getElementById('category-screen').classList.add('hidden');
         document.getElementById('quiz-screen').classList.remove('hidden');
@@ -143,90 +117,103 @@
 
     function displayQuestion() {
         if (currentStep < quizData.length) {
-            const pct = (currentStep / quizData.length) * 100;
-            document.getElementById('progressBar').style.width = pct + "%";
+            const qObj = quizData[currentStep];
+            document.getElementById('progressBar').style.width = (currentStep / quizData.length * 100) + "%";
             document.getElementById('progress-text').innerText = `Pytanie ${currentStep + 1}/${quizData.length}`;
             document.getElementById('score-text').innerText = `Punkty: ${score}`;
-            document.getElementById('question-text').innerText = quizData[currentStep].q;
             document.getElementById('feedback').classList.add('hidden');
             document.getElementById('nextBtn').classList.add('hidden');
-            document.getElementById('self-eval').classList.add('hidden');
+
+            const hasGap = qObj.q.includes("[") && qObj.q.includes("]");
 
             if (currentMode === "fiszki") {
+                // Zawsze tryb fiszek (nawet jeśli są nawiasy - czyścimy je do wyświetlania)
+                document.getElementById('question-text').innerText = qObj.q.replace(/\[|\]/g, "");
                 document.getElementById('input-mode').classList.add('hidden');
                 document.getElementById('flash-mode').classList.remove('hidden');
                 document.getElementById('revealBtn').classList.remove('hidden');
+                document.getElementById('self-eval').classList.add('hidden');
             } else {
+                // Tryb wpisywania
                 document.getElementById('flash-mode').classList.add('hidden');
                 document.getElementById('input-mode').classList.remove('hidden');
-                const input = document.getElementById('answerInput');
-                input.value = ""; input.disabled = false;
-                setTimeout(() => input.focus(), 50);
+                
+                if (hasGap) {
+                    const gapMatch = qObj.q.match(/\[(.*?)\]/);
+                    const textWithInp = qObj.q.replace(/\[.*?\]/, `<input type="text" id="gapInput" class="gap-input" style="width: ${gapMatch[1].length * 15 + 30}px">`);
+                    document.getElementById('question-text').innerHTML = textWithInp;
+                    document.getElementById('full-input-div').classList.add('hidden');
+                    setTimeout(() => document.getElementById('gapInput').focus(), 50);
+                } else {
+                    document.getElementById('question-text').innerText = qObj.q;
+                    document.getElementById('full-input-div').classList.remove('hidden');
+                    const inp = document.getElementById('answerInputFull'); inp.value = ""; inp.disabled = false;
+                    setTimeout(() => inp.focus(), 50);
+                }
             }
         } else { showSummary(); }
     }
 
-    function checkAnswer() {
-        const input = document.getElementById('answerInput');
-        const userAns = input.value.trim().toLowerCase();
-        const correctAns = quizData[currentStep].a;
-        input.disabled = true;
-        document.getElementById('input-mode').classList.add('hidden');
+    function checkAnyInput() {
+        const gapInp = document.getElementById('gapInput');
+        const fullInp = document.getElementById('answerInputFull');
+        let userVal = "";
+        
+        if (gapInp) userVal = gapInp.value.trim().toLowerCase();
+        else userVal = fullInp.value.trim().toLowerCase();
+        
+        const correctVal = quizData[currentStep].a.toLowerCase();
         const feedback = document.getElementById('feedback');
         feedback.classList.remove('hidden');
 
-        if (userAns === correctAns.toLowerCase()) {
-            score++;
-            feedback.innerText = "Brawo!";
-            feedback.className = "correct-box";
+        if (userAnsClean(userVal) === userAnsClean(correctVal)) {
+            score++; feedback.innerText = "Dobrze!"; feedback.className = "correct-box";
         } else {
-            feedback.innerHTML = `Poprawnie: <strong>${correctAns}</strong>`;
+            feedback.innerHTML = `Błąd. Poprawnie: <strong>${quizData[currentStep].a}</strong>`;
             feedback.className = "wrong-box";
             wrongAnswers.push(quizData[currentStep]);
         }
+        document.getElementById('input-mode').classList.add('hidden');
         document.getElementById('nextBtn').classList.remove('hidden');
         currentStep++;
     }
 
+    function userAnsClean(str) { return str.replace(/[.,!?;:]/g, ""); }
+
     function revealAnswer() {
-        const feedback = document.getElementById('feedback');
-        feedback.innerHTML = `Odpowiedź:<br><strong>${quizData[currentStep].a}</strong>`;
-        feedback.className = "correct-box";
-        feedback.classList.remove('hidden');
+        const f = document.getElementById('feedback');
+        f.innerHTML = `Odpowiedź: <strong>${quizData[currentStep].a}</strong>`;
+        f.className = "correct-box"; f.classList.remove('hidden');
         document.getElementById('revealBtn').classList.add('hidden');
         document.getElementById('self-eval').classList.remove('hidden');
     }
 
-    function selfJudge(isCorrect) {
-        if (isCorrect) score++;
-        else wrongAnswers.push(quizData[currentStep]);
-        currentStep++;
-        displayQuestion();
+    function selfJudge(ok) {
+        if (ok) score++; else wrongAnswers.push(quizData[currentStep]);
+        currentStep++; displayQuestion();
     }
 
     function showSummary() {
-        document.getElementById('progressBar').style.width = "100%";
-        const pct = Math.round((score / quizData.length) * 100);
-        let stars = pct >= 95 ? "⭐⭐⭐" : (pct >= 70 ? "⭐⭐" : "⭐");
-        let html = `<div style="text-align:center"><h1 style="font-size:60px;margin:0;">${stars}</h1>
-                    <h2>Wynik: ${score} / ${quizData.length}</h2>`;
-        if (wrongAnswers.length > 0) html += `<button class="btn btn-s" onclick="retryErrors()">Powtórz błędy (${wrongAnswers.length})</button>`;
+        const pct = Math.round(score/quizData.length*100);
+        let html = `<div style="text-align:center"><h2>Wynik: ${score}/${quizData.length} (${pct}%)</h2>`;
+        if (wrongAnswers.length > 0) html += `<button class="btn btn-s" onclick="retryErrors()">Powtórz błędy</button>`;
         html += `<button class="btn btn-p" onclick="location.reload()">Menu główne</button></div>`;
         document.getElementById('quiz-screen').innerHTML = html;
     }
 
     function retryErrors() {
         quizData = [...wrongAnswers]; wrongAnswers = []; currentStep = 0; score = 0;
-        location.reload(); 
+        // Reset interfejsu i start od nowa (uproszczony)
+        displayQuestion();
     }
 
-    function showIndex() {
-        document.getElementById('category-screen').classList.add('hidden');
-        document.getElementById('index-screen').classList.remove('hidden');
-    }
+    function showIndex() { document.getElementById('category-screen').classList.add('hidden'); document.getElementById('index-screen').classList.remove('hidden'); }
 
-    document.getElementById('answerInput').addEventListener("keypress", (e) => {
-        if (e.key === "Enter" && !document.getElementById('answerInput').disabled) checkAnswer();
+    window.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            if (!document.getElementById('input-mode').classList.contains('hidden')) checkAnyInput();
+            else if (!document.getElementById('nextBtn').classList.contains('hidden')) displayQuestion();
+        }
     });
 </script>
 </body>
