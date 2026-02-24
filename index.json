@@ -1,4 +1,5 @@
 [
-  { "title": "Angielski Klasa 4 - Dział 4", "file": "angielski_kl4_d4.json" },
-  { "title": "Biologia Klasa 5 - Wirusy i bakterie", "file": "biologia_kl5_d2.json" }
+  { "title": "Angielski Klasa 4 - Dział 4", "file": "angielski_kl4_d4.json", "type": "wpisywanie" },
+  { "title": "Biologia Klasa 5 - Wirusy i bakterie", "file": "biologia_kl5_d2.json", "type": "fiszki" }
+
 ]
