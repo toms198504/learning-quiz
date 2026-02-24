@@ -1,0 +1,87 @@
+[
+  {
+    "category": "Wirusy - podstawowe informacje",
+    "questions": [
+      {
+        "q": "Wirusów nie zaliczamy do organizmów, ponieważ nie mają budowy [komórkowej] i nie wykazują czynności życiowych.",
+        "a": "komórkowej"
+      },
+      {
+        "q": "Cząstka wirusa składa się z kwasu nukleinowego oraz otoczki zbudowanej z [białek].",
+        "a": "białek"
+      },
+      {
+        "q": "Wirusy [namnażają] się wyłącznie wewnątrz żywych komórek organizmów gospodarza.",
+        "a": "namnażają"
+      }
+    ]
+  },
+  {
+    "category": "Bakterie - budowa i występowanie",
+    "questions": [
+      {
+        "q": "Bakterie są organizmami jednokomórkowymi i [bezjądrowymi], co oznacza, że nie mają jądra komórkowego.",
+        "a": "bezjądrowymi"
+      },
+      {
+        "q": "Podstawowe kształty bakterii to formy kuliste, podłużne oraz [spiralne].",
+        "a": "spiralne"
+      },
+      {
+        "q": "Skupiska kulistych bakterii przypominające sznur koralików to [paciorkowce].",
+        "a": "paciorkowce"
+      }
+    ]
+  },
+  {
+    "category": "Czynności życiowe bakterii",
+    "questions": [
+      {
+        "q": "Bakterie rozmnażają się bezpłciowo poprzez [podział] komórki.",
+        "a": "podział"
+      },
+      {
+        "q": "Bakterie pobierające pokarm z innych żywych organizmów nazywamy [pasożytami].",
+        "a": "pasożytami"
+      },
+      {
+        "q": "Beztlenowy rodzaj oddychania występujący u niektórych bakterii to [fermentacja].",
+        "a": "fermentacja"
+      }
+    ]
+  },
+  {
+    "category": "Znaczenie bakterii",
+    "questions": [
+      {
+        "q": "Bakterie żyjące w jelicie grubym człowieka wytwarzają niezbędne witaminy z grupy [B i K].",
+        "a": "B i K"
+      },
+      {
+        "q": "Bakterie kwasu mlekowego wykorzystuje się do produkcji [jogurtów] i kefirów.",
+        "a": "jogurtów"
+      },
+      {
+        "q": "Bakterie żyjące w korzeniach roślin motylkowych potrafią wchłaniać [azot] z powietrza.",
+        "a": "azot"
+      }
+    ]
+  },
+  {
+    "category": "Choroby i drogi zakażenia",
+    "questions": [
+      {
+        "q": "Grypa, odra i ospa wietrzna to przykłady chorób [wirusowych].",
+        "a": "wirusowych"
+      },
+      {
+        "q": "Borelioza, tężec i gruźlica to przykłady chorób [bakteryjnych].",
+        "a": "bakteryjnych"
+      },
+      {
+        "q": "Charakterystyczny objaw boreliozy pojawiający się na skórze po ukąszeniu kleszcza to [rumień].",
+        "a": "rumień"
+      }
+    ]
+  }
+]
