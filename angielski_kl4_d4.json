@@ -37,13 +37,14 @@
   {
     "category": "Sytuacje i Reakcje",
     "questions": [
-      { "q": "Odpowiedz na: 'Excuse me. Is this our new classroom?'", "a": ["Yes, it is.","No, it isn't", "No, it is not", "No, it's not" ],
+      { "q": "Odpowiedz na: 'Excuse me. Is this our new classroom?'", "a": ["Yes, it is.","No, it isn't", "No, it is not", "No, it's not" ]},
       { "q": "Jak jest po angielsku: 'Jak się pisze twoje imię?'", "a": "How do you spell your name?" },
       { "q": "Jak jest po angielsku: 'Jest prawie 12.00'" , "a": "It's nearly 12 o'clock" },
       { "q": "Odpowiedz na: 'Nice to meet you'", "a": "Nice to meet you, too" }
     ]
   }
 ]
+
 
 
 
