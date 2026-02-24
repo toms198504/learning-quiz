@@ -163,26 +163,42 @@
     }
 
     function checkAnyInput() {
-        const gapInp = document.getElementById('gapInput');
-        const fullInp = document.getElementById('answerInputFull');
-        let userVal = gapInp ? gapInp.value : fullInp.value;
-        userVal = userVal.trim().toLowerCase();
-        
-        const correctVal = quizData[currentStep].a.toLowerCase();
-        const feedback = document.getElementById('feedback');
-        feedback.classList.remove('hidden');
+    const gapInp = document.getElementById('gapInput');
+    const fullInp = document.getElementById('answerInputFull');
+    let userVal = gapInp ? gapInp.value : fullInp.value;
+    userVal = clean(userVal.trim().toLowerCase());
+    
+    const correctData = quizData[currentStep].a;
+    let isCorrect = false;
 
-        if (clean(userVal) === clean(correctVal)) {
-            score++; feedback.innerText = "Dobrze!"; feedback.className = "correct-box";
-        } else {
-            feedback.innerHTML = `Poprawnie: <strong>${quizData[currentStep].a}</strong>`;
-            feedback.className = "wrong-box";
-            wrongAnswers.push(quizData[currentStep]);
-        }
-        document.getElementById('input-mode').classList.add('hidden');
-        document.getElementById('nextBtn').classList.remove('hidden');
-        currentStep++;
+    // Sprawdzamy, czy "a" jest listą, czy pojedynczym tekstem
+    if (Array.isArray(correctData)) {
+        // Jeśli to lista, sprawdź czy userVal pasuje do którejkolwiek
+        isCorrect = correctData.some(ans => clean(ans.toLowerCase()) === userVal);
+    } else {
+        // Jeśli to pojedynczy tekst, sprawdź klasycznie
+        isCorrect = clean(correctData.toLowerCase()) === userVal;
     }
+
+    const feedback = document.getElementById('feedback');
+    feedback.classList.remove('hidden');
+
+    if (isCorrect) {
+        score++; 
+        feedback.innerText = "Dobrze!"; 
+        feedback.className = "correct-box";
+    } else {
+        // Jeśli jest kilka odpowiedzi, pokaż pierwszą z brzegu lub wszystkie
+        const displayAns = Array.isArray(correctData) ? correctData.join(" lub ") : correctData;
+        feedback.innerHTML = `Błąd. Poprawnie: <strong>${displayAns}</strong>`;
+        feedback.className = "wrong-box";
+        wrongAnswers.push(quizData[currentStep]);
+    }
+    
+    document.getElementById('input-mode').classList.add('hidden');
+    document.getElementById('nextBtn').classList.remove('hidden');
+    currentStep++;
+}
 
     function clean(str) { return str.replace(/[.,!?;:]/g, "").trim(); }
 
@@ -249,3 +265,4 @@
 </script>
 </body>
 </html>
+
