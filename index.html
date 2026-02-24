@@ -3,75 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platforma Edukacyjna</title>
+    <title>Platforma Edukacyjna - Uniwersalny Quiz</title>
     <style>
         :root {
-            --primary-color: #6f42c1;
-            --secondary-color: #28a745;
-            --bg-color: #f0f2f5;
-            --text-color: #333;
+            --primary: #6f42c1;
+            --secondary: #28a745;
+            --bg: #f0f2f5;
+            --text: #333;
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: center; padding: 20px; background: var(--bg-color); color: var(--text-color); }
+        body { font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; padding: 20px; background: var(--bg); color: var(--text); }
         .quiz-container { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 500px; min-height: 400px; }
         
-        /* Przyciski */
-        .btn { width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 12px; cursor: pointer; font-size: 16px; font-weight: bold; transition: all 0.2s; }
-        .category-btn { background: var(--primary-color); color: white; }
-        .subcategory-btn { background: var(--secondary-color); color: white; }
-        .btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
-        .back-btn { background: #6c757d; color: white; margin-top: 20px; }
+        .btn { width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 12px; cursor: pointer; font-size: 16px; font-weight: bold; transition: 0.2s; }
+        .btn-p { background: var(--primary); color: white; }
+        .btn-s { background: var(--secondary); color: white; }
+        .btn-d { background: #dc3545; color: white; }
+        .btn-gray { background: #6c757d; color: white; }
+        .btn:hover { filter: brightness(1.1); transform: translateY(-2px); }
         
-        /* Pasek postępu */
         .progress-container { width: 100%; background: #e0e0e0; border-radius: 10px; height: 12px; margin-bottom: 20px; overflow: hidden; }
-        #progressBar { width: 0%; background: var(--primary-color); height: 100%; transition: 0.4s ease; }
+        #progressBar { width: 0%; background: var(--primary); height: 100%; transition: 0.4s ease; }
         
-        /* Interfejs Quizu */
         input { width: 100%; padding: 14px; margin: 15px 0; border: 2px solid #ddd; border-radius: 10px; font-size: 18px; box-sizing: border-box; }
-        input:focus { border-color: var(--primary-color); outline: none; }
-        #question-text { font-size: 24px; margin-bottom: 20px; text-align: center; font-weight: bold; }
+        #question-text { font-size: 22px; margin-bottom: 20px; text-align: center; font-weight: bold; line-height: 1.4; }
         .stats { display: flex; justify-content: space-between; color: #666; font-size: 0.9em; margin-bottom: 10px; }
         
-        /* Komunikaty */
         #feedback { margin-top: 15px; padding: 20px; border-radius: 12px; text-align: center; font-weight: bold; font-size: 1.1em; }
         .correct-box { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
         .wrong-box { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
         .hidden { display: none; }
-        
-        hr { border: 0; border-top: 1px solid #eee; margin: 20px 0; }
+        .flex-gap { display: flex; gap: 10px; }
     </style>
 </head>
 <body>
 
 <div class="quiz-container">
     <div id="index-screen">
-        <h2 style="text-align:center">Wybierz Przedmiot / Dział</h2>
-        <div id="index-list">Wczytywanie listy...</div>
+        <h2 style="text-align:center">Twoje Przedmioty</h2>
+        <div id="index-list">Wczytywanie...</div>
     </div>
 
     <div id="category-screen" class="hidden">
-        <h2 id="module-title" style="text-align:center">Wybierz Kategorię</h2>
+        <h2 id="module-title" style="text-align:center">Wybierz temat</h2>
         <div id="category-list"></div>
-        <button class="btn back-btn" onclick="showIndex()">← Powrót do menu</button>
+        <button class="btn btn-gray" onclick="showIndex()">← Powrót</button>
     </div>
 
     <div id="quiz-screen" class="hidden">
         <div class="progress-container"><div id="progressBar"></div></div>
         <div class="stats">
-            <span id="progress-text">Pytanie 0/0</span>
+            <span id="progress-text"></span>
             <span id="score-text">Punkty: 0</span>
         </div>
         
-        <div id="question-area">
-            <h2 id="question-text">Pytanie</h2>
+        <h2 id="question-text">Pytanie</h2>
+
+        <div id="input-mode" class="hidden">
+            <input type="text" id="answerInput" placeholder="Twoja odpowiedź..." autocomplete="off">
+            <button class="btn btn-p" onclick="checkAnswer()">Sprawdź</button>
         </div>
 
-        <div id="input-area">
-            <input type="text" id="answerInput" placeholder="Wpisz odpowiedź..." autocomplete="off" autofocus>
-            <button id="checkBtn" class="btn category-btn" onclick="checkAnswer()">Sprawdź</button>
+        <div id="flash-mode" class="hidden">
+            <button id="revealBtn" class="btn btn-p" onclick="revealAnswer()">Pokaż odpowiedź</button>
+            <div id="self-eval" class="hidden">
+                <p style="text-align:center;">Czy wiedziałeś?</p>
+                <div class="flex-gap">
+                    <button class="btn btn-s" onclick="selfJudge(true)">TAK ✅</button>
+                    <button class="btn btn-d" onclick="selfJudge(false)">NIE ❌</button>
+                </div>
+            </div>
         </div>
 
         <div id="feedback" class="hidden"></div>
-        <button id="nextBtn" class="btn back-btn hidden" onclick="displayQuestion()">Następne pytanie →</button>
+        <button id="nextBtn" class="btn btn-gray hidden" onclick="displayQuestion()">Następne →</button>
     </div>
 </div>
 
@@ -82,17 +86,13 @@
     let currentStep = 0;
     let score = 0;
     let wrongAnswers = [];
+    let currentMode = "wpisywanie";
 
-    // 1. Ładowanie spisu treści
     fetch('index.json?v=' + Date.now())
         .then(res => res.json())
         .then(data => {
             allModules = data;
             renderIndex();
-        })
-        .catch(err => {
-            document.getElementById('index-list').innerText = "Błąd wczytywania index.json!";
-            console.error(err);
         });
 
     function renderIndex() {
@@ -100,15 +100,15 @@
         list.innerHTML = "";
         allModules.forEach(item => {
             const btn = document.createElement('button');
-            btn.className = 'btn category-btn';
+            btn.className = 'btn btn-p';
             btn.innerText = item.title;
-            btn.onclick = () => loadModule(item.file, item.title);
+            btn.onclick = () => loadModule(item.file, item.title, item.type);
             list.appendChild(btn);
         });
     }
 
-    // 2. Ładowanie pliku z działem
-    function loadModule(file, title) {
+    function loadModule(file, title, type) {
+        currentMode = type || "wpisywanie";
         fetch(file + '?v=' + Date.now())
             .then(res => res.json())
             .then(data => {
@@ -123,7 +123,7 @@
         list.innerHTML = "";
         currentModule.forEach((cat, idx) => {
             const btn = document.createElement('button');
-            btn.className = 'btn subcategory-btn';
+            btn.className = 'btn btn-s';
             btn.innerText = cat.category;
             btn.onclick = () => prepareQuiz(idx);
             list.appendChild(btn);
@@ -132,14 +132,10 @@
         document.getElementById('category-screen').classList.remove('hidden');
     }
 
-    // 3. Przygotowanie pytań z kategorii
     function prepareQuiz(idx) {
         quizData = [...currentModule[idx].questions];
-        quizData.sort(() => Math.random() - 0.5); // Losowanie
-        currentStep = 0;
-        score = 0;
-        wrongAnswers = [];
-        
+        quizData.sort(() => Math.random() - 0.5);
+        currentStep = 0; score = 0; wrongAnswers = [];
         document.getElementById('category-screen').classList.add('hidden');
         document.getElementById('quiz-screen').classList.remove('hidden');
         displayQuestion();
@@ -151,92 +147,77 @@
             document.getElementById('progressBar').style.width = pct + "%";
             document.getElementById('progress-text').innerText = `Pytanie ${currentStep + 1}/${quizData.length}`;
             document.getElementById('score-text').innerText = `Punkty: ${score}`;
-            
             document.getElementById('question-text').innerText = quizData[currentStep].q;
-
-            document.getElementById('answerInput').value = "";
-            document.getElementById('answerInput').disabled = false;
-            document.getElementById('input-area').classList.remove('hidden');
-            document.getElementById('feedback').className = 'hidden';
+            document.getElementById('feedback').classList.add('hidden');
             document.getElementById('nextBtn').classList.add('hidden');
-            
-            setTimeout(() => document.getElementById('answerInput').focus(), 50);
-        } else {
-            showSummary();
-        }
+            document.getElementById('self-eval').classList.add('hidden');
+
+            if (currentMode === "fiszki") {
+                document.getElementById('input-mode').classList.add('hidden');
+                document.getElementById('flash-mode').classList.remove('hidden');
+                document.getElementById('revealBtn').classList.remove('hidden');
+            } else {
+                document.getElementById('flash-mode').classList.add('hidden');
+                document.getElementById('input-mode').classList.remove('hidden');
+                const input = document.getElementById('answerInput');
+                input.value = ""; input.disabled = false;
+                setTimeout(() => input.focus(), 50);
+            }
+        } else { showSummary(); }
     }
 
     function checkAnswer() {
         const input = document.getElementById('answerInput');
         const userAns = input.value.trim().toLowerCase();
         const correctAns = quizData[currentStep].a;
-        const feedback = document.getElementById('feedback');
-
         input.disabled = true;
-        document.getElementById('input-area').classList.add('hidden');
+        document.getElementById('input-mode').classList.add('hidden');
+        const feedback = document.getElementById('feedback');
         feedback.classList.remove('hidden');
 
         if (userAns === correctAns.toLowerCase()) {
             score++;
-            feedback.innerText = "Brawo! Poprawna odpowiedź.";
+            feedback.innerText = "Brawo!";
             feedback.className = "correct-box";
         } else {
-            feedback.innerHTML = `Ups! Prawidłowa odpowiedź to: <strong>${correctAns}</strong>`;
+            feedback.innerHTML = `Poprawnie: <strong>${correctAns}</strong>`;
             feedback.className = "wrong-box";
             wrongAnswers.push(quizData[currentStep]);
         }
-        
-        document.getElementById('score-text').innerText = `Punkty: ${score}`;
         document.getElementById('nextBtn').classList.remove('hidden');
         currentStep++;
+    }
+
+    function revealAnswer() {
+        const feedback = document.getElementById('feedback');
+        feedback.innerHTML = `Odpowiedź:<br><strong>${quizData[currentStep].a}</strong>`;
+        feedback.className = "correct-box";
+        feedback.classList.remove('hidden');
+        document.getElementById('revealBtn').classList.add('hidden');
+        document.getElementById('self-eval').classList.remove('hidden');
+    }
+
+    function selfJudge(isCorrect) {
+        if (isCorrect) score++;
+        else wrongAnswers.push(quizData[currentStep]);
+        currentStep++;
+        displayQuestion();
     }
 
     function showSummary() {
         document.getElementById('progressBar').style.width = "100%";
         const pct = Math.round((score / quizData.length) * 100);
-        
-        let stars = "⭐";
-        if (pct >= 70) stars = "⭐⭐";
-        if (pct >= 95) stars = "⭐⭐⭐";
-
-        let html = `
-            <div style="text-align:center">
-                <h1 style="font-size: 60px; margin: 0;">${stars}</h1>
-                <h2>Koniec testu!</h2>
-                <p style="font-size: 1.5em;">Twój wynik: ${score} / ${quizData.length}</p>
-                <hr>`;
-
-        if (wrongAnswers.length > 0) {
-            html += `<button class="btn subcategory-btn" onclick="retryErrors()">Powtórz tylko błędy (${wrongAnswers.length})</button>`;
-        }
-        
-        html += `<button class="btn category-btn" onclick="location.reload()">Wróć do menu głównego</button></div>`;
+        let stars = pct >= 95 ? "⭐⭐⭐" : (pct >= 70 ? "⭐⭐" : "⭐");
+        let html = `<div style="text-align:center"><h1 style="font-size:60px;margin:0;">${stars}</h1>
+                    <h2>Wynik: ${score} / ${quizData.length}</h2>`;
+        if (wrongAnswers.length > 0) html += `<button class="btn btn-s" onclick="retryErrors()">Powtórz błędy (${wrongAnswers.length})</button>`;
+        html += `<button class="btn btn-p" onclick="location.reload()">Menu główne</button></div>`;
         document.getElementById('quiz-screen').innerHTML = html;
     }
 
     function retryErrors() {
-        // Podmieniamy zestaw pytań na te błędne
-        quizData = [...wrongAnswers];
-        wrongAnswers = [];
-        currentStep = 0;
-        score = 0;
-        
-        // Odświeżamy UI quizu
-        document.getElementById('quiz-screen').innerHTML = `
-            <div class="progress-container"><div id="progressBar"></div></div>
-            <div class="stats"><span id="progress-text"></span><span id="score-text"></span></div>
-            <h2 id="question-text"></h2>
-            <div id="input-area">
-                <input type="text" id="answerInput" placeholder="Wpisz odpowiedź..." autocomplete="off">
-                <button id="checkBtn" class="btn category-btn" onclick="checkAnswer()">Sprawdź</button>
-            </div>
-            <div id="feedback" class="hidden"></div>
-            <button id="nextBtn" class="btn back-btn hidden" onclick="displayQuestion()">Następne pytanie →</button>
-        `;
-        
-        // Ponowne podpięcie obsługi Enter
-        document.getElementById('answerInput').addEventListener("keypress", handleEnter);
-        displayQuestion();
+        quizData = [...wrongAnswers]; wrongAnswers = []; currentStep = 0; score = 0;
+        location.reload(); 
     }
 
     function showIndex() {
@@ -244,15 +225,9 @@
         document.getElementById('index-screen').classList.remove('hidden');
     }
 
-    function handleEnter(e) {
-        if (e.key === "Enter" && !document.getElementById('answerInput').disabled) {
-            checkAnswer();
-        }
-    }
-
-    document.getElementById('answerInput').addEventListener("keypress", handleEnter);
-
+    document.getElementById('answerInput').addEventListener("keypress", (e) => {
+        if (e.key === "Enter" && !document.getElementById('answerInput').disabled) checkAnswer();
+    });
 </script>
-
 </body>
 </html>
