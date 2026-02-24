@@ -144,4 +144,101 @@
                 document.getElementById('revealBtn').classList.remove('hidden');
                 document.getElementById('self-eval').classList.add('hidden');
             } else {
-                document.getElementById('flash-mode
+                document.getElementById('flash-mode').classList.add('hidden');
+                document.getElementById('input-mode').classList.remove('hidden');
+                if (hasGap) {
+                    const gapMatch = qObj.q.match(/\[(.*?)\]/);
+                    const textWithInp = qObj.q.replace(/\[.*?\]/, `<input type="text" id="gapInput" class="gap-input" style="width: ${gapMatch[1].length * 15 + 30}px">`);
+                    document.getElementById('question-text').innerHTML = textWithInp;
+                    document.getElementById('full-input-div').classList.add('hidden');
+                    setTimeout(() => document.getElementById('gapInput').focus(), 50);
+                } else {
+                    document.getElementById('question-text').innerText = qObj.q;
+                    document.getElementById('full-input-div').classList.remove('hidden');
+                    const inp = document.getElementById('answerInputFull'); inp.value = ""; inp.disabled = false;
+                    setTimeout(() => inp.focus(), 50);
+                }
+            }
+        } else { showSummary(); }
+    }
+
+    function checkAnyInput() {
+        const gapInp = document.getElementById('gapInput');
+        const fullInp = document.getElementById('answerInputFull');
+        let userVal = gapInp ? gapInp.value : fullInp.value;
+        userVal = userVal.trim().toLowerCase();
+        
+        const correctVal = quizData[currentStep].a.toLowerCase();
+        const feedback = document.getElementById('feedback');
+        feedback.classList.remove('hidden');
+
+        if (clean(userVal) === clean(correctVal)) {
+            score++; feedback.innerText = "Dobrze!"; feedback.className = "correct-box";
+        } else {
+            feedback.innerHTML = `Poprawnie: <strong>${quizData[currentStep].a}</strong>`;
+            feedback.className = "wrong-box";
+            wrongAnswers.push(quizData[currentStep]);
+        }
+        document.getElementById('input-mode').classList.add('hidden');
+        document.getElementById('nextBtn').classList.remove('hidden');
+        currentStep++;
+    }
+
+    function clean(str) { return str.replace(/[.,!?;:]/g, "").trim(); }
+
+    function revealAnswer() {
+        const f = document.getElementById('feedback');
+        f.innerHTML = `Odpowiedź: <strong>${quizData[currentStep].a}</strong>`;
+        f.className = "correct-box"; f.classList.remove('hidden');
+        document.getElementById('revealBtn').classList.add('hidden');
+        document.getElementById('self-eval').classList.remove('hidden');
+    }
+
+    function selfJudge(ok) {
+        if (ok) score++; else wrongAnswers.push(quizData[currentStep]);
+        currentStep++; displayQuestion();
+    }
+
+    function showSummary() {
+        document.getElementById('quiz-content').classList.add('hidden');
+        const sum = document.getElementById('summary-content');
+        sum.classList.remove('hidden');
+        
+        const pct = Math.round(score/quizData.length*100);
+        let stars = "⭐";
+        if (pct >= 70) stars = "⭐⭐";
+        if (pct >= 95) stars = "⭐⭐⭐";
+
+        let html = `<div style="text-align:center">
+            <span class="stars">${stars}</span>
+            <h2>Wynik: ${score} / ${quizData.length}</h2>
+            <p>Udało Ci się zaliczyć ${pct}% materiału!</p>`;
+        
+        if (wrongAnswers.length > 0) {
+            html += `<button class="btn btn-s" onclick="retryErrors()">Powtórz tylko błędy (${wrongAnswers.length})</button>`;
+        }
+        
+        html += `<button class="btn btn-p" onclick="location.reload()">Menu główne</button></div>`;
+        sum.innerHTML = html;
+    }
+
+    function retryErrors() {
+        quizData = [...wrongAnswers];
+        startNewSet();
+    }
+
+    function showIndex() {
+        document.getElementById('category-screen').classList.add('hidden');
+        document.getElementById('index-screen').classList.remove('hidden');
+        document.getElementById('quiz-screen').classList.add('hidden');
+    }
+
+    window.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            if (!document.getElementById('input-mode').classList.contains('hidden')) checkAnyInput();
+            else if (!document.getElementById('nextBtn').classList.contains('hidden')) displayQuestion();
+        }
+    });
+</script>
+</body>
+</html>
