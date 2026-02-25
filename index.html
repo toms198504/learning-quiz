@@ -148,14 +148,17 @@
                 document.getElementById('input-mode').classList.remove('hidden');
                 if (hasGap) {
                     const gapMatch = qObj.q.match(/\[(.*?)\]/);
-                    const textWithInp = qObj.q.replace(/\[.*?\]/, `<input type="text" id="gapInput" class="gap-input" style="width: ${gapMatch[1].length * 15 + 30}px">`);
+                    // TUTAJ DODANO ATRYBUTY BLOKUJĄCE PODPOWIEDZI:
+                    const textWithInp = qObj.q.replace(/\[.*?\]/, `<input type="text" id="gapInput" class="gap-input" autocomplete="off" autocorrect="off" spellcheck="false" style="width: ${gapMatch[1].length * 15 + 30}px">`);
                     document.getElementById('question-text').innerHTML = textWithInp;
                     document.getElementById('full-input-div').classList.add('hidden');
                     setTimeout(() => document.getElementById('gapInput').focus(), 50);
                 } else {
                     document.getElementById('question-text').innerText = qObj.q;
                     document.getElementById('full-input-div').classList.remove('hidden');
-                    const inp = document.getElementById('answerInputFull'); inp.value = ""; inp.disabled = false;
+                    const inp = document.getElementById('answerInputFull'); 
+                    inp.value = ""; 
+                    inp.disabled = false;
                     setTimeout(() => inp.focus(), 50);
                 }
             }
@@ -265,4 +268,5 @@
 </script>
 </body>
 </html>
+
 
