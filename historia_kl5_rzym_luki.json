@@ -1,0 +1,102 @@
+[
+  {
+    "category": "Armia i podboje rzymskie",
+    "questions": [
+      {
+        "q": "W 146 roku p.n.e. Rzymianie ostatecznie pokonali i zniszczyli [Kartaginę], rządzoną niegdyś przez Fenicjan.",
+        "a": "Kartaginę"
+      },
+      {
+        "q": "Rzymskie oddziały liczące około 4 tysięcy ciężkozbrojnych żołnierzy piechoty to [legiony].",
+        "a": "legiony"
+      },
+      {
+        "q": "System potężnych umocnień na granicach państwa, chroniący przed najazdami, nazywano [limesami].",
+        "a": "limesami"
+      },
+      {
+        "q": "Terytoria podbite przez Rzym poza Italią, których ludność płaciła podatki, to [prowincje].",
+        "a": "prowincje"
+      },
+      {
+        "q": "Okres pokoju i stabilizacji wewnątrz państwa trwający od I wieku p.n.e. to [pax romana].",
+        "a": "pax romana"
+      }
+    ]
+  },
+  {
+    "category": "Życie w Wiecznym Mieście",
+    "questions": [
+      {
+        "q": "Główny plac Rzymu, będący centrum życia politycznego i religijnego, to [Forum Romanum].",
+        "a": "Forum Romanum"
+      },
+      {
+        "q": "Publiczne łaźnie z basenami i salkami do gimnastyki to rzymskie [termy].",
+        "a": "termy"
+      },
+      {
+        "q": "Uprzywilejowana grupa społeczna sprawująca najważniejsze urzędy to [patrycjusze].",
+        "a": "patrycjusze"
+      },
+      {
+        "q": "Budowla pełniąca w starożytnym Rzymie funkcję sądu lub hali targowej to [bazylika].",
+        "a": "bazylika"
+      },
+      {
+        "q": "Wielopiętrowe kamienice, w których mieszkali ubożsi plebejusze, to [insule].",
+        "a": "insule"
+      }
+    ]
+  },
+  {
+    "category": "Kultura, technika i prawo",
+    "questions": [
+      {
+        "q": "Wodociągi doprowadzające świeżą wodę z górskich źródeł do miast to [akwedukty].",
+        "a": "akwedukty"
+      },
+      {
+        "q": "Rzymianie jako pierwsi w budownictwie zaczęli powszechnie stosować [beton], co pozwoliło na budowę wielkich kopuł.",
+        "a": "beton"
+      },
+      {
+        "q": "Najsłynniejsza świątynia poświęcona wszystkim rzymskim bogom to [Panteon].",
+        "a": "Panteon"
+      },
+      {
+        "q": "Zbiór praw zebrany w VI wieku n.e. z polecenia cesarza wschodniorzymskiego to [Kodeks Justyniana].",
+        "a": "Kodeks Justyniana"
+      },
+      {
+        "q": "Języki takie jak włoski, francuski czy hiszpański wywodzą się z łaciny i nazywamy je [romańskimi].",
+        "a": "romańskimi"
+      }
+    ]
+  },
+  {
+    "category": "Początki chrześcijaństwa i upadek imperium",
+    "questions": [
+      {
+        "q": "Religia chrześcijańska narodziła się w I wieku n.e. w rzymskiej prowincji o nazwie [Palestyna].",
+        "a": "Palestyna"
+      },
+      {
+        "q": "W 313 roku n.e. cesarz [Konstantyn Wielki] wydał Edykt mediolański, dający chrześcijanom wolność wyznania.",
+        "a": "Konstantyn Wielki"
+      },
+      {
+        "q": "W 395 roku n.e. nastąpił podział państwa na Cesarstwo [Zachodniorzymskie] oraz Wschodniorzymskie.",
+        "a": "Zachodniorzymskie"
+      },
+      {
+        "q": "Rok [476] n.e., w którym upadło cesarstwo na zachodzie, uznaje się za symboliczny koniec starożytności.",
+        "a": "476"
+      },
+      {
+        "q": "Plemiona koczownicze z Azji, których atak wywołał wielką wędrówkę ludów, to [Hunowie].",
+        "a": "Hunowie"
+      }
+    ]
+  }
+]
