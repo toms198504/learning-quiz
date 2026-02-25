@@ -1,143 +1,176 @@
 [
-  {
-    "category": "Wojskowość i podboje (Rozdziały 2 i 3)",
-    "questions": [
-      {
-        "q": "W którym roku i po jakich wojnach Rzymianie ostatecznie zniszczyli Kartaginę?",
-        "a": "W 146 roku p.n.e., po trzech wojnach punickich."
-      },
-      {
-        "q": "Z ilu żołnierzy składał się zazwyczaj rzymski legion?",
-        "a": "Legion liczył około 4 tysięcy ciężkozbrojnych, doskonale wyszkolonych żołnierzy piechoty."
-      },
-      {
-        "q": "Jak nazywała się maszyna oblężnicza używana przez Rzymian do burzenia murów miast?",
-        "a": "Była to katapulta."
-      },
-      {
-        "q": "Czym był limes i jaką pełnił funkcję?",
-        "a": "Był to potężny system umocnień wzniesiony na liniach rzek (np. Renu i Dunaju), który chronił Rzymian przed atakami ludów spoza państwa."
-      },
-      {
-        "q": "Na czym polegała kara dziesiątkowania w rzymskiej armii?",
-        "a": "Polegała na skazaniu na śmierć drogą losowania co dziesiątego żołnierza z oddziału, który stchórzył lub zbuntował się."
-      },
-      {
-        "q": "Co oznacza termin 'Pax Romana'?",
-        "a": "Oznacza okres pokoju panujący wewnątrz Imperium Rzymskiego od I wieku p.n.e., sprzyjający rozwojowi gospodarczemu i kulturalnemu."
-      }
-    ]
-  },
-  {
-    "category": "Życie w mieście i społeczeństwo (Rozdział 3)",
-    "questions": [
-      {
-        "q": "Dlaczego Rzym nazywano 'Wiecznym Miastem'?",
-        "a": "Ponieważ mieszkańcy byli tak dumni ze swojej stolicy, że w ich mniemaniu miała ona trwać zawsze."
-      },
-      {
-        "q": "Jakie funkcje pełniło Forum Romanum?",
-        "a": "Było centrum życia politycznego, towarzyskiego i religijnego; miejscem spotkań, handlu oraz ogłaszania zarządzeń władz."
-      },
-      {
-        "q": "Czym różniły się warunki mieszkaniowe patrycjuszy od plebejuszy?",
-        "a": "Patrycjusze budowali okazałe wille z dziedzińcami, natomiast plebejusze zazwyczaj wynajmowali małe mieszkania w kamienicach, często pozbawione ogrzewania."
-      },
-      {
-        "q": "Kim był Spartakus i z czego zasłynął?",
-        "a": "Był gladiatorem, który w 73 roku p.n.e. stanął na czele wielkiego powstania niewolników."
-      },
-      {
-        "q": "Jakie rozrywki były dostępne dla Rzymian niezależnie od ich zamożności?",
-        "a": "Oglądanie igrzysk w amfiteatrach, w tym brutalnych walk gladiatorów oraz przedstawień ukazujących dzieje Rzymu."
-      },
-      {
-        "q": "Czym były rzymskie termy?",
-        "a": "Były to publiczne łaźnie z basenami i salami do uprawiania sportu, służące higienie i spotkaniom towarzyskim."
-      }
-    ]
-  },
-  {
-    "category": "Dokonania i kultura (Rozdział 4)",
-    "questions": [
-      {
-        "q": "Jaki wynalazek budowlany pozwolił Rzymianom wznosić kopuły i łuki?",
-        "a": "Wynalezienie i użycie betonu."
-      },
-      {
-        "q": "Jakie było przeznaczenie akweduktów?",
-        "a": "Doprowadzały świeżą wodę z górskich źródeł do miast, często przebiegając nad naturalnymi przeszkodami na wysokich łukach."
-      },
-      {
-        "q": "Czym był Panteon?",
-        "a": "Najsłynniejszą świątynią rzymską poświęconą wszystkim bogom, z charakterystycznym otworem w kopule (oculus)."
-      },
-      {
-        "q": "Jakie znaczenie dla współczesności ma Kodeks Justyniana?",
-        "a": "Zebrał on wszystkie prawa rzymskie w jeden zbiór, który stał się podstawą obowiązujących dziś kodeksów prawnych."
-      },
-      {
-        "q": "Kto był autorem 'Eneidy' i o czym opowiada to dzieło?",
-        "a": "Autorem był Wergiliusz; poemat opowiada o losach Eneasza, uciekiniera z Troi i przodka założycieli Rzymu."
-      },
-      {
-        "q": "W jakim celu wznoszono łuki triumfalne?",
-        "a": "Dla upamiętnienia wielkich zwycięstw wodzów lub cesarzy oraz innych ważnych uroczystości."
-      }
-    ]
-  },
-  {
-    "category": "Religia i chrześcijaństwo (Rozdziały 3 i 5)",
-    "questions": [
-      {
-        "q": "Wymień najważniejszych bogów rzymskich i ich greckie odpowiedniki.",
-        "a": "Jowisz (Zeus), Junona (Hera), Minerwa (Atena), Mars (Ares), Neptun (Posejdon), Wenus (Afrodyta)."
-      },
-      {
-        "q": "Gdzie i kiedy narodziło się chrześcijaństwo?",
-        "a": "W pierwszej połowie I wieku n.e. w Palestynie, podbitej przez Rzymian."
-      },
-      {
-        "q": "Czym był Edykt mediolański i kto go wydał?",
-        "a": "Był to dokument wydany przez Konstantyna Wielkiego w 313 roku n.e., który zezwalał na swobodne wyznawanie chrześcijaństwa."
-      },
-      {
-        "q": "Jakie zadanie miały kapłanki nazywane westalkami?",
-        "a": "Ich zadaniem było pilnowanie wiecznego ognia symbolizującego boginię Westę, opiekunkę domowego ogniska."
-      },
-      {
-        "q": "Kto był uznawany za pierwszego biskupa Rzymu?",
-        "a": "Według tradycji był nim apostoł Piotr."
-      },
-      {
-        "q": "Z jakich części składa się chrześcijańska Biblia?",
-        "a": "Zestawiona jest ze Starego Testamentu (dzieje narodu żydowskiego) oraz Nowego Testamentu (życie Jezusa i uczniów)."
-      }
-    ]
-  },
-  {
-    "category": "Upadek państwa i dziedzictwo (Rozdziały 2 i 4)",
-    "questions": [
-      {
-        "q": "Kiedy i na jakie części podzielono cesarstwo rzymskie?",
-        "a": "W 395 roku n.e. na cesarstwo zachodniorzymskie (stolica w Rzymie) i wschodniorzymskie (stolica w Konstantynopolu)."
-      },
-      {
-        "q": "Co wydarzyło się w 476 roku n.e.?",
-        "a": "Jeden z barbarzyńskich wodzów pozbawił korony ostatniego cesarza zachodniorzymskiego, co uznaje się za symboliczny koniec starożytności."
-      },
-      {
-        "q": "Dlaczego wykopaliska w Pompejach są tak cennym źródłem wiedzy?",
-        "a": "Ponieważ warstwa pyłu wulkanicznego z wybuchu Wezuwiusza w 79 roku n.e. doskonale zakonserwowała miasto, budowle i przedmioty."
-      },
-      {
-        "q": "Co to są języki romańskie i z czego się wywodzą?",
-        "a": "Są to języki takie jak hiszpański, francuski, włoski czy rumuński, które wywodzą się z łaciny potocznej."
-      },
-      {
-        "q": "Jakie plemiona barbarzyńskie zagrażały Rzymowi od III wieku n.e.?",
-        "a": "Głównie Germanie, a później plemiona Hunów, których atak wywołał wielką wędrówkę ludów."
-      }
-    ]
-  }
+{
+"category": "Początki Rzymu i republika (Rozdział 1)",
+"questions": [
+{
+"q": "W którym roku p.n.e. według legendy został założony Rzym i kto był jego pierwszym królem?",
+"a": "Rzym został założony w 753 roku p.n.e., a jego pierwszym królem był Romulus."
+},
+{
+"q": "Co oznacza łaciński termin 'res publica' i co on mówił o państwie?",
+"a": "Oznacza 'rzecz wspólną' i wskazywał, że państwo jest dobrem wspólnym wszystkich obywateli, a nie własnością władcy."
+},
+{
+"q": "Kim byli patrycjusze i plebejusze w społeczeństwie rzymskim?",
+"a": "Patrycjusze to członkowie bogatych i wpływowych rodów mający pełnię praw, a plebejusze to wolni obywatele, którzy początkowo nie mieli wpływu na rządy."
+},
+{
+"q": "Jakie uprawnienia posiadał trybun ludowy?",
+"a": "Reprezentował plebejuszy i posiadał prawo weta (intercesji), czyli możliwość blokowania decyzji urzędników szkodliwych dla ludu."
+},
+{
+"q": "W jakiej sytuacji powoływano dyktatora i na jak długo?",
+"a": "Powoływano go w sytuacjach wielkiego zagrożenia państwa na okres maksymalnie sześciu miesięcy."
+},
+{
+"q": "Co oznacza powiedzenie 'kości zostały rzucone' przypisywane Juliuszowi Cezarowi?",
+"a": "Oznacza podjęcie nieodwołalnej decyzji; Cezar wypowiedział te słowa, przekraczając rzekę Rubikon z wojskiem, co rozpoczęło wojnę domową."
+},
+{
+"q": "Kto i w którym roku został pierwszym cesarzem rzymskim?",
+"a": "Był nim Oktawian August w 27 roku p.n.e."
+}
+]
+},
+{
+"category": "Wojskowość i podboje (Rozdziały 2 i 3)",
+"questions": [
+{
+"q": "W którym roku i po jakich wojnach Rzymianie ostatecznie zniszczyli Kartaginę?",
+"a": "W 146 roku p.n.e., po trzech wojnach punickich."
+},
+{
+"q": "Z ilu żołnierzy składał się zazwyczaj rzymski legion?",
+"a": "Legion liczył około 4 tysięcy ciężkozbrojnych, doskonale wyszkolonych żołnierzy piechoty."
+},
+{
+"q": "Jak nazywała się maszyna oblężnicza używana przez Rzymian do burzenia murów miast?",
+"a": "Była to katapulta."
+},
+{
+"q": "Czym był limes i jaką pełnił funkcję?",
+"a": "Był to potężny system umocnień wzniesiony na liniach rzek (np. Renu i Dunaju), który chronił Rzymian przed atakami ludów spoza państwa."
+},
+{
+"q": "Na czym polegała kara dziesiątkowania w rzymskiej armii?",
+"a": "Polegała na skazaniu na śmierć drogą losowania co dziesiątego żołnierza z oddziału, który stchórzył lub zbuntował się."
+},
+{
+"q": "Co oznacza termin 'Pax Romana'?",
+"a": "Oznacza okres pokoju panujący wewnątrz Imperium Rzymskiego od I wieku p.n.e., sprzyjający rozwojowi gospodarczemu i kulturalnemu."
+}
+]
+},
+{
+"category": "Życie w mieście i społeczeństwo (Rozdział 3)",
+"questions": [
+{
+"q": "Dlaczego Rzym nazywano 'Wiecznym Miastem'?",
+"a": "Ponieważ mieszkańcy byli tak dumni ze swojej stolicy, że w ich mniemaniu miała ona trwać zawsze."
+},
+{
+"q": "Jakie funkcje pełniło Forum Romanum?",
+"a": "Było centrum życia politycznego, towarzyskiego i religijnego; miejscem spotkań, handlu oraz ogłaszania zarządzeń władz."
+},
+{
+"q": "Czym różniły się warunki mieszkaniowe patrycjuszy od plebejuszy?",
+"a": "Patrycjusze budowali okazałe wille z dziedzińcami, natomiast plebejusze zazwyczaj wynajmowali małe mieszkania w kamienicach, często pozbawione ogrzewania."
+},
+{
+"q": "Kim był Spartakus i z czego zasłynął?",
+"a": "Był gladiatorem, który w 73 roku p.n.e. stanął na czele wielkiego powstania niewolników."
+},
+{
+"q": "Jakie rozrywki były dostępne dla Rzymian niezależnie od ich zamożności?",
+"a": "Oglądanie igrzysk w amfiteatrach, w tym brutalnych walk gladiatorów oraz przedstawień ukazujących dzieje Rzymu."
+},
+{
+"q": "Czym były rzymskie termy?",
+"a": "Były to publiczne łaźnie z basenami i salami do uprawiania sportu, służące higienie i spotkaniom towarzyskim."
+}
+]
+},
+{
+"category": "Dokonania i kultura (Rozdział 4)",
+"questions": [
+{
+"q": "Jaki wynalazek budowlany pozwolił Rzymianom wznosić kopuły i łuki?",
+"a": "Wynalezienie i użycie betonu."
+},
+{
+"q": "Jakie było przeznaczenie akweduktów?",
+"a": "Doprowadzały świeżą wodę z górskich źródeł do miast, często przebiegając nad naturalnymi przeszkodami na wysokich łukach."
+},
+{
+"q": "Czym był Panteon?",
+"a": "Najsłynniejszą świątynią rzymską poświęconą wszystkim bogom, z charakterystycznym otworem w kopule (oculus)."
+},
+{
+"q": "Jakie znaczenie dla współczesności ma Kodeks Justyniana?",
+"a": "Zebrał on wszystkie prawa rzymskie w jeden zbiór, który stał się podstawą obowiązujących dziś kodeksów prawnych."
+},
+{
+"q": "Kto był autorem 'Eneidy' i o czym opowiada to dzieło?",
+"a": "Autorem był Wergiliusz; poemat opowiada o losach Eneasza, uciekiniera z Troi i przodka założycieli Rzymu."
+},
+{
+"q": "W jakim celu wznoszono łuki triumfalne?",
+"a": "Dla upamiętnienia wielkich zwycięstw wodzów lub cesarzy oraz innych ważnych uroczystości."
+}
+]
+},
+{
+"category": "Religia i chrześcijaństwo (Rozdziały 3 i 5)",
+"questions": [
+{
+"q": "Wymień najważniejszych bogów rzymskich i ich greckie odpowiedniki.",
+"a": "Jowisz (Zeus), Junona (Hera), Minerwa (Atena), Mars (Ares), Neptun (Posejdon), Wenus (Afrodyta)."
+},
+{
+"q": "Gdzie i kiedy narodziło się chrześcijaństwo?",
+"a": "W pierwszej połowie I wieku n.e. w Palestynie, podbitej przez Rzymian."
+},
+{
+"q": "Czym był Edykt mediolański i kto go wydał?",
+"a": "Był to dokument wydany przez Konstantyna Wielkiego w 313 roku n.e., który zezwalał na swobodne wyznawanie chrześcijaństwa."
+},
+{
+"q": "Jakie zadanie miały kapłanki nazywane westalkami?",
+"a": "Ich zadaniem było pilnowanie wiecznego ognia symbolizującego boginię Westę, opiekunkę domowego ogniska."
+},
+{
+"q": "Kto był uznawany za pierwszego biskupa Rzymu?",
+"a": "Według tradycji był nim apostoł Piotr."
+},
+{
+"q": "Z jakich części składa się chrześcijańska Biblia?",
+"a": "Zestawiona jest ze Starego Testamentu (dzieje narodu żydowskiego) oraz Nowego Testamentu (życie Jezusa i uczniów)."
+}
+]
+},
+{
+"category": "Upadek państwa i dziedzictwo (Rozdziały 2 i 4)",
+"questions": [
+{
+"q": "Kiedy i na jakie części podzielono cesarstwo rzymskie?",
+"a": "W 395 roku n.e. na cesarstwo zachodniorzymskie (stolica w Rzymie) i wschodniorzymskie (stolica w Konstantynopolu)."
+},
+{
+"q": "Co wydarzyło się w 476 roku n.e.?",
+"a": "Jeden z barbarzyńskich wodzów pozbawił korony ostatniego cesarza zachodniorzymskiego, co uznaje się za symboliczny koniec starożytności."
+},
+{
+"q": "Dlaczego wykopaliska w Pompejach są tak cennym źródłem wiedzy?",
+"a": "Ponieważ warstwa pyłu wulkanicznego z wybuchu Wezuwiusza w 79 roku n.e. doskonale zakonserwowała miasto, budowle i przedmioty."
+},
+{
+"q": "Co to są języki romańskie i z czego się wywodzą?",
+"a": "Są to języki takie jak hiszpański, francuski, włoski czy rumuński, które wywodzą się z łaciny potocznej."
+},
+{
+"q": "Jakie plemiona barbarzyńskie zagrażały Rzymowi od III wieku n.e.?",
+"a": "Głównie Germanie, a później plemiona Hunów, których atak wywołał wielką wędrówkę ludów."
+}
+]
+}
 ]
