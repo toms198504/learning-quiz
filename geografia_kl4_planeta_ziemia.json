@@ -1,0 +1,98 @@
+[
+  {
+    "category": "Ziemia jako bryła i jej model",
+    "questions": [
+      {
+        "q": "Ziemia ma kształt zbliżony do kuli, a jej pomniejszonym modelem jest [globus].",
+        "a": "globus"
+      },
+      {
+        "q": "Linia, która przebiega przez środek Ziemi i łączy oba bieguny, to [oś ziemska].",
+        "a": "oś ziemska"
+      },
+      {
+        "q": "Punkty, w których oś ziemska przebija powierzchnię planety, to biegun północny i [biegun południowy].",
+        "a": "biegun południowy"
+      }
+    ]
+  },
+  {
+    "category": "Współrzędne geograficzne",
+    "questions": [
+      {
+        "q": "Linie łączące bieguny, które mają taką samą długość i wskazują kierunek północ-południe, to [południki].",
+        "a": "południki"
+      },
+      {
+        "q": "Najdłuższym równoleżnikiem, który dzieli Ziemię na półkulę północną i południową, jest [równik].",
+        "a": "równik"
+      },
+      {
+        "q": "Płaszczyzna południka 0° i południka 180° dzieli kulę ziemską na półkulę [wschodnią] i zachodnią.",
+        "a": "wschodnią"
+      },
+      {
+        "q": "Wszystkie [równoleżniki] mają kształt okręgów o różnej długości.",
+        "a": "równoleżniki"
+      }
+    ]
+  },
+  {
+    "category": "Lądy i oceany na Ziemi",
+    "questions": [
+      {
+        "q": "Na Ziemi wyróżniamy siedem kontynentów, z których największym jest [Azja].",
+        "a": "Azja"
+      },
+      {
+        "q": "Kontynentem, który leży niemal w całości na półkuli zachodniej, jest Ameryka Północna oraz [Ameryka Południowa].",
+        "a": "Ameryka Południowa"
+      },
+      {
+        "q": "W skład oceanu światowego wchodzi pięć oceanów: Spokojny, Atlantycki, Indyjski, Południowy oraz [Arktyczny].",
+        "a": "Arktyczny"
+      }
+    ]
+  },
+  {
+    "category": "Wielcy odkrywcy i podróżnicy",
+    "questions": [
+      {
+        "q": "W 1492 roku [Krzysztof Kolumb] dopłynął do wysp Ameryki, błędnie nazywając ich mieszkańców Indianami.",
+        "a": "Krzysztof Kolumb"
+      },
+      {
+        "q": "Morską drogę do Indii wokół Afryki odkrył w 1498 roku portugalski żeglarz [Vasco da Gama].",
+        "a": "Vasco da Gama"
+      },
+      {
+        "q": "Wyprawa pod dowództwem [Ferdynanda Magellana] jako pierwsza opłynęła świat dookoła.",
+        "a": "Ferdynand Magellan"
+      },
+      {
+        "q": "Australię i Hawaje badał podczas swoich trzech wypraw brytyjski podróżnik [James Cook].",
+        "a": "James Cook"
+      },
+      {
+        "q": "Brytyjski badacz [David Livingstone] prowadził liczne wyprawy w głąb Afryki, odkrywając m.in. Wodospady Wiktorii.",
+        "a": "David Livingstone"
+      },
+      {
+        "q": "Norweski polarnik, który jako pierwszy zdobył biegun południowy w 1911 roku, to [Roald Amundsen].",
+        "a": "Roald Amundsen"
+      },
+      {
+        "q": "Pierwszymi ludźmi, którzy w 1953 roku stanęli na szczycie Mount Everest, byli Edmund Hillary oraz [Tenzing Norgay].",
+        "a": "Tenzing Norgay"
+      },
+      {
+        "q": "Głębię Rowu Mariańskiego jako pierwsi zbadali Jacques Piccard i [Don Walsh].",
+        "a": "Don Walsh"
+      },
+      {
+        "q": "Amerykański astronauta, który jako pierwszy człowiek stanął na Księżycu w 1969 roku, to [Neil Armstrong].",
+        "a": "Neil Armstrong"
+      }
+    ]
+  }
+]
