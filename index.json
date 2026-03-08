@@ -5,9 +5,10 @@
   { "title": "Historia Klasa 5 - Starożytny Rzym - fiszki", "file": "historia_kl5_rzym.json", "type": "fiszki" },
 { "title": "Historia Klasa 5 - Starożytny Rzym - wypełnianie", "file": "historia_kl5_rzym_luki.json", "type": "wpisywanie" },
   { "title": "Geografia Klasa 5 - Planeta Ziemia - wypełnianie", "file": "geografia_kl4_planeta_ziemia.json", "type": "wpisywanie" },
-  { "title": "Biologia Klasa 4 - Ciało Człowika - fiszki", "file": "biologia_kl4_cialo_czlowieka_fiszki.json", "type": "wpisywanie" },
+  { "title": "Biologia Klasa 4 - Ciało Człowika - fiszki", "file": "biologia_kl4_cialo_czlowieka_fiszki.json", "type": "fiszki" },
   { "title": "Biologia Klasa 4 - Ciało Człowika - wypełnianie", "file": "biologia_kl4_cialo_czlowieka_luki.json", "type": "wpisywanie" }
 ]
+
 
 
 
