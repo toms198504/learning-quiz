@@ -1,0 +1,51 @@
+[
+  {
+    "category": "Ciało człowieka - Luki",
+    "questions": [
+      {
+        "q": "Podstawowym materiałem budulcowym komórek są [białka].",
+        "a": "białka"
+      },
+      {
+        "q": "Narządem zmysłu smaku jest [język].",
+        "a": "język"
+      },
+      {
+        "q": "U chłopców w okresie dojrzewania jądra zaczynają wytwarzać [plemniki].",
+        "a": "plemniki"
+      },
+      {
+        "q": "Połączenie plemnika z komórką jajową to [zapłodnienie].",
+        "a": "zapłodnienie"
+      },
+      {
+        "q": "Narządem, w którym rośnie i rozwija się nowy organizm, jest [macica].",
+        "a": "macica"
+      },
+      {
+        "q": "Trawienie pokarmu i wchłanianie składników to główne funkcje układu [pokarmowego].",
+        "a": "pokarmowego"
+      },
+      {
+        "q": "Serce, tętnice i żyły wchodzą w skład układu [krwionośnego].",
+        "a": "krwionośnego"
+      },
+      {
+        "q": "Jama nosowa, krtań, tchawica i płuca tworzą układ [oddechowy].",
+        "a": "oddechowy"
+      },
+      {
+        "q": "Szkielet oraz mięśnie szkieletowe tworzą układ [ruchu].",
+        "a": "ruchu"
+      },
+      {
+        "q": "Za odbiór i analizę informacji ze zmysłów odpowiada układ [nerwowy].",
+        "a": "nerwowy"
+      },
+      {
+        "q": "Narządy zmysłu dotyku to [skóra].",
+        "a": "skóra"
+      }
+    ]
+  }
+]
