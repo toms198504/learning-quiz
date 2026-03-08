@@ -1,0 +1,51 @@
+[
+  {
+    "category": "Ciało człowieka - Podsumowanie",
+    "questions": [
+      {
+        "q": "Jakie są główne grupy składników pokarmowych wymienione w podręczniku?",
+        "a": "Białka, tłuszcze, cukry, witaminy, sole mineralne, woda"
+      },
+      {
+        "q": "Które składniki pokarmowe pełnią funkcję dostarczania energii?",
+        "a": "Cukry i tłuszcze"
+      },
+      {
+        "q": "Jaką rolę w organizmie pełnią witaminy?",
+        "a": "Regulują pracę organizmu"
+      },
+      {
+        "q": "Wymień narządy zmysłów człowieka.",
+        "a": "Oczy, uszy, nos, język, skóra"
+      },
+      {
+        "q": "Około którego roku życia rozpoczyna się dojrzewanie u dziewcząt?",
+        "a": "Około 10. roku życia"
+      },
+      {
+        "q": "Gdzie w żeńskim układzie rozrodczym dochodzi do zapłodnienia?",
+        "a": "W jajowodzie"
+      },
+      {
+        "q": "Jakie są główne funkcje układu krwionośnego?",
+        "a": "Transport tlenu, dwutlenku węgla i substancji pokarmowych oraz utrzymywanie stałej temperatury ciała"
+      },
+      {
+        "q": "Z jakich elementów składa się układ nerwowy?",
+        "a": "Mózg, rdzeń kręgowy, nerwy"
+      },
+      {
+        "q": "Który układ odpowiada za rusztowanie dla ciała i ochronę narządów?",
+        "a": "Układ ruchu"
+      },
+      {
+        "q": "Jakie narządy wspomagają proces trawienia w układzie pokarmowym?",
+        "a": "Ślinianki, wątroba, trzustka"
+      },
+      {
+        "q": "Co jest funkcją układu oddechowego?",
+        "a": "Pobieranie tlenu i usuwanie dwutlenku węgla"
+      }
+    ]
+  }
+]
