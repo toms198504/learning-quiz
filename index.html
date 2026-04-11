@@ -54,7 +54,7 @@
             <div class="progress-container"><div id="progressBar"></div></div>
             <div class="stats"><span id="progress-text"></span><span id="score-text">Punkty: 0</span></div>
             
-            <img id="question-img" src="" alt="podgląd pytania" class="hidden">
+            <img id="question-img" src="" style="display: none; max-width: 100%; max-height: 250px; margin: 0 auto 20px auto; border-radius: 10px;">
             <div id="question-text">Pytanie</div>
 
             <div id="input-mode" class="hidden">
@@ -139,25 +139,28 @@
         const qObj = quizData[currentStep];
         const imgEl = document.getElementById('question-img');
         
+        // Resetowanie widoku przed każdym pytaniem
         document.getElementById('progressBar').style.width = (currentStep / quizData.length * 100) + "%";
         document.getElementById('progress-text').innerText = `Pytanie ${currentStep + 1}/${quizData.length}`;
         document.getElementById('score-text').innerText = `Punkty: ${score}`;
         document.getElementById('feedback').classList.add('hidden');
         document.getElementById('nextBtn').classList.add('hidden');
 
-        // --- KLUCZOWA POPRAWKA OBRAZKA ---
+        // --- GWARANTOWANA NAPRAWA OBRAZKA ---
         if (qObj.img && qObj.img.trim() !== "") {
             imgEl.src = qObj.img;
-            imgEl.classList.remove('hidden');
+            imgEl.style.display = "block"; // Pokazuje element
         } else {
-            imgEl.src = ""; // Czyścimy źródło
-            imgEl.classList.add('hidden'); // Ukrywamy element całkowicie
+            imgEl.src = ""; // Czyści źródło, żeby nie było ikony błędu
+            imgEl.style.display = "none";  // Całkowicie ukrywa element (nie zajmuje miejsca)
         }
-        // ---------------------------------
+        // ------------------------------------
 
+        // Reszta logiki (hasGap, isABCD, currentMode) zostaje bez zmian...
         const hasGap = qObj.q.includes("[") && qObj.q.includes("]");
         const isABCD = qObj.options && qObj.options.length > 0;
-
+        
+       
         if (currentMode === "fiszki") {
             document.getElementById('question-text').innerText = qObj.q.replace(/\[|\]/g, "");
             document.getElementById('input-mode').classList.add('hidden');
