@@ -53,6 +53,7 @@
         <div id="quiz-content">
             <div class="progress-container"><div id="progressBar"></div></div>
             <div class="stats"><span id="progress-text"></span><span id="score-text">Punkty: 0</span></div>
+            <button id="exit-early-btn" class="btn btn-d" style="padding: 5px; font-size: 12px; margin-bottom: 10px;" onclick="terminateQuiz()">Zakończ quiz i sprawdź wynik</button>
             
             <img id="question-img" src="" style="display: none; max-width: 100%; max-height: 250px; margin: 0 auto 20px auto; border-radius: 10px;">
             <div id="question-text">Pytanie</div>
@@ -261,18 +262,46 @@
     }
 
     function showSummary() {
-        document.getElementById('quiz-content').classList.add('hidden');
-        const sum = document.getElementById('summary-content');
-        sum.classList.remove('hidden');
-        const pct = Math.round(score/quizData.length*100);
-        let stars = pct >= 95 ? "⭐⭐⭐" : (pct >= 70 ? "⭐⭐" : "⭐");
-        let html = `<div style="text-align:center"><span class="stars">${stars}</span><h2>Wynik: ${score} / ${quizData.length}</h2><p>${pct}% materiału opanowane!</p>`;
-        if (wrongAnswers.length > 0) html += `<button class="btn btn-s" onclick="retryErrors()">Powtórz tylko błędy (${wrongAnswers.length})</button>`;
-        html += `<button class="btn btn-p" onclick="backToCategories()">Powrót do tematów</button><button class="btn btn-gray" onclick="location.reload()">Menu główne</button></div>`;
-        sum.innerHTML = html;
+    document.getElementById('quiz-content').classList.add('hidden');
+    const sum = document.getElementById('summary-content');
+    sum.classList.remove('hidden');
+    
+    const pct = Math.round(score / quizData.length * 100);
+    let stars = pct >= 95 ? "⭐⭐⭐" : (pct >= 70 ? "⭐⭐" : "⭐");
+    
+    let html = `
+        <div style="text-align:center">
+            <span class="stars">${stars}</span>
+            <h2>Wynik: ${score} / ${quizData.length}</h2>
+            <p>${pct}% materiału opanowane!</p>
+            <p style="font-size: 0.8em; color: #666;">(Niezrobione pytania zostały policzone jako błędy)</p>
+    `;
+    
+    if (wrongAnswers.length > 0) {
+        html += `<button class="btn btn-s" onclick="retryErrors()">Powtórz błędy i pominięte (${wrongAnswers.length})</button>`;
     }
+    
+    html += `
+            <button class="btn btn-p" onclick="backToCategories()">Powrót do tematów</button>
+            <button class="btn btn-gray" onclick="location.reload()">Menu główne</button>
+        </div>
+    `;
+    sum.innerHTML = html;
+}
 
     function retryErrors() { quizData = [...wrongAnswers]; startNewSet(); }
+    function terminateQuiz() {
+    if (confirm("Czy na pewno chcesz przerwać quiz? Wszystkie pozostałe pytania zostaną uznane za błędne.")) {
+        // Przechodzimy przez wszystkie pozostałe pytania
+        for (let i = currentStep; i < quizData.length; i++) {
+            wrongAnswers.push(quizData[i]);
+        }
+        
+        // Ustawiamy licznik na koniec, aby showSummary() zadziałało poprawnie
+        currentStep = quizData.length;
+        showSummary();
+    }
+}
     function backToCategories() {
         document.getElementById('quiz-screen').classList.add('hidden');
         document.getElementById('summary-content').classList.add('hidden');
