@@ -1,0 +1,87 @@
+[
+  {
+    "category": "Konkurs Panda 2020",
+    "questions": [
+      {
+        "q": "Pieszy idący po jezdni ma obowiązek:",
+        "a": "iść po poboczu",
+        "options": ["iść z prawej strony jezdni", "iść po poboczu", "iść jak najbliżej osi jezdni", "wszystkie odpowiedzi są prawidłowe"]
+      },
+      {
+        "q": "Który narząd znajduje się pośrodku klatki piersiowej między płucami?",
+        "a": "serce",
+        "options": ["nerka", "serce", "obojczyk", "wątroba"]
+      },
+      {
+        "q": "Zmysł, który pomoże stwierdzić czy pranie już wyschło, to:",
+        "a": "dotyk",
+        "options": ["równowaga", "powonienie", "dotyk", "węch"]
+      },
+      {
+        "q": "Wskaż zdanie fałszywe dotyczące organizmu człowieka:",
+        "a": "Liczba komórek budujących ciało człowieka jest stała.",
+        "options": [
+          "W ciemności źrenice poszerzają się, by wychwycić nawet minimalną ilość światła.",
+          "Liczba komórek budujących ciało człowieka jest stała.",
+          "Nierówności na powierzchni palców utrudniają ślizganie się dłoni po trzymanym przedmiocie.",
+          "Błonnik to taki składnik pokarmu, którego organizm nie trawi."
+        ]
+      },
+      {
+        "q": "Szkielet chroni przed urazami niektóre narządy. Wskaż układ, który NIE jest chroniony przez szkielet:",
+        "a": "nerwowy",
+        "options": ["nerwowy", "krwionośny", "oddechowy", "brak prawidłowej odpowiedzi"]
+      },
+      {
+        "q": "Wypoczynek czynny jest zaprzeczeniem:",
+        "a": "bierności",
+        "options": ["ruchu", "aktywności", "bierności", "dynamiki"]
+      },
+      {
+        "q": "Wskaż chorobę zakaźną, na którą można chorować raz w życiu:",
+        "a": "odra",
+        "options": ["angina", "grypa", "odra", "salmonelloza"]
+      },
+      {
+        "q": "Wskaż osad atmosferyczny, który topnieje w temperaturze powyżej 0°C:",
+        "a": "szron",
+        "options": ["rosa", "szron", "grad", "brak prawidłowej odpowiedzi"]
+      },
+      {
+        "q": "Zjawisko symbiozy grzybów z korzeniami drzew to:",
+        "a": "mikoryza",
+        "options": ["pasożytnictwo", "fotosynteza", "mikoryza", "zapy lanie"]
+      },
+      {
+        "q": "Grzyby pełnią w przyrodzie wiele funkcji. Wskaż prawdziwe stwierdzenie:",
+        "a": "wszystkie odpowiedzi są prawidłowe",
+        "options": [
+          "odpowiadają za choroby skóry",
+          "powodują psucie się pokarmów",
+          "przyczyniają się do tworzenia gleby",
+          "wszystkie odpowiedzi są prawidłowe"
+        ]
+      },
+      {
+        "q": "Zaznacz zdanie prawdziwe dotyczące higieny i zdrowia:",
+        "a": "Częste mycie rąk pomaga ustrzec się przed grypą.",
+        "options": [
+          "Chrypka często towarzyszy ospie wietrznej.",
+          "Prawidłowa temperatura ludzkiego ciała to około 26,6°C.",
+          "Notariusz robi i sprzedaje leki.",
+          "Częste mycie rąk pomaga ustrzec się przed grypą."
+        ]
+      },
+      {
+        "q": "Wskaż zestaw środków higienicznych, których NIE powinno się pożyczać:",
+        "a": "grzebień, gąbka, pilniczek",
+        "options": [
+          "ręcznik, pasta do zębów, tonik antybakteryjny",
+          "szampon, obcinacz do paznokci, dezodorant",
+          "grzebień, gąbka, pilniczek",
+          "płyn do płukania jamy ustnej, mydło, żel pod prysznic"
+        ]
+      }
+    ]
+  }
+]
