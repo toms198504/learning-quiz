@@ -4,95 +4,205 @@
     "questions": [
       {
         "q": "Pieszy idący po jezdni ma obowiązek:",
-        "a": "iść po poboczu",
-        "options": ["iść z prawej strony jezdni", "iść po poboczu", "iść jak najbliżej osi jezdni", "wszystkie odpowiedzi są prawidłowe"]
+        "a": "B) iść po poboczu",
+        "options": ["A) iść z prawej strony jezdni", "B) iść po poboczu", "C) iść jak najbliżej osi jezdni", "D) wszystkie odpowiedzi są prawidłowe"]
       },
       {
-        "q": "Który narząd znajduje się pośrodku klatki piersiowej między płucami?",
-        "a": "serce",
-        "options": ["nerka", "serce", "obojczyk", "wątroba"]
+        "q": "Wskaż części ciała zaznaczone na rysunku:",
+        "a": "C) D - podudzie, A - ramię",
+        "options": ["A) A - bark, B - ramię", "B) C - udo, B - przedramię", "C) D - podudzie, A - ramię", "D) C - podudzie D - łydka"],
+        "img": "panda_pytanie_2.jpg"
       },
       {
-        "q": "Zmysł, który pomoże stwierdzić czy pranie już wyschło, to:",
-        "a": "dotyk",
-        "options": ["równowaga", "powonienie", "dotyk", "węch"]
+        "q": "Leży pośrodku klatki piersiowej między płucami:",
+        "a": "B) serce",
+        "options": ["A) nerka", "B) serce", "C) obojczyk", "D) wątroba"]
       },
       {
-        "q": "Wskaż zdanie fałszywe dotyczące organizmu człowieka:",
-        "a": "Liczba komórek budujących ciało człowieka jest stała.",
+        "q": "Zmysł, który pomoże stwierdzić czy pranie już wyschło:",
+        "a": "C) dotyk",
+        "options": ["A) równowaga", "B) powonienie", "C) dotyk", "D) węch"]
+      },
+      {
+        "q": "Wskaż zdanie fałszywe:",
+        "a": "B) Liczba komórek budujących ciało człowieka jest stała.",
         "options": [
-          "W ciemności źrenice poszerzają się, by wychwycić nawet minimalną ilość światła.",
-          "Liczba komórek budujących ciało człowieka jest stała.",
-          "Nierówności na powierzchni palców utrudniają ślizganie się dłoni po trzymanym przedmiocie.",
-          "Błonnik to taki składnik pokarmu, którego organizm nie trawi."
+          "A) W ciemności źrenice poszerzają się, by wychwycić nawet minimalną ilość światła.",
+          "B) Liczba komórek budujących ciało człowieka jest stała.",
+          "C) Nierówności na powierzchni palców utrudniają ślizganie się dłoni po trzymanym przedmiocie.",
+          "D) Błonnik to taki składnik pokarmu, którego organizm nie trawi."
         ]
       },
       {
-        "q": "Szkielet chroni przed urazami niektóre narządy. Wskaż układ, który NIE jest chroniony przez szkielet:",
-        "a": "nerwowy",
-        "options": ["nerwowy", "krwionośny", "oddechowy", "brak prawidłowej odpowiedzi"]
+        "q": "Wskaż narząd, który wytwarza komórki widoczne na rysunku obok:",
+        "a": "C) jądro",
+        "options": ["A) szpik kostny", "B) macica", "C) jądro", "D) wątroba"],
+        "img": "panda_pytanie_6.jpg"
+      },
+      {
+        "q": "Spotykają się w mostku:",
+        "a": "D) żebra",
+        "options": ["A) jelita", "B) płuca", "C) ścięgna", "D) żebra"]
+      },
+      {
+        "q": "Szkielet chroni przed urazami niektóre narządy, które należą do różnych układów. Wskaż układ, który nie jest chroniony przez szkielet:",
+        "a": "D) brak prawidłowej odpowiedzi",
+        "options": ["A) nerwowy", "B) krwionośny", "C) oddechowy", "D) brak prawidłowej odpowiedzi"]
+      },
+      {
+        "q": "Żuchwa to:",
+        "a": "A) szczęka dolna",
+        "options": ["A) szczęka dolna", "B) wszystkie zęby", "C) szczęka górna", "D) górna część czaszki"]
       },
       {
         "q": "Wypoczynek czynny jest zaprzeczeniem:",
-        "a": "bierności",
-        "options": ["ruchu", "aktywności", "bierności", "dynamiki"]
+        "a": "C) bierności",
+        "options": ["A) ruchu", "B) aktywności", "C) bierności", "D) dynamiki"]
+      },
+      {
+        "q": "Wskaż przykłady profilaktyki zdrowotnej:",
+        "a": "D) wszystkie odpowiedzi są prawidłowe",
+        "options": [
+          "A) skuteczne radzenie sobie ze stresem",
+          "B) prawidłowe nawyki żywieniowe",
+          "C) asertywność wobec substancji uzależniających",
+          "D) wszystkie odpowiedzi są prawidłowe"
+        ]
+      },
+      {
+        "q": "Zaznacz porę roku, której dotyczy ten fragment kartki z kalendarza:",
+        "a": "A) pora roku przed latem",
+        "options": ["A) pora roku przed latem", "B) lato", "C) pora roku po jesieni", "D) jesień"],
+        "img": "panda_pytanie_12.jpg"
       },
       {
         "q": "Wskaż chorobę zakaźną, na którą można chorować raz w życiu:",
-        "a": "odra",
-        "options": ["angina", "grypa", "odra", "salmonelloza"]
+        "a": "C) odra",
+        "options": ["A) angina", "B) grypa", "C) odra", "D) salmonelloza"]
+      },
+      {
+        "q": "Na podstawie rysunku wskaż właściwe stwierdzenie:",
+        "a": "B) występuje równonoc",
+        "options": ["A) słońce wschodzi na NE i zachodzi na NW", "B) występuje równonoc", "C) zaczyna się lato", "D) wszystkie odpowiedzi są prawidłowe"],
+        "img": "panda_pytanie_14.jpg"
       },
       {
         "q": "Wskaż osad atmosferyczny, który topnieje w temperaturze powyżej 0°C:",
-        "a": "szron",
-        "options": ["rosa", "szron", "grad", "brak prawidłowej odpowiedzi"]
+        "a": "D) brak prawidłowej odpowiedzi",
+        "options": ["A) rosa", "B) szron", "C) grad", "D) brak prawidłowej odpowiedzi"]
       },
       {
-        "q": "Zjawisko symbiozy grzybów z korzeniami drzew to:",
-        "a": "mikoryza",
-        "options": ["pasożytnictwo", "fotosynteza", "mikoryza", "zapy lanie"]
-      },
-      {
-        "q": "Grzyby pełnią w przyrodzie wiele funkcji. Wskaż prawdziwe stwierdzenie:",
-        "a": "wszystkie odpowiedzi są prawidłowe",
+        "q": "[TEKST]: Kaja miała ciekawe wakacje. Zaraz po zakończeniu roku szkolnego była na wycieczce w Biebrzańskim Parku Narodowym, gdzie podziwiała bagienną faunę i florę. Po powrocie wiele razy jeździła z rodzicami nad jezioro, a z babcią pojechała pociągiem na weekend nad morze. Raz nawet ze starszym bratem łowiła ryby w kanale. Spełniła też swoje największe marzenie - pojechała w dolinę Wisły na obóz harcerski pod namiotami. W czasie wakacji Kaja:",
+        "a": "B) dwa razy była nad wodą płynącą i raz nad wodą słoną",
         "options": [
-          "odpowiadają za choroby skóry",
-          "powodują psucie się pokarmów",
-          "przyczyniają się do tworzenia gleby",
-          "wszystkie odpowiedzi są prawidłowe"
+          "A) więcej razy odpoczywała nad wodą stojącą",
+          "B) dwa razy była nad wodą płynącą i raz nad wodą słoną",
+          "C) była w pobliżu sztucznego zbiornika",
+          "D) wszystkie odpowiedzi są prawidłowe"
         ]
       },
       {
-        "q": "Zaznacz zdanie prawdziwe dotyczące higieny i zdrowia:",
-        "a": "Częste mycie rąk pomaga ustrzec się przed grypą.",
+        "q": "Znak widoczny obok umieszcza się na przedmiotach:",
+        "a": "C) kruchych",
+        "options": ["A) sprężystych", "B) plastycznych", "C) kruchych", "D) niebezpiecznych"],
+        "img": "panda_pytanie_17.jpg"
+      },
+      {
+        "q": "W przypadku skaleczenia należy:",
+        "a": "C) zdezynfekować ranę wodą utlenioną lub jodyną",
+        "options": ["A) wezwać lekarza", "B) unieruchomić kończynę", "C) zdezynfekować ranę wodą utlenioną lub jodyną", "D) brak prawidłowej odpowiedzi"]
+      },
+      {
+        "q": "[TEKST]: Niektóre grzyby żyją w związku z korzeniami ......... na zasadzie symbiozy. To zjawisko odkrył w 1880 roku polski ......... Franciszek Kamieński i nazwał ......... . Wybierz zestaw prawidłowo uzupełniający powyższy tekst:",
+        "a": "D) drzew, botanik, mikoryzą",
+        "options": ["A) krzewów, biolog, pasożytnictwem", "B) traw, ornitolog, zapylaniem", "C) mchów, ekolog, fotosyntezą", "D) drzew, botanik, mikoryzą"]
+      },
+      {
+        "q": "[TEKST]: Niektóre grzyby żyją w związku z korzeniami ......... na zasadzie symbiozy. To zjawisko odkrył w 1880 roku polski ......... Franciszek Kamieński i nazwał ......... . Odkrycia Polak dokonał w:",
+        "a": "B) XIX wieku",
+        "options": ["A) średniowieczu", "B) XIX wieku", "C) osiemnastym stuleciu", "D) brak prawidłowej odpowiedzi"]
+      },
+      {
+        "q": "Grzyby:",
+        "a": "D) wszystkie odpowiedzi są prawidłowe",
+        "options": ["A) odpowiadają za choroby skóry", "B) powodują psucie się pokarmów", "C) przyczyniają się do tworzenia gleby", "D) wszystkie odpowiedzi są prawidłowe"]
+      },
+      {
+        "q": "Wskaż stwierdzenie prawidłowo opisujące warunki życia w wodzie:",
+        "a": "C) można pobierać wodę całą powierzchnią ciała",
         "options": [
-          "Chrypka często towarzyszy ospie wietrznej.",
-          "Prawidłowa temperatura ludzkiego ciała to około 26,6°C.",
-          "Notariusz robi i sprzedaje leki.",
-          "Częste mycie rąk pomaga ustrzec się przed grypą."
+          "A) w wodzie jest więcej tlenu niż w powietrzu",
+          "B) organizmy żyjące głębiej mają lepszy dostęp do światła",
+          "C) można pobierać wodę całą powierzchnią ciała",
+          "D) temperatura wody szybko się zmienia"
         ]
       },
       {
-        "q": "Wskaż zestaw środków higienicznych, których NIE powinno się pożyczać:",
-        "a": "grzebień, gąbka, pilniczek",
+        "q": "Opór:",
+        "a": "C) może się zwiększać pod wpływem obecności śluzu na ciele zwierzęcia",
         "options": [
-          "ręcznik, pasta do zębów, tonik antybakteryjny",
-          "szampon, obcinacz do paznokci, dezodorant",
-          "grzebień, gąbka, pilniczek",
-          "płyn do płukania jamy ustnej, mydło, żel pod prysznic"
+          "A) występuje w wodzie, a w powietrzu - nie",
+          "B) utrudnia wykonywanie czynności",
+          "C) może się zwiększać pod wpływem obecności śluzu na ciele zwierzęcia",
+          "D) nie zależy od kształtu ani od wielkości ciała"
         ]
       },
       {
-  "q": "Wskaż części ciała zaznaczone na rysunku obok:",
-  "a": "C",
-  "options": [
-    "A) A - bark, B - ramię",
-    "B) C - udo, B - przedramię",
-    "C) D - podudzie, A - ramię",
-    "D) C - podudzie, D - łydka"
-  ],
-  "img": "panda_pytanie_2.jpg"
-}
+        "q": "[TEKST]: Jurek wreszcie kupił sobie aparat fotograficzny. Długo na niego oszczędzał. Coraz częściej uwieczniał nim życie ru/ósałki admirał, ró/udnicy i tu/órkucia. Nadal jednak marzył o fotografowaniu kiełrz/ża i muszli ż/rzyworódki. Na podstawie tekstu dyktanda wskaż błędną odpowiedź:",
+        "a": "D) w tekście występuje nazwa rośliny",
+        "options": [
+          "A) w trzecim zdaniu wymienione są owady",
+          "B) w ostatnim zdaniu wymienione są zwierzęta wodne",
+          "C) tekst prawidłowo uzupełniają litery: u, u, u, ż, ż",
+          "D) w tekście występuje nazwa rośliny"
+        ]
+      },
+      {
+        "q": "Dąbrówka, Grabina, Lipnica to miejscowości, których nazwy pochodzą od nazw:",
+        "a": "B) drzew",
+        "options": ["A) zawodów", "B) drzew", "C) imion właścicieli", "D) form ukształtowania terenu"]
+      },
+      {
+        "q": "Wskaż błędny przykład ochrony przyrody:",
+        "a": "C) „Polska czerwona księga” to spis pomników przyrody nieożywionej.",
+        "options": [
+          "A) W Polsce istnieją 23 parki narodowe.",
+          "B) Ochronie gatunkowej w Polsce podlegają rozmaite rośliny, zwierzęta, a także grzyby.",
+          "C) „Polska czerwona księga” to spis pomników przyrody nieożywionej.",
+          "D) Puszcza Białowieska to teren objęty ochroną, bo to ostatni w Europie las naturalny."
+        ]
+      },
+      {
+        "q": "Temblak:",
+        "a": "A) wykonujemy z chusty trójkątnej",
+        "options": ["A) wykonujemy z chusty trójkątnej", "B) stosujemy w przypadku zakrztuszenia", "C) zakładamy na nogę", "D) jest konieczny w pierwszych objawach zatrucia"]
+      },
+      {
+        "q": "Zaznacz zdanie prawdziwe:",
+        "a": "D) Częste mycie rąk pomaga ustrzec się przed grypą.",
+        "options": [
+          "A) Chrypka często towarzyszy ospie wietrznej.",
+          "B) Prawidłowa temperatura ludzkiego ciała to około 26,6°C.",
+          "C) Notariusz robi i sprzedaje leki.",
+          "D) Częste mycie rąk pomaga ustrzec się przed grypą."
+        ]
+      },
+      {
+        "q": "Wskaż zestaw środków higienicznych, których nie powinno się pożyczać:",
+        "a": "C) grzebień, gąbka, pilniczek",
+        "options": [
+          "A) ręcznik, pasta do zębów, tonik antybakteryjny",
+          "B) szampon, obcinacz do paznokci, dezodorant",
+          "C) grzebień, gąbka, pilniczek",
+          "D) płyn do płukania jamy ustnej, mydło, żel pod prysznic"
+        ]
+      },
+      {
+        "q": "Przyjrzyj się ilustracjom. Zaznacz zdjęcie przedstawiające pomnik przyrody:",
+        "a": "A) głaz narzutowy",
+        "options": ["A) głaz narzutowy", "B) drewniana brama", "C) jaszczurka", "D) gniazdo ptaka"],
+        "img": "panda_pytanie_30.jpg"
+      }
     ]
   }
 ]
