@@ -81,7 +81,18 @@
           "grzebień, gąbka, pilniczek",
           "płyn do płukania jamy ustnej, mydło, żel pod prysznic"
         ]
-      }
+      },
+      {
+  "q": "Wskaż części ciała zaznaczone na rysunku obok:",
+  "a": "C",
+  "options": [
+    "A) A - bark, B - ramię",
+    "B) C - udo, B - przedramię",
+    "C) D - podudzie, A - ramię",
+    "D) C - podudzie, D - łydka"
+  ],
+  "img": "panda_pytanie_2.jpg"
+}
     ]
   }
 ]
