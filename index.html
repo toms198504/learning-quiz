@@ -134,72 +134,73 @@
         displayQuestion();
     }
 
-    function displayQuestion() {
-        if (currentStep < quizData.length) {
-            const qObj = quizData[currentStep];
-            const imgEl = document.getElementById('question-img');
+   function displayQuestion() {
+    if (currentStep < quizData.length) {
+        const qObj = quizData[currentStep];
+        const imgEl = document.getElementById('question-img');
+        
+        document.getElementById('progressBar').style.width = (currentStep / quizData.length * 100) + "%";
+        document.getElementById('progress-text').innerText = `Pytanie ${currentStep + 1}/${quizData.length}`;
+        document.getElementById('score-text').innerText = `Punkty: ${score}`;
+        document.getElementById('feedback').classList.add('hidden');
+        document.getElementById('nextBtn').classList.add('hidden');
+
+        // --- KLUCZOWA POPRAWKA OBRAZKA ---
+        if (qObj.img && qObj.img.trim() !== "") {
+            imgEl.src = qObj.img;
+            imgEl.classList.remove('hidden');
+        } else {
+            imgEl.src = ""; // Czyścimy źródło
+            imgEl.classList.add('hidden'); // Ukrywamy element całkowicie
+        }
+        // ---------------------------------
+
+        const hasGap = qObj.q.includes("[") && qObj.q.includes("]");
+        const isABCD = qObj.options && qObj.options.length > 0;
+
+        if (currentMode === "fiszki") {
+            document.getElementById('question-text').innerText = qObj.q.replace(/\[|\]/g, "");
+            document.getElementById('input-mode').classList.add('hidden');
+            document.getElementById('abcd-mode').classList.add('hidden');
+            document.getElementById('flash-mode').classList.remove('hidden');
+            document.getElementById('revealBtn').classList.remove('hidden');
+            document.getElementById('self-eval').classList.add('hidden');
+        } else if (isABCD) {
+            document.getElementById('flash-mode').classList.add('hidden');
+            document.getElementById('input-mode').classList.add('hidden');
+            document.getElementById('abcd-mode').classList.remove('hidden');
+            document.getElementById('question-text').innerText = qObj.q;
             
-            document.getElementById('progressBar').style.width = (currentStep / quizData.length * 100) + "%";
-            document.getElementById('progress-text').innerText = `Pytanie ${currentStep + 1}/${quizData.length}`;
-            document.getElementById('score-text').innerText = `Punkty: ${score}`;
-            document.getElementById('feedback').classList.add('hidden');
-            document.getElementById('nextBtn').classList.add('hidden');
-
-            // Obsługa obrazka
-            if (qObj.img) {
-                imgEl.src = qObj.img;
-                imgEl.classList.remove('hidden');
+            const abcdList = document.getElementById('abcd-list');
+            abcdList.innerHTML = "";
+            const shuffled = [...qObj.options].sort(() => Math.random() - 0.5);
+            shuffled.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = 'btn btn-gray';
+                btn.innerText = opt;
+                btn.onclick = () => checkABCD(opt);
+                abcdList.appendChild(btn);
+            });
+        } else {
+            document.getElementById('flash-mode').classList.add('hidden');
+            document.getElementById('abcd-mode').classList.add('hidden');
+            document.getElementById('input-mode').classList.remove('hidden');
+            if (hasGap) {
+                const gapMatch = qObj.q.match(/\[(.*?)\]/);
+                const textWithInp = qObj.q.replace(/\[.*?\]/, `<input type="text" id="gapInput" class="gap-input" autocomplete="off" autocorrect="off" spellcheck="false" style="width: ${gapMatch[1].length * 15 + 30}px">`);
+                document.getElementById('question-text').innerHTML = textWithInp;
+                document.getElementById('full-input-div').classList.add('hidden');
+                setTimeout(() => { if(document.getElementById('gapInput')) document.getElementById('gapInput').focus(); }, 50);
             } else {
-                imgEl.classList.add('hidden');
-            }
-
-            const hasGap = qObj.q.includes("[") && qObj.q.includes("]");
-            const isABCD = qObj.options && qObj.options.length > 0;
-
-            if (currentMode === "fiszki") {
-                document.getElementById('question-text').innerText = qObj.q.replace(/\[|\]/g, "");
-                document.getElementById('input-mode').classList.add('hidden');
-                document.getElementById('abcd-mode').classList.add('hidden');
-                document.getElementById('flash-mode').classList.remove('hidden');
-                document.getElementById('revealBtn').classList.remove('hidden');
-                document.getElementById('self-eval').classList.add('hidden');
-            } else if (isABCD) {
-                document.getElementById('flash-mode').classList.add('hidden');
-                document.getElementById('input-mode').classList.add('hidden');
-                document.getElementById('abcd-mode').classList.remove('hidden');
                 document.getElementById('question-text').innerText = qObj.q;
-                
-                const abcdList = document.getElementById('abcd-list');
-                abcdList.innerHTML = "";
-                const shuffled = [...qObj.options].sort(() => Math.random() - 0.5);
-                shuffled.forEach(opt => {
-                    const btn = document.createElement('button');
-                    btn.className = 'btn btn-gray';
-                    btn.innerText = opt;
-                    btn.onclick = () => checkABCD(opt);
-                    abcdList.appendChild(btn);
-                });
-            } else {
-                document.getElementById('flash-mode').classList.add('hidden');
-                document.getElementById('abcd-mode').classList.add('hidden');
-                document.getElementById('input-mode').classList.remove('hidden');
-                if (hasGap) {
-                    const gapMatch = qObj.q.match(/\[(.*?)\]/);
-                    const textWithInp = qObj.q.replace(/\[.*?\]/, `<input type="text" id="gapInput" class="gap-input" autocomplete="off" autocorrect="off" spellcheck="false" style="width: ${gapMatch[1].length * 15 + 30}px">`);
-                    document.getElementById('question-text').innerHTML = textWithInp;
-                    document.getElementById('full-input-div').classList.add('hidden');
-                    setTimeout(() => { if(document.getElementById('gapInput')) document.getElementById('gapInput').focus(); }, 50);
-                } else {
-                    document.getElementById('question-text').innerText = qObj.q;
-                    document.getElementById('full-input-div').classList.remove('hidden');
-                    const inp = document.getElementById('answerInputFull'); 
-                    inp.value = ""; inp.disabled = false;
-                    setTimeout(() => inp.focus(), 50);
-                }
+                document.getElementById('full-input-div').classList.remove('hidden');
+                const inp = document.getElementById('answerInputFull'); 
+                inp.value = ""; inp.disabled = false;
+                setTimeout(() => inp.focus(), 50);
             }
-        } else { showSummary(); }
-    }
-
+        }
+    } else { showSummary(); }
+}
     function checkABCD(selected) {
         evaluateAnswer(selected);
         document.getElementById('abcd-mode').classList.add('hidden');
