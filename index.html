@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uniwersalna Platforma Edukacyjna</title>
+    <title>Uniwersalna Platforma Edukacyjna - Final Pro</title>
     <style>
         :root { --primary: #6f42c1; --secondary: #28a745; --bg: #f0f2f5; --text: #333; }
         body { font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; padding: 20px; background: var(--bg); color: var(--text); }
@@ -22,7 +22,9 @@
         .gap-input { padding: 5px; border: 2px solid var(--primary); border-radius: 6px; font-size: 18px; text-align: center; background: #fdfbff; }
         #answerInputFull { width: 100%; padding: 14px; margin: 15px 0; border: 2px solid #ddd; border-radius: 10px; font-size: 18px; box-sizing: border-box; }
         
-        #question-text { font-size: 20px; margin-bottom: 25px; text-align: center; line-height: 1.6; }
+        #question-text { font-size: 20px; margin-bottom: 15px; text-align: center; line-height: 1.6; }
+        #question-img { display: block; max-width: 100%; max-height: 250px; margin: 0 auto 20px auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        
         .stats { display: flex; justify-content: space-between; color: #666; font-size: 0.9em; margin-bottom: 10px; }
         #feedback { margin-top: 15px; padding: 20px; border-radius: 12px; text-align: center; font-weight: bold; }
         .correct-box { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
@@ -52,11 +54,12 @@
             <div class="progress-container"><div id="progressBar"></div></div>
             <div class="stats"><span id="progress-text"></span><span id="score-text">Punkty: 0</span></div>
             
+            <img id="question-img" src="" alt="podgląd pytania" class="hidden">
             <div id="question-text">Pytanie</div>
 
             <div id="input-mode" class="hidden">
                 <div id="full-input-div">
-                    <input type="text" id="answerInputFull" placeholder="Twoja odpowiedź..." autocomplete="off">
+                    <input type="text" id="answerInputFull" placeholder="Twoja odpowiedź..." autocomplete="off" autocorrect="off" spellcheck="false">
                 </div>
                 <button class="btn btn-p" onclick="checkAnyInput()">Sprawdź odpowiedź</button>
             </div>
@@ -134,11 +137,21 @@
     function displayQuestion() {
         if (currentStep < quizData.length) {
             const qObj = quizData[currentStep];
+            const imgEl = document.getElementById('question-img');
+            
             document.getElementById('progressBar').style.width = (currentStep / quizData.length * 100) + "%";
             document.getElementById('progress-text').innerText = `Pytanie ${currentStep + 1}/${quizData.length}`;
             document.getElementById('score-text').innerText = `Punkty: ${score}`;
             document.getElementById('feedback').classList.add('hidden');
             document.getElementById('nextBtn').classList.add('hidden');
+
+            // Obsługa obrazka
+            if (qObj.img) {
+                imgEl.src = qObj.img;
+                imgEl.classList.remove('hidden');
+            } else {
+                imgEl.classList.add('hidden');
+            }
 
             const hasGap = qObj.q.includes("[") && qObj.q.includes("]");
             const isABCD = qObj.options && qObj.options.length > 0;
@@ -247,37 +260,20 @@
         document.getElementById('quiz-content').classList.add('hidden');
         const sum = document.getElementById('summary-content');
         sum.classList.remove('hidden');
-        
         const pct = Math.round(score/quizData.length*100);
-        let stars = "⭐";
-        if (pct >= 70) stars = "⭐⭐";
-        if (pct >= 95) stars = "⭐⭐⭐";
-
-        let html = `<div style="text-align:center">
-            <span class="stars">${stars}</span>
-            <h2>Wynik: ${score} / ${quizData.length}</h2>
-            <p>Udało Ci się zaliczyć ${pct}% materiału!</p>`;
-        
-        if (wrongAnswers.length > 0) {
-            html += `<button class="btn btn-s" onclick="retryErrors()">Powtórz tylko błędy (${wrongAnswers.length})</button>`;
-        }
-        
-        html += `<button class="btn btn-p" onclick="backToCategories()">Powrót do tematów</button>`;
-        html += `<button class="btn btn-gray" onclick="location.reload()">Menu główne (Przedmioty)</button></div>`;
+        let stars = pct >= 95 ? "⭐⭐⭐" : (pct >= 70 ? "⭐⭐" : "⭐");
+        let html = `<div style="text-align:center"><span class="stars">${stars}</span><h2>Wynik: ${score} / ${quizData.length}</h2><p>${pct}% materiału opanowane!</p>`;
+        if (wrongAnswers.length > 0) html += `<button class="btn btn-s" onclick="retryErrors()">Powtórz tylko błędy (${wrongAnswers.length})</button>`;
+        html += `<button class="btn btn-p" onclick="backToCategories()">Powrót do tematów</button><button class="btn btn-gray" onclick="location.reload()">Menu główne</button></div>`;
         sum.innerHTML = html;
     }
 
-    function retryErrors() {
-        quizData = [...wrongAnswers];
-        startNewSet();
-    }
-
+    function retryErrors() { quizData = [...wrongAnswers]; startNewSet(); }
     function backToCategories() {
         document.getElementById('quiz-screen').classList.add('hidden');
         document.getElementById('summary-content').classList.add('hidden');
         document.getElementById('category-screen').classList.remove('hidden');
     }
-
     function showIndex() {
         document.getElementById('category-screen').classList.add('hidden');
         document.getElementById('index-screen').classList.remove('hidden');
