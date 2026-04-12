@@ -1,7 +1,10 @@
 [
-  { "title": "Panda 2020 - Przyroda - abcd", "file": "panda_przyroda_2020.json", "type": "wpisywanie" },
-  { "title": "Panda 2023 - Przyroda - abcd", "file": "panda_przyroda_2023.json", "type": "wpisywanie" }
+  { "title": "Panda 2020 - Przyroda", "file": "panda_przyroda_2020.json", "type": "wpisywanie" },
+  { "title": "Panda 2023 - Przyroda", "file": "panda_przyroda_2023.json", "type": "wpisywanie" },
+   { "title": "Panda 2023 - Biologia - kl 5", "file": "panda_biologia_2023_kl5.json", "type": "wpisywanie" },
+  { "title": "Panda 2024 - Biologia - kl 5", "file": "panda_biologia_2024_kl5.json", "type": "wpisywanie" }
 ]
+
 
 
 
