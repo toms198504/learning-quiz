@@ -1,0 +1,161 @@
+[
+  {
+    "category": "Konkurs Panda 2023",
+    "questions": [
+      {
+        "q": "Do drzew iglastych nie należy:",
+        "a": "B) lipa",
+        "options": ["A) modrzew", "B) lipa", "C) sosna", "D) świerk"]
+      },
+      {
+        "q": "Do ptaków odlatujących na zimę z Polski nie należy:",
+        "a": "D) dzięcioł",
+        "options": ["A) bocian", "B) jaskółka", "C) żuraw", "D) dzięcioł"]
+      },
+      {
+        "q": "Prędkość wiatru można podać w jednostce:",
+        "a": "D) odpowiedzi A i C są poprawne",
+        "options": ["A) m/s", "B) mm/h", "C) km/h", "D) odpowiedzi A i C są poprawne"]
+      },
+      {
+        "q": "Barometr służy do pomiaru:",
+        "a": "B) ciśnienia atmosferycznego",
+        "options": ["A) temperatury powietrza", "B) ciśnienia atmosferycznego", "C) wilgotności powietrza", "D) osadów atmosferycznych"]
+      },
+      {
+        "q": "Do osadów nie należy:",
+        "a": "B) grad",
+        "options": ["A) rosa", "B) grad", "C) szron", "D) szadź"]
+      },
+      {
+        "q": "Przyrząd przedstawiony na ilustracji służy do pomiaru:",
+        "a": "D) wielkości opadów atmosferycznych",
+        "options": ["A) temperatury powietrza", "B) wartości ciśnienia atmosferycznego", "C) prędkości wiatru", "D) wielkości opadów atmosferycznych"],
+        "img": "panda2023_pytanie_6.jpg"
+      },
+      {
+        "q": "Na mapie przedstawiono wiatr o kierunku:",
+        "a": "D) północno-zachodnim",
+        "options": ["A) północnym", "B) północno-wschodnim", "C) południowo-zachodnim", "D) północno-zachodnim"],
+        "img": "panda2023_pytanie_7.jpg"
+      },
+      {
+        "q": "W stanie ciekłym występuje:",
+        "a": "A) rosa",
+        "options": ["A) rosa", "B) grad", "C) szadź", "D) śnieg"]
+      },
+      {
+        "q": "Temperatura poniżej 0°C, opady śniegu, zawieje oraz szadź to zjawiska charakterystyczne dla:",
+        "a": "D) zimy",
+        "options": ["A) wiosny", "B) lata", "C) jesieni", "D) zimy"]
+      },
+      {
+        "q": "Do zadań układu ruchu nie należy:",
+        "a": "C) dostarczanie energii niezbędnej do pracy organizmu",
+        "options": ["A) utrzymywanie pionowej pozycji ciała", "B) ochrona narządów wewnętrznych", "C) dostarczanie energii niezbędnej do pracy organizmu", "D) umożliwianie ruchu"]
+      },
+      {
+        "q": "Zbieraniem, analizą i przetwarzaniem informacji z wewnątrz organizmu oraz bodźców zewnętrznych, zajmuje się układ:",
+        "a": "C) nerwowy",
+        "options": ["A) pokarmowy", "B) ruchu", "C) nerwowy", "D) krwionośny"]
+      },
+      {
+        "q": "Zadaniem układu krwionośnego jest:",
+        "a": "C) dostarczanie komórkom substancji niezbędnych oraz usuwanie szkodliwych",
+        "options": ["A) ochrona narządów wewnętrznych", "B) wydawanie na świat potomstwa", "C) dostarczanie komórkom substancji niezbędnych oraz usuwanie szkodliwych", "D) rozdrabnianie i trawienie pokarmu"]
+      },
+      {
+        "q": "Wytwarzanie komórek rozrodczych należy do zadań układu:",
+        "a": "D) rozrodczego",
+        "options": ["A) nerwowego", "B) pokarmowego", "C) krwionośnego", "D) rozrodczego"]
+      },
+      {
+        "q": "Aby zapobiegać próchnicy należy:",
+        "a": "A) szczotkować zęby dwa razy dziennie",
+        "options": ["A) szczotkować zęby dwa razy dziennie", "B) używać mydła antybakteryjnego", "C) nie pożyczać grzebienia", "D) na basenie nosić klapki"]
+      },
+      {
+        "q": "Grzybicą nie zarazimy się:",
+        "a": "D) jedząc zepsute mięso",
+        "options": ["A) na basenie", "B) używając wspólnego ręcznika", "C) szczotkując włosy czyjąś szczotką", "D) jedząc zepsute mięso"]
+      },
+      {
+        "q": "Do wypoczynku czynnego nie należy:",
+        "a": "B) czytanie książki",
+        "options": ["A) jazda na łyżwach", "B) czytanie książki", "C) spacerowanie", "D) gra w piłkę nożną"]
+      },
+      {
+        "q": "Podczas zimowych zabaw nie należy:",
+        "a": "C) jeździć na łyżwach po zamarzniętym jeziorze",
+        "options": ["A) spacerować po wyznaczonych górskich szlakach", "B) zjeżdżać na sankach w bezpiecznym miejscu", "C) jeździć na łyżwach po zamarzniętym jeziorze", "D) zakładać kasku podczas jazdy na nartach"]
+      },
+      {
+        "q": "Przedmiot przedstawiony na ilustracji:",
+        "a": "A) jest sprężysty",
+        "options": ["A) jest sprężysty", "B) nie jest ciałem stałym", "C) nie ma określonego kształtu", "D) jest plastyczny"],
+        "img": "panda2023_pytanie_18.jpg"
+      },
+      {
+        "q": "Kamienne rzeźby mogą powstawać dzięki temu, że skały cechuje:",
+        "a": "C) kruchość",
+        "options": ["A) sprężystość", "B) plastyczność", "C) kruchość", "D) porowatość"]
+      },
+      {
+        "q": "Głównymi sprawcami ukąszeń w Polsce są:",
+        "a": "C) osy",
+        "options": ["A) szerszenie", "B) mrówki", "C) osy", "D) pszczoły"]
+      },
+      {
+        "q": "Do objawów ukąszenia nie należą:",
+        "a": "C) wymioty",
+        "options": ["A) zaczerwienienie", "B) świąd", "C) wymioty", "D) obrzęki"]
+      },
+      {
+        "q": "W przypadku ukąszenia przez zwierzę przedstawione na ilustracji należy:",
+        "a": "C) wezwać lekarza",
+        "options": ["A) energicznie poruszać ukąszoną częścią ciała", "B) wyssać jad z rany", "C) wezwać lekarza", "D) prowokować wymioty"],
+        "img": "panda2023_pytanie_22.jpg"
+      },
+      {
+        "q": "W przypadku niewielkiego skaleczenia:",
+        "a": "D) nie lekceważ zranienia",
+        "options": ["A) nie przemywaj rany wodą", "B) nie zakładaj plastra z opatrunkiem", "C) nie trzeba reagować w żaden sposób", "D) nie lekceważ zranienia"]
+      },
+      {
+        "q": "Oparzoną skórę:",
+        "a": "B) trzeba schłodzić",
+        "options": ["A) należy polewać ciepłą wodą", "B) trzeba schłodzić", "C) należy posmarować tłustą maścią", "D) trzeba rozmasować"]
+      },
+      {
+        "q": "Trujące rośliny:",
+        "a": "D) mogą podrażnić naszą skórę",
+        "options": ["A) nigdy nie należą do hodowanych w naszych domach", "B) nie występują w Polsce", "C) wyglądają zupełnie inaczej niż te, które nie trują", "D) mogą podrażnić naszą skórę"]
+      },
+      {
+        "q": "Uzależnienie:",
+        "a": "D) może mieć psychiczne i fizyczne konsekwencje dla naszego organizmu",
+        "options": ["A) dotyczy tylko osób dorosłych", "B) to umiejętność odmowy", "C) nie wpływa na nasze samopoczucie", "D) może mieć psychiczne i fizyczne konsekwencje dla naszego organizmu"]
+      },
+      {
+        "q": "Palenie tytoniu nie powoduje:",
+        "a": "C) zaburzeń wzroku",
+        "options": ["A) przewlekłego zapalenia oskrzeli", "B) niedotlenienia serca", "C) zaburzeń wzroku", "D) raka trzustki"]
+      },
+      {
+        "q": "Zaznacz punkt, w którym nie wymieniono konsekwencji spożywania alkoholu.",
+        "a": "D) charakterystyczna wysypka na skórze",
+        "options": ["A) zakłócenia rytmu serca", "B) rak jamy ustnej i gardła", "C) uszkodzenie wątroby i żołądka", "D) charakterystyczna wysypka na skórze"]
+      },
+      {
+        "q": "Plan:",
+        "a": "A) zawsze narysowany jest w pomniejszeniu",
+        "options": ["A) zawsze narysowany jest w pomniejszeniu", "B) to to samo, co mapa", "C) to zawsze obraz przedmiotu", "D) rysowany jest w powiększeniu"]
+      },
+      {
+        "q": "Z mapy turystycznej nie odczytamy:",
+        "a": "D) informacji na temat pogody",
+        "options": ["A) trasy naszej wędrówki", "B) informacji o rozmieszczeniu parkingów", "C) nazw ulic", "D) informacji na temat pogody"]
+      }
+    ]
+  }
+]
