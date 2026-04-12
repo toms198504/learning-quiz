@@ -1,0 +1,333 @@
+[
+  {
+    "category": "Tkanki roślinne",
+    "questions": [
+      {
+        "q": "1. Do tkanek stałych nie należą tkanki:",
+        "a": "D) twórcze",
+        "options": [
+          "A) miękiszowe",
+          "B) wzmacniające",
+          "C) okrywające",
+          "D) twórcze"
+        ]
+      },
+      {
+        "q": "2. Zaznacz stwierdzenie błędne na temat tkanek twórczych.",
+        "a": "C) ich liczba stale rośnie",
+        "options": [
+          "A) dzielą się szybko",
+          "B) znajdują się na obu końcach rośliny",
+          "C) ich liczba stale rośnie",
+          "D) ich liczba się nie zmienia"
+        ]
+      },
+      {
+        "q": "3. Tkanki okrywające:",
+        "a": "B) to tkanki, do których należą skórka pędu i skórka korzenia",
+        "options": [
+          "A) tworzą wewnętrzną część rośliny",
+          "B) to tkanki, do których należą skórka pędu i skórka korzenia",
+          "C) są nieprzepuszczalne",
+          "D) to tkanki, których komórki są oddalone od siebie"
+        ]
+      },
+      {
+        "q": "4. W płatkach kwiatów znajduje się tkanka:",
+        "a": "A) miękiszowa",
+        "options": [
+          "A) miękiszowa",
+          "B) okrywająca",
+          "C) twórcza",
+          "D) wzmacniająca"
+        ]
+      },
+      {
+        "q": "5. Drewno:",
+        "a": "C) posiada długie, łączące się w cienkie rurki komórki",
+        "options": [
+          "A) jest tkanką okrywającą",
+          "B) wraz z łykiem należy do tkanek miękiszowych",
+          "C) posiada długie, łączące się w cienkie rurki komórki",
+          "D) jest tkanką, która posiada liczne ściany poprzeczne"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Korzeń i łodyga",
+    "questions": [
+      {
+        "q": "6. Strefa włośnikowa korzenia:",
+        "a": "D) umożliwia intensywne pobieranie z gleby wody i soli mineralnych",
+        "options": [
+          "A) utrzymuje roślinę w podłożu",
+          "B) to miejsce, w którym następuje wzrost korzenia na długość",
+          "C) to strefa tworzenia się korzeni bocznych rośliny",
+          "D) umożliwia intensywne pobieranie z gleby wody i soli mineralnych"
+        ]
+      },
+      {
+        "q": "7. Ilustracja przedstawia system korzeniowy:",
+        "a": "B) palowy",
+        "options": [
+          "A) wiązkowy",
+          "B) palowy",
+          "C) włośnikowy",
+          "D) przybyszowy"
+        ],
+        "img": "system_korzeniowy.jpg"
+      },
+      {
+        "q": "8. Korzenie podporowe:",
+        "a": "A) występują m.in. u kukurydzy",
+        "options": [
+          "A) występują m.in. u kukurydzy",
+          "B) spotkać możemy u buraka",
+          "C) nie wrastają w podłoże",
+          "D) nie zabezpieczają rośliny przed utratą równowagi"
+        ]
+      },
+      {
+        "q": "9. U roślin pasożytniczych i półpasożytniczych występują:",
+        "a": "C) ssawki",
+        "options": [
+          "A) korzenie podporowe",
+          "B) korzenie spichrzowe",
+          "C) ssawki",
+          "D) korzenie czepne"
+        ]
+      },
+      {
+        "q": "10. Do elementów łodygi pokrzywy nie należy/nie należą:",
+        "a": "D) cebulka",
+        "options": [
+          "A) węzły",
+          "B) pąki wierzchołowe",
+          "C) międzywęźla",
+          "D) cebulka"
+        ]
+      },
+      {
+        "q": "11. Na ilustracji przedstawiono budowę łodygi. Literą A zaznaczono:",
+        "a": "D) aparat szparkowy",
+        "options": [
+          "A) drewno",
+          "B) tkankę miękiszową",
+          "C) łyko",
+          "D) aparat szparkowy"
+        ],
+        "img": "budowa_lodygi.jpg"
+      },
+      {
+        "q": "12. Bulwy:",
+        "a": "C) służą do rozmnażania wegetatywnego",
+        "options": [
+          "A) są rodzajem pędu nadziemnego",
+          "B) wytwarza imbir",
+          "C) służą do rozmnażania wegetatywnego",
+          "D) są wiotkie i cienkie"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Liście i ich modyfikacje",
+    "questions": [
+      {
+        "q": "13. Do funkcji liści nie należy:",
+        "a": "D) pobieranie wody z gleby",
+        "options": [
+          "A) wydalanie z rośliny pary wodnej",
+          "B) wymiana gazowa",
+          "C) produkcja substancji pokarmowych w procesie fotosyntezy",
+          "D) pobieranie wody z gleby"
+        ]
+      },
+      {
+        "q": "14. Liści pojedynczych nie posiadają:",
+        "a": "B) kasztanowce",
+        "options": [
+          "A) lipy",
+          "B) kasztanowce",
+          "C) buki",
+          "D) dęby"
+        ]
+      },
+      {
+        "q": "15. Roślina przedstawiona na ilustracji posiada liście:",
+        "a": "C) pułapkowe",
+        "options": [
+          "A) spichrzowe",
+          "B) czepne",
+          "C) pułapkowe",
+          "D) przekształcone w ciernie"
+        ],
+        "img": "roslina_owadozerna.jpg"
+      },
+      {
+        "q": "16. Ciernie:",
+        "a": "C) skutecznie ograniczają parowanie wody",
+        "options": [
+          "A) często posiadają rośliny żyjące w klimacie wilgotnym",
+          "B) nie są ostre",
+          "C) skutecznie ograniczają parowanie wody",
+          "D) to inna nazwa liści pułapkowych"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Mchy",
+    "questions": [
+      {
+        "q": "17. Mchy zazwyczaj spotykamy w środowisku:",
+        "a": "A) cienistym i wilgotnym",
+        "options": [
+          "A) cienistym i wilgotnym",
+          "B) suchym",
+          "C) silnie nasłonecznionym",
+          "D) o niskiej temperaturze otoczenia"
+        ]
+      },
+      {
+        "q": "18. Na zamieszczonym schemacie budowy mchu, numerem 1 oznaczono:",
+        "a": "B) zarodnię",
+        "options": [
+          "A) trzonek",
+          "B) zarodnię",
+          "C) łodyżkę",
+          "D) chwytniki"
+        ],
+        "img": "budowa_mchu.jpg"
+      },
+      {
+        "q": "19. Zaznacz błędne zdanie na temat mchów.",
+        "a": "A) Żyją tylko w środowisku lądowym.",
+        "options": [
+          "A) Żyją tylko w środowisku lądowym.",
+          "B) Można je spotkać w miastach.",
+          "C) Najlepiej rosną w miejscach o dużej wilgotności.",
+          "D) Mogą rosnąć na pniach i gałęziach drzew."
+        ]
+      },
+      {
+        "q": "20. Mchy utrzymywane są w podłożu za pomocą:",
+        "a": "D) chwytników",
+        "options": [
+          "A) łodyżki",
+          "B) zarodni",
+          "C) witki",
+          "D) chwytników"
+        ]
+      },
+      {
+        "q": "21. Mchy są nazywane organizmami pionierskimi, ponieważ:",
+        "a": "D) jako pierwsze pojawiają się w miejscach niedostępnych innym roślinom",
+        "options": [
+          "A) mają wysokie wymagania glebowe",
+          "B) rozwijają się na najwyższych wysokościach nad poziomem morza",
+          "C) rozwijają się w środowisku wodnym",
+          "D) jako pierwsze pojawiają się w miejscach niedostępnych innym roślinom"
+        ]
+      },
+      {
+        "q": "22. Dzięki magazynowaniu dużej ilości wody, mchy:",
+        "a": "D) zapobiegają wysychaniu gleby",
+        "options": [
+          "A) zwiększają ryzyko powodzi",
+          "B) powodują wysychanie gleby",
+          "C) nie sprzyjają pojawianiu się innych roślin",
+          "D) zapobiegają wysychaniu gleby"
+        ]
+      },
+      {
+        "q": "23. Torf nie jest wykorzystywany w celach:",
+        "a": "B) spożywczych",
+        "options": [
+          "A) ogrodniczych i leczniczych",
+          "B) spożywczych",
+          "C) kosmetycznych i przemysłowych",
+          "D) budowlanych i leczniczych"
+        ]
+      },
+      {
+        "q": "24. Mech przedstawiony na ilustracji to:",
+        "a": "C) torfowiec błotny",
+        "options": [
+          "A) płonnik pospolity",
+          "B) widłoząb miotlasty",
+          "C) torfowiec błotny",
+          "D) chrobotek reniferowy"
+        ],
+        "img": "gatunek_mchu.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Paprotniki",
+    "questions": [
+      {
+        "q": "25. Nieliczne gatunki paprotników przystosowały się do życia:",
+        "a": "D) w wodzie",
+        "options": [
+          "A) na łące",
+          "B) w lesie",
+          "C) nad rzeką",
+          "D) w wodzie"
+        ]
+      },
+      {
+        "q": "26. U paproci zarodnie rozwijają się:",
+        "a": "A) na spodniej stronie listków",
+        "options": [
+          "A) na spodniej stronie listków",
+          "B) na wierzchu listków",
+          "C) w kłączach",
+          "D) w młodych liściach"
+        ]
+      },
+      {
+        "q": "27. Kłos zarodnionośny występuje u:",
+        "a": "C) skrzypów i widłaków",
+        "options": [
+          "A) mchów i porostów",
+          "B) grzybów i skrzypów",
+          "C) skrzypów i widłaków",
+          "D) grzybów i widłaków"
+        ]
+      },
+      {
+        "q": "28. Pędy wiosenne i letnie wytwarzają:",
+        "a": "B) skrzypy",
+        "options": [
+          "A) paprocie",
+          "B) skrzypy",
+          "C) widłaki",
+          "D) grzyby"
+        ]
+      },
+      {
+        "q": "29. Na ilustracji przedstawiono budowę:",
+        "a": "B) skrzypu",
+        "options": [
+          "A) paproci",
+          "B) skrzypu",
+          "C) porostu",
+          "D) widłaka"
+        ],
+        "img": "budowa_paprotnika.jpg"
+      },
+      {
+        "q": "30. Gatunkiem paproci nie jest:",
+        "a": "A) zdrojek pospolity",
+        "options": [
+          "A) zdrojek pospolity",
+          "B) orlica pospolita",
+          "C) długosz królewski",
+          "D) pióropusznik strusi"
+        ]
+      }
+    ]
+  }
+]
