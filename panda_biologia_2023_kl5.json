@@ -1,331 +1,311 @@
 [
   {
-    "category": "Tkanki roślinne",
+    "category": "Konkurs Panda 2023 - Biologia klasa 5",
     "questions": [
       {
-        "q": "1. Do tkanek stałych nie należą tkanki:",
-        "a": "D) twórcze",
+        "q": "Do tkanek stałych nie należą tkanki:",
+        "a": "twórcze",
         "options": [
-          "A) miękiszowe",
-          "B) wzmacniające",
-          "C) okrywające",
-          "D) twórcze"
+          "miękiszowe",
+          "wzmacniające",
+          "okrywające",
+          "twórcze"
         ]
       },
       {
-        "q": "2. Zaznacz stwierdzenie błędne na temat tkanek twórczych.",
-        "a": "C) ich liczba stale rośnie",
+        "q": "Zaznacz stwierdzenie błędne na temat tkanek twórczych.",
+        "a": "ich liczba stale rośnie",
         "options": [
-          "A) dzielą się szybko",
-          "B) znajdują się na obu końcach rośliny",
-          "C) ich liczba stale rośnie",
-          "D) ich liczba się nie zmienia"
+          "dzielą się szybko",
+          "znajdują się na obu końcach rośliny",
+          "ich liczba stale rośnie",
+          "ich liczba się nie zmienia"
         ]
       },
       {
-        "q": "3. Tkanki okrywające:",
-        "a": "B) to tkanki, do których należą skórka pędu i skórka korzenia",
+        "q": "Tkanki okrywające:",
+        "a": "to tkanki, do których należą skórka pędu i skórka korzenia",
         "options": [
-          "A) tworzą wewnętrzną część rośliny",
-          "B) to tkanki, do których należą skórka pędu i skórka korzenia",
-          "C) są nieprzepuszczalne",
-          "D) to tkanki, których komórki są oddalone od siebie"
+          "tworzą wewnętrzną część rośliny",
+          "to tkanki, do których należą skórka pędu i skórka korzenia",
+          "są nieprzepuszczalne",
+          "to tkanki, których komórki są oddalone od siebie"
         ]
       },
       {
-        "q": "4. W płatkach kwiatów znajduje się tkanka:",
-        "a": "A) miękiszowa",
+        "q": "W płatkach kwiatów znajduje się tkanka:",
+        "a": "miękiszowa",
         "options": [
-          "A) miękiszowa",
-          "B) okrywająca",
-          "C) twórcza",
-          "D) wzmacniająca"
+          "miękiszowa",
+          "okrywająca",
+          "twórcza",
+          "wzmacniająca"
         ]
       },
       {
-        "q": "5. Drewno:",
-        "a": "C) posiada długie, łączące się w cienkie rurki komórki",
+        "q": "Drewno:",
+        "a": "posiada długie, łączące się w cienkie rurki komórki",
         "options": [
-          "A) jest tkanką okrywającą",
-          "B) wraz z łykiem należy do tkanek miękiszowych",
-          "C) posiada długie, łączące się w cienkie rurki komórki",
-          "D) jest tkanką, która posiada liczne ściany poprzeczne"
-        ]
-      }
-    ]
-  },
-  {
-    "category": "Korzeń i łodyga",
-    "questions": [
-      {
-        "q": "6. Strefa włośnikowa korzenia:",
-        "a": "D) umożliwia intensywne pobieranie z gleby wody i soli mineralnych",
-        "options": [
-          "A) utrzymuje roślinę w podłożu",
-          "B) to miejsce, w którym następuje wzrost korzenia na długość",
-          "C) to strefa tworzenia się korzeni bocznych rośliny",
-          "D) umożliwia intensywne pobieranie z gleby wody i soli mineralnych"
+          "jest tkanką okrywającą",
+          "wraz z łykiem należy do tkanek miękiszowych",
+          "posiada długie, łączące się w cienkie rurki komórki",
+          "jest tkanką, która posiada liczne ściany poprzeczne"
         ]
       },
       {
-        "q": "7. Ilustracja przedstawia system korzeniowy:",
-        "a": "B) palowy",
+        "q": "Strefa włośnikowa korzenia:",
+        "a": "umożliwia intensywne pobieranie z gleby wody i soli mineralnych",
         "options": [
-          "A) wiązkowy",
-          "B) palowy",
-          "C) włośnikowy",
-          "D) przybyszowy"
+          "utrzymuje roślinę w podłożu",
+          "to miejsce, w którym następuje wzrost korzenia na długość",
+          "to strefa tworzenia się korzeni bocznych rośliny",
+          "umożliwia intensywne pobieranie z gleby wody i soli mineralnych"
+        ]
+      },
+      {
+        "q": "Ilustracja przedstawia system korzeniowy:",
+        "a": "palowy",
+        "options": [
+          "wiązkowy",
+          "palowy",
+          "włośnikowy",
+          "przybyszowy"
         ],
         "img": "system_korzeniowy.jpg"
       },
       {
-        "q": "8. Korzenie podporowe:",
-        "a": "A) występują m.in. u kukurydzy",
+        "q": "Korzenie podporowe:",
+        "a": "występują m.in. u kukurydzy",
         "options": [
-          "A) występują m.in. u kukurydzy",
-          "B) spotkać możemy u buraka",
-          "C) nie wrastają w podłoże",
-          "D) nie zabezpieczają rośliny przed utratą równowagi"
+          "występują m.in. u kukurydzy",
+          "spotkać możemy u buraka",
+          "nie wrastają w podłoże",
+          "nie zabezpieczają rośliny przed utratą równowagi"
         ]
       },
       {
-        "q": "9. U roślin pasożytniczych i półpasożytniczych występują:",
-        "a": "C) ssawki",
+        "q": "U roślin pasożytniczych i półpasożytniczych występują:",
+        "a": "ssawki",
         "options": [
-          "A) korzenie podporowe",
-          "B) korzenie spichrzowe",
-          "C) ssawki",
-          "D) korzenie czepne"
+          "korzenie podporowe",
+          "korzenie spichrzowe",
+          "ssawki",
+          "korzenie czepne"
         ]
       },
       {
-        "q": "10. Do elementów łodygi pokrzywy nie należy/nie należą:",
-        "a": "D) cebulka",
+        "q": "Do elementów łodygi pokrzywy nie należy/nie należą:",
+        "a": "cebulka",
         "options": [
-          "A) węzły",
-          "B) pąki wierzchołowe",
-          "C) międzywęźla",
-          "D) cebulka"
+          "węzły",
+          "pąki wierzchołowe",
+          "międzywęźla",
+          "cebulka"
         ]
       },
       {
-        "q": "11. Na ilustracji przedstawiono budowę łodygi. Literą A zaznaczono:",
-        "a": "D) aparat szparkowy",
+        "q": "Na ilustracji przedstawiono budowę łodygi. Literą A zaznaczono:",
+        "a": "aparat szparkowy",
         "options": [
-          "A) drewno",
-          "B) tkankę miękiszową",
-          "C) łyko",
-          "D) aparat szparkowy"
+          "drewno",
+          "tkankę miękiszową",
+          "łyko",
+          "aparat szparkowy"
         ],
         "img": "budowa_lodygi.jpg"
       },
       {
-        "q": "12. Bulwy:",
-        "a": "C) służą do rozmnażania wegetatywnego",
+        "q": "Bulwy:",
+        "a": "służą do rozmnażania wegetatywnego",
         "options": [
-          "A) są rodzajem pędu nadziemnego",
-          "B) wytwarza imbir",
-          "C) służą do rozmnażania wegetatywnego",
-          "D) są wiotkie i cienkie"
-        ]
-      }
-    ]
-  },
-  {
-    "category": "Liście i ich modyfikacje",
-    "questions": [
-      {
-        "q": "13. Do funkcji liści nie należy:",
-        "a": "D) pobieranie wody z gleby",
-        "options": [
-          "A) wydalanie z rośliny pary wodnej",
-          "B) wymiana gazowa",
-          "C) produkcja substancji pokarmowych w procesie fotosyntezy",
-          "D) pobieranie wody z gleby"
+          "są rodzajem pędu nadziemnego",
+          "wytwarza imbir",
+          "służą do rozmnażania wegetatywnego",
+          "są wiotkie i cienkie"
         ]
       },
       {
-        "q": "14. Liści pojedynczych nie posiadają:",
-        "a": "B) kasztanowce",
+        "q": "Do funkcji liści nie należy:",
+        "a": "pobieranie wody z gleby",
         "options": [
-          "A) lipy",
-          "B) kasztanowce",
-          "C) buki",
-          "D) dęby"
+          "wydalanie z rośliny pary wodnej",
+          "wymiana gazowa",
+          "produkcja substancji pokarmowych w procesie fotosyntezy",
+          "pobieranie wody z gleby"
         ]
       },
       {
-        "q": "15. Roślina przedstawiona na ilustracji posiada liście:",
-        "a": "C) pułapkowe",
+        "q": "Liści pojedynczych nie posiadają:",
+        "a": "kasztanowce",
         "options": [
-          "A) spichrzowe",
-          "B) czepne",
-          "C) pułapkowe",
-          "D) przekształcone w ciernie"
+          "lipy",
+          "kasztanowce",
+          "buki",
+          "dęby"
+        ]
+      },
+      {
+        "q": "Roślina przedstawiona na ilustracji posiada liście:",
+        "a": "pułapkowe",
+        "options": [
+          "spichrzowe",
+          "czepne",
+          "pułapkowe",
+          "przekształcone w ciernie"
         ],
         "img": "roslina_owadozerna.jpg"
       },
       {
-        "q": "16. Ciernie:",
-        "a": "C) skutecznie ograniczają parowanie wody",
+        "q": "Ciernie:",
+        "a": "skutecznie ograniczają parowanie wody",
         "options": [
-          "A) często posiadają rośliny żyjące w klimacie wilgotnym",
-          "B) nie są ostre",
-          "C) skutecznie ograniczają parowanie wody",
-          "D) to inna nazwa liści pułapkowych"
-        ]
-      }
-    ]
-  },
-  {
-    "category": "Mchy",
-    "questions": [
-      {
-        "q": "17. Mchy zazwyczaj spotykamy w środowisku:",
-        "a": "A) cienistym i wilgotnym",
-        "options": [
-          "A) cienistym i wilgotnym",
-          "B) suchym",
-          "C) silnie nasłonecznionym",
-          "D) o niskiej temperaturze otoczenia"
+          "często posiadają rośliny żyjące w klimacie wilgotnym",
+          "nie są ostre",
+          "skutecznie ograniczają parowanie wody",
+          "to inna nazwa liści pułapkowych"
         ]
       },
       {
-        "q": "18. Na zamieszczonym schemacie budowy mchu, numerem 1 oznaczono:",
-        "a": "B) zarodnię",
+        "q": "Mchy zazwyczaj spotykamy w środowisku:",
+        "a": "cienistym i wilgotnym",
         "options": [
-          "A) trzonek",
-          "B) zarodnię",
-          "C) łodyżkę",
-          "D) chwytniki"
+          "cienistym i wilgotnym",
+          "suchym",
+          "silnie nasłonecznionym",
+          "o niskiej temperaturze otoczenia"
+        ]
+      },
+      {
+        "q": "Na zamieszczonym schemacie budowy mchu, numerem 1 oznaczono:",
+        "a": "zarodnię",
+        "options": [
+          "trzonek",
+          "zarodnię",
+          "łodyżkę",
+          "chwytniki"
         ],
         "img": "budowa_mchu.jpg"
       },
       {
-        "q": "19. Zaznacz błędne zdanie na temat mchów.",
-        "a": "A) Żyją tylko w środowisku lądowym.",
+        "q": "Zaznacz błędne zdanie na temat mchów.",
+        "a": "Żyją tylko w środowisku lądowym.",
         "options": [
-          "A) Żyją tylko w środowisku lądowym.",
-          "B) Można je spotkać w miastach.",
-          "C) Najlepiej rosną w miejscach o dużej wilgotności.",
-          "D) Mogą rosnąć na pniach i gałęziach drzew."
+          "Żyją tylko w środowisku lądowym.",
+          "Można je spotkać w miastach.",
+          "Najlepiej rosną w miejscach o dużej wilgotności.",
+          "Mogą rosnąć na pniach i gałęziach drzew."
         ]
       },
       {
-        "q": "20. Mchy utrzymywane są w podłożu za pomocą:",
-        "a": "D) chwytników",
+        "q": "Mchy utrzymywane są w podłożu za pomocą:",
+        "a": "chwytników",
         "options": [
-          "A) łodyżki",
-          "B) zarodni",
-          "C) witki",
-          "D) chwytników"
+          "łodyżki",
+          "zarodni",
+          "witki",
+          "chwytników"
         ]
       },
       {
-        "q": "21. Mchy są nazywane organizmami pionierskimi, ponieważ:",
-        "a": "D) jako pierwsze pojawiają się w miejscach niedostępnych innym roślinom",
+        "q": "Mchy są nazywane organizmami pionierskimi, ponieważ:",
+        "a": "jako pierwsze pojawiają się w miejscach niedostępnych innym roślinom",
         "options": [
-          "A) mają wysokie wymagania glebowe",
-          "B) rozwijają się na najwyższych wysokościach nad poziomem morza",
-          "C) rozwijają się w środowisku wodnym",
-          "D) jako pierwsze pojawiają się w miejscach niedostępnych innym roślinom"
+          "mają wysokie wymagania glebowe",
+          "rozwijają się na najwyższych wysokościach nad poziomem morza",
+          "rozwijają się w środowisku wodnym",
+          "jako pierwsze pojawiają się w miejscach niedostępnych innym roślinom"
         ]
       },
       {
-        "q": "22. Dzięki magazynowaniu dużej ilości wody, mchy:",
-        "a": "D) zapobiegają wysychaniu gleby",
+        "q": "Dzięki magazynowaniu dużej ilości wody, mchy:",
+        "a": "zapobiegają wysychaniu gleby",
         "options": [
-          "A) zwiększają ryzyko powodzi",
-          "B) powodują wysychanie gleby",
-          "C) nie sprzyjają pojawianiu się innych roślin",
-          "D) zapobiegają wysychaniu gleby"
+          "zwiększają ryzyko powodzi",
+          "powodują wysychanie gleby",
+          "nie sprzyjają pojawianiu się innych roślin",
+          "zapobiegają wysychaniu gleby"
         ]
       },
       {
-        "q": "23. Torf nie jest wykorzystywany w celach:",
-        "a": "B) spożywczych",
+        "q": "Torf nie jest wykorzystywany w celach:",
+        "a": "spożywczych",
         "options": [
-          "A) ogrodniczych i leczniczych",
-          "B) spożywczych",
-          "C) kosmetycznych i przemysłowych",
-          "D) budowlanych i leczniczych"
+          "ogrodniczych i leczniczych",
+          "spożywczych",
+          "kosmetycznych i przemysłowych",
+          "budowlanych i leczniczych"
         ]
       },
       {
-        "q": "24. Mech przedstawiony na ilustracji to:",
-        "a": "C) torfowiec błotny",
+        "q": "Mech przedstawiony na ilustracji to:",
+        "a": "torfowiec błotny",
         "options": [
-          "A) płonnik pospolity",
-          "B) widłoząb miotlasty",
-          "C) torfowiec błotny",
-          "D) chrobotek reniferowy"
+          "płonnik pospolity",
+          "widłoząb miotlasty",
+          "torfowiec błotny",
+          "chrobotek reniferowy"
         ],
         "img": "gatunek_mchu.jpg"
-      }
-    ]
-  },
-  {
-    "category": "Paprotniki",
-    "questions": [
+      },
       {
-        "q": "25. Nieliczne gatunki paprotników przystosowały się do życia:",
-        "a": "D) w wodzie",
+        "q": "Nieliczne gatunki paprotników przystosowały się do życia:",
+        "a": "w wodzie",
         "options": [
-          "A) na łące",
-          "B) w lesie",
-          "C) nad rzeką",
-          "D) w wodzie"
+          "na łące",
+          "w lesie",
+          "nad rzeką",
+          "w wodzie"
         ]
       },
       {
-        "q": "26. U paproci zarodnie rozwijają się:",
-        "a": "A) na spodniej stronie listków",
+        "q": "U paproci zarodnie rozwijają się:",
+        "a": "na spodniej stronie listków",
         "options": [
-          "A) na spodniej stronie listków",
-          "B) na wierzchu listków",
-          "C) w kłączach",
-          "D) w młodych liściach"
+          "na spodniej stronie listków",
+          "na wierzchu listków",
+          "w kłączach",
+          "w młodych liściach"
         ]
       },
       {
-        "q": "27. Kłos zarodnionośny występuje u:",
-        "a": "C) skrzypów i widłaków",
+        "q": "Kłos zarodnionośny występuje u:",
+        "a": "skrzypów i widłaków",
         "options": [
-          "A) mchów i porostów",
-          "B) grzybów i skrzypów",
-          "C) skrzypów i widłaków",
-          "D) grzybów i widłaków"
+          "mchów i porostów",
+          "grzybów i skrzypów",
+          "skrzypów i widłaków",
+          "grzybów i widłaków"
         ]
       },
       {
-        "q": "28. Pędy wiosenne i letnie wytwarzają:",
-        "a": "B) skrzypy",
+        "q": "Pędy wiosenne i letnie wytwarzają:",
+        "a": "skrzypy",
         "options": [
-          "A) paprocie",
-          "B) skrzypy",
-          "C) widłaki",
-          "D) grzyby"
+          "paprocie",
+          "skrzypy",
+          "widłaki",
+          "grzyby"
         ]
       },
       {
-        "q": "29. Na ilustracji przedstawiono budowę:",
-        "a": "B) skrzypu",
+        "q": "Na ilustracji przedstawiono budowę:",
+        "a": "skrzypu",
         "options": [
-          "A) paproci",
-          "B) skrzypu",
-          "C) porostu",
-          "D) widłaka"
+          "paproci",
+          "skrzypu",
+          "porostu",
+          "widłaka"
         ],
         "img": "budowa_paprotnika.jpg"
       },
       {
-        "q": "30. Gatunkiem paproci nie jest:",
-        "a": "A) zdrojek pospolity",
+        "q": "Gatunkiem paproci nie jest:",
+        "a": "zdrojek pospolity",
         "options": [
-          "A) zdrojek pospolity",
-          "B) orlica pospolita",
-          "C) długosz królewski",
-          "D) pióropusznik strusi"
+          "zdrojek pospolity",
+          "orlica pospolita",
+          "długosz królewski",
+          "pióropusznik strusi"
         ]
       }
     ]
