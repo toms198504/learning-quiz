@@ -7,7 +7,8 @@
   { "title": "Geografia Klasa 5 - Planeta Ziemia - wypełnianie", "file": "geografia_kl4_planeta_ziemia.json", "type": "wpisywanie" },
   { "title": "Biologia Klasa 4 - Ciało Człowika - fiszki", "file": "biologia_kl4_cialo_czlowieka_fiszki.json", "type": "fiszki" },
   { "title": "Biologia Klasa 4 - Ciało Człowika - wypełnianie", "file": "biologia_kl4_cialo_czlowieka_luki.json", "type": "wpisywanie" },
-  { "title": "Panda 2020 - Przyroda - abcd", "file": "panda_przyroda_2020.json", "type": "wpisywanie" }
+  { "title": "Panda 2020 - Przyroda - abcd", "file": "panda_przyroda_2020.json", "type": "wpisywanie" },
+  { "title": "Panda 2023 - Przyroda - abcd", "file": "panda_przyroda_2023.json", "type": "wpisywanie" }
 ]
 
 
