@@ -14,7 +14,7 @@
       },
       {
         "q": "Zaznacz stwierdzenie błędne na temat tkanek twórczych.",
-        "a": "ich liczba stale rośnie",
+        "a": "ich liczba się nie zmienia",
         "options": [
           "dzielą się szybko",
           "znajdują się na obu końcach rośliny",
@@ -146,7 +146,7 @@
       },
       {
         "q": "Roślina przedstawiona na ilustracji posiada liście:",
-        "a": "pułapkowe",
+        "a": "spichrzowe",
         "options": [
           "spichrzowe",
           "czepne",
@@ -289,7 +289,7 @@
       },
       {
         "q": "Na ilustracji przedstawiono budowę:",
-        "a": "skrzypu",
+        "a": "widłaka",
         "options": [
           "paprocie",
           "skrzypu",
