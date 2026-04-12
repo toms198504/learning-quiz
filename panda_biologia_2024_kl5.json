@@ -1,0 +1,164 @@
+[
+  {
+    "category": "Konkurs Panda 2024 - Biologia klasa 5",
+    "questions": [
+      {
+        "q": "Zaznacz cechę, która nie dotyczy wirusów.",
+        "a": "potrafią samodzielnie się poruszać",
+        "options": ["nie mają budowy komórkowej", "potrafią samodzielnie się poruszać", "składają się z kwasu nukleinowego i białkowej otoczki", "nie rozmnażają się samodzielnie"]
+      },
+      {
+        "q": "Komórki bakterii:",
+        "a": "posiadają błonę komórkową",
+        "options": ["zawierają jądro komórkowe", "nie są wypełnione cytozolem", "posiadają błonę komórkową", "nie posiadają ściany komórkowej"]
+      },
+      {
+        "q": "Skupiska bakterii tworzą formy:",
+        "a": "kuliste",
+        "options": ["podłużne", "wielokomórkowe", "kuliste", "spiralne"]
+      },
+      {
+        "q": "Drobnoustroje rozprzestrzeniające się podczas kaszlu przenoszone są:",
+        "a": "drogą kropelkową",
+        "options": ["drogą kropelkową", "drogą pokarmową", "drogą płciową", "przez krew"]
+      },
+      {
+        "q": "Bolesne powiększenie ślinianek przyusznych jest jednym z objawów:",
+        "a": "świnki",
+        "options": ["różyczki", "boreliozy", "gruźlicy", "świnki"]
+      },
+      {
+        "q": "Produkt przedstawiony na ilustracji, zjedzony w surowej lub niedogotowanej postaci wywołać może:",
+        "a": "salmonellozę",
+        "options": ["odrę", "boreliozę", "tężec", "salmonellozę"],
+        "img": "Panda_Biologia_2024_kl5_pytanie6.jpg"
+      },
+      {
+        "q": "Do zakażenia wirusem HIV nie dochodzi poprzez:",
+        "a": "drogę kropelkową",
+        "options": ["kontakt z zakażoną krwią", "drogę kropelkową", "karmienie piersią", "poprzez łożysko w czasie ciąży"]
+      },
+      {
+        "q": "Przedstawione na ilustracji spod mikroskopu świdrowce wywołują:",
+        "a": "śpiączkę afrykańską",
+        "options": ["śpiączkę afrykańską", "malarię", "toksoplazmozę", "grzybicę"],
+        "img": "Panda_Biologia_2024_kl5_pytanie8.jpg"
+      },
+      {
+        "q": "Mikroskopijnych rozmiarów protisty, porastające ściany akwariów to:",
+        "a": "eugleny",
+        "options": ["eugleny", "pantofelki", "morszczyn", "okrzemki"]
+      },
+      {
+        "q": "Protisty wielokomórkowe:",
+        "a": "zawierają chloroplasty w komórkach",
+        "options": ["to rośliny lądowe", "oddychają beztlenowo", "zawierają chloroplasty w komórkach", "to np. śluzowce"]
+      },
+      {
+        "q": "Samica komara widliszka rozprzestrzeniać może:",
+        "a": "malarię",
+        "options": ["malarię", "glistnicę", "tasiemczycę", "toksoplazmozę"]
+      },
+      {
+        "q": "Grzyby:",
+        "a": "mają ścianę komórkową zbudowaną z chityny",
+        "options": ["mogą być samożywne lub cudzożywne", "wszystkie posiadają dwa jądra komórkowe w komórce", "mają ścianę komórkową zbudowaną z chityny", "wszystkie posiadają owocniki"]
+      },
+      {
+        "q": "Grzyb przedstawiony na ilustracji:",
+        "a": "jest zbudowany z jednej komórki o mikroskopijnych rozmiarach",
+        "options": ["należy do grzybów wielokomórkowych", "składa się z długich rozgałęzionych komórek", "jest zbudowany z jednej komórki o mikroskopijnych rozmiarach", "jest grzybem trującym"],
+        "img": "Panda_Biologia_2024_kl5_pytanie13.jpg"
+      },
+      {
+        "q": "Strzępki grzybów żyjących w ścisłym związku z drzewami:",
+        "a": "ułatwiają roślinom pobieranie wody",
+        "options": ["ułatwiają roślinom pobieranie wody", "mogą same wytwarzać substancje pokarmowe", "produkują tlen", "hamują u roślin przebieg fotosyntezy"]
+      },
+      {
+        "q": "Pomarańczowe plamy na liściach roślin może wywoływać:",
+        "a": "rdza źdźbłowa",
+        "options": ["rdza źdźbłowa", "zrywka", "purchawka", "pleśniak"]
+      },
+      {
+        "q": "Fragmentacja grzybni:",
+        "a": "polega na podziale grzybni na kilka części",
+        "options": ["to sposób rozmnażania płciowego", "to inaczej pączkowanie", "polega na podziale grzybni na kilka części", "to sposób rozmnażania się drożdży"]
+      },
+      {
+        "q": "Porosty są organizmami zaliczanymi do królestwa:",
+        "a": "grzybów",
+        "options": ["roślin", "grzybów", "bakterii", "protistów"]
+      },
+      {
+        "q": "W strukturze porostu, glony mają za zadanie:",
+        "a": "wytwarzać pokarm",
+        "options": ["chronić organizm", "dostarczać wodę", "wytwarzać pokarm", "utrzymywać organizm w podłożu"]
+      },
+      {
+        "q": "Widoczna na ilustracji postać porostu - rozgałęziona i wzniesiona to porost:",
+        "a": "krzaczkowaty",
+        "options": ["listkowaty", "skorupiasty", "nitkowaty", "krzaczkowaty"],
+        "img": "Panda_Biologia_2024_kl5_pytanie19.jpg"
+      },
+      {
+        "q": "W obszarze silnie uprzemysłowionym należy spodziewać się:",
+        "a": "braku występowania porostów",
+        "options": ["występowania jednego gatunku porostów", "dużego zróżnicowania gatunków porostów", "braku występowania porostów", "wyłącznie porostów listkowatych"]
+      },
+      {
+        "q": "Drzewa przyrastają na grubość dzięki obecności tkanek:",
+        "a": "twórczych",
+        "options": ["twórczych", "miękiszowych", "wzmacniających", "okrywających"]
+      },
+      {
+        "q": "Miękisz zawierający dużo chloroplastów występuje w:",
+        "a": "liściach i zielonych łodygach",
+        "options": ["korzeniach roślin", "cebulach roślin", "liściach i zielonych łodygach", "płatkach kwiatów"]
+      },
+      {
+        "q": "Roślinę w podłożu utrzymuje:",
+        "a": "strefa korzeni bocznych",
+        "options": ["strefa włośnikowa", "strefa korzeni bocznych", "strefa stożka wzrostu", "strefa wydłużania"]
+      },
+      {
+        "q": "Strefę korzenia, w której komórki wytwarzają włośniki oznaczono numerem:",
+        "a": "2",
+        "options": ["5", "1", "2", "3"],
+        "img": "Panda_Biologia_2024_kl5_pytanie24.jpg"
+      },
+      {
+        "q": "Korzenie podporowe, pomagające roślinie utrzymać równowagę posiada:",
+        "a": "kukurydza",
+        "options": ["jemioła", "marchew", "bluszcz", "kukurydza"]
+      },
+      {
+        "q": "Łodygi roślin zielnych:",
+        "a": "zawierają w swoich komórkach chloroplasty",
+        "options": ["są grube", "posiadają korę", "nie są soczyste", "zawierają w swoich komórkach chloroplasty"]
+      },
+      {
+        "q": "Łodygi czepne występują np. u:",
+        "a": "winorośli",
+        "options": ["truskawek", "winorośli", "ziemniaków", "rzodkiewek"]
+      },
+      {
+        "q": "Przedstawiona na ilustracji część ziemniaka:",
+        "a": "gromadzi substancje pokarmowe",
+        "options": ["to kłącze", "nie służy roślinie do rozmnażania", "gromadzi substancje pokarmowe", "jest jego częścią nadziemną"],
+        "img": "Panda_Biologia_2024_kl5_pytanie28.jpg"
+      },
+      {
+        "q": "Do podstawowych funkcji liści nie należy:",
+        "a": "magazynowanie substancji pokarmowych",
+        "options": ["parowanie wody z roślin", "wymiana gazowa", "magazynowanie substancji pokarmowych", "wytwarzanie substancji pokarmowych"]
+      },
+      {
+        "q": "Na ilustracji przedstawiono przykład liścia:",
+        "a": "pułapkowego",
+        "options": ["w postaci cierni", "czepnego", "spichrzowego", "pułapkowego"],
+        "img": "Panda_Biologia_2024_kl5_pytanie30.jpg"
+      }
+    ]
+  }
+]
